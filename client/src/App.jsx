@@ -87,7 +87,7 @@ const THEMES_CONFIG = {
 
     bg: {
       color: "none",
-      image: "url(images/bg.jpg)",
+      image: "url(/images/bg.jpg)",
     },
     
     container: {
@@ -1916,7 +1916,7 @@ export default function App() {
                   {lobby.map((j,index) => (
                     <div key={j.id} className='flex flex-row'>
                       <p className={`${j.pret ? "text-green-600" : "text-blue-600"} font-medium`}>● {j.pseudo} {j.id === socket?.id ? "(Moi)" : j.pret ? "(Prêt)" : ""}</p>
-                      {index===0 ? <img className='pl-1 pt-1 w-5 h-5' src='../images/couronne.png' alt="chef"></img> : ""}
+                      {index===0 ? <img className='pl-1 pt-1 w-5 h-5' src='/images/couronne.png' alt="chef"></img> : ""}
                     </div>
                   ))}
                 </div>
