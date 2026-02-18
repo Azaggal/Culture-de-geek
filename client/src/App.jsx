@@ -918,7 +918,7 @@ const PhotoProfil = () => {
       <div className={`absolute bottom-0 w-40 h-40 bg-white rounded-full border-4 border-purple-600 transition-all duration-300`}></div>
       {/* 2. COUCHE MILIEU */}
       <div className={`relative z-10 w-36 h-full mb-1 items-end justify-center overflow-visible transition-all duration-300 -translate-y-3 ${transition ? "translate-y-50" : "translate-y-0 opacity-100 group-hover:-translate-y-6"}`}>
-         <img className="h-40 w-40 object-contain drop-shadow-xl" src={`/images/avatar/${photoProfil}`} alt="Avatar" />
+         <img className="h-40 w-40 object-contain drop-shadow-xl" src="/images/avatar/profil.png" alt="Avatar" />
       </div>
       {/* 3. COUCHE AVANT (Cache) */}
       <div className="absolute top-full z-20 w-50 h-50 bg-purple-400 pointer-events-none "></div>
