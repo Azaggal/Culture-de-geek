@@ -13,14 +13,21 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
+
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 const server = http.createServer(app);
-const io = new Server(server, {
-  cors: { origin: "http://localhost:5173", methods: ["GET", "POST"] } // Adapte le port si besoin
+const io = require('socket.io')(server, {
+  cors: {
+    origin: "*", // Autorise n'importe quel site à se connecter
+    methods: ["GET", "POST"]
+  }
 });
+
+
 
 let rooms = {};
 
