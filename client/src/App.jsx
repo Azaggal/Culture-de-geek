@@ -1400,7 +1400,7 @@ export default function App() {
 
   useEffect(() => {
     if (!socket) {
-      socket = io('http://localhost:3001', { reconnectionAttempts: 5 });
+      socket = io('https://culture-de-geek.onrender.com', { reconnectionAttempts: 5 });
       socket.on('connect', () => { console.log("Connecté avec le socket :", socket.id); });
     }
 
