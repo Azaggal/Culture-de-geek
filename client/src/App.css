@@ -1,0 +1,109 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+.animate-shake {
+  animation: shake 0.2s ease-in-out 0s 2;
+}
+
+.friction-spark {
+  /* L'animation dure 1s (comme la barre) et reste sur la dernière frame (invisible) grâce à "forwards" */
+  animation: spark-fade 1s ease-out forwards; 
+  /* On la centre parfaitement sur le bout de la barre */
+  transform: translateY(-50%) translateX(50%); 
+}
+
+@keyframes spark-fade {
+  0% {
+    opacity: 1;
+    /* Grosse lueur blanche au centre, grosse lueur violette autour */
+    box-shadow: 0 0 20px 8px white, 0 0 40px 15px #9333ea;
+    transform: translateY(-50%) translateX(50%) scale(1.5);
+  }
+  30% {
+    /* La lueur diminue vite au début pour l'effet d'impact */
+    opacity: 0.8;
+    box-shadow: 0 0 10px 4px white, 0 0 20px 8px #9333ea;
+    transform: translateY(-50%) translateX(50%) scale(1);
+  }
+  100% {
+    opacity: 0; /* Totalement invisible à la fin */
+    box-shadow: 0 0 0px 0px white, 0 0 0px 0px #9333ea;
+    transform: translateY(-50%) translateX(50%) scale(0.5);
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #1e293b; /* correspond au bg-slate-800 */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #475569; /* correspond au bg-slate-600 */
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #64748b; /* correspond au bg-slate-500 */
+}
+
+/* Cache les images, tableaux complexes et boîtes d'infos pour se concentrer sur le texte et les liens */
+.wiki-content .infobox, .wiki-content .thumb, .wiki-content .navbox, .wiki-content .reference {
+  display: none !important;
+}
+/* Force les liens à être bien bleus et visibles */
+.wiki-content a {
+  color: #2563eb !important;
+  font-weight: bold;
+  text-decoration: none;
+}
+.wiki-content a:hover {
+  text-decoration: underline;
+}

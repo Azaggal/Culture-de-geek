@@ -1,0 +1,497 @@
+[
+  {
+    "question": "Quel est le nom du célèbre plombier, mascotte de Nintendo ?",
+    "reponse": "Mario",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le protagoniste principal de la saga The Legend of Zelda ?",
+    "reponse": "Link",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelles étaient les deux premières couleurs des versions de Pokémon sorties en Europe et aux USA ?",
+    "reponse": "Rouge et Bleu",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel célèbre créateur japonais est le père de Mario, Zelda et Donkey Kong ?",
+    "reponse": "Shigeru Miyamoto",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle la chasseuse de primes héroïne de la saga Metroid ?",
+    "reponse": "Samus Aran",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le petit nom du dinosaure vert qui sert de monture à Mario ?",
+    "reponse": "Yoshi",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans Animal Crossing, comment s'appelle le raton-laveur capitaliste à qui l'on doit rembourser son prêt ?",
+    "reponse": "Tom Nook",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel était le tout premier nom de Mario lors de sa première apparition dans le jeu d'arcade Donkey Kong ?",
+    "reponse": "Jumpman",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel pilote de F-Zero est célèbre pour son coup de poing enflammé, le 'Falcon Punch' ?",
+    "reponse": "Captain Falcon",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appellent les créatures mi-humaines mi-calamars du jeu Splatoon ?",
+    "reponse": "Les Inklings",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans Halo, comment s'appelle l'Intelligence Artificielle qui accompagne le Master Chief ?",
+    "reponse": "Cortana",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le nom du Dieu de la Guerre, protagoniste de la saga God of War ?",
+    "reponse": "Kratos",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel studio de développement a créé Crash Bandicoot, Uncharted et The Last of Us ?",
+    "reponse": "Naughty Dog",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle l'héroïne aux cheveux roux de la série Horizon (Zero Dawn / Forbidden West) ?",
+    "reponse": "Aloy",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel studio de développement a initialement créé la saga Halo avant de passer le flambeau à 343 Industries ?",
+    "reponse": "Bungie",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans quel jeu Xbox incarne-t-on Marcus Fenix, un soldat tronçonnant des Locustes ?",
+    "reponse": "Gears of War",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle le chasseur de trésors, descendant de Sir Francis, dans la série Uncharted ?",
+    "reponse": "Nathan Drake",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans quelle ville à l'architecture gothique et victorienne se déroule le jeu Bloodborne ?",
+    "reponse": "Yharnam",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelle le petit robot intelligent qui accompagne le Lombax Ratchet ?",
+    "reponse": "Clank",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans quel jeu de Hideo Kojima incarne-t-on Sam Porter Bridges, un livreur post-apocalyptique ?",
+    "reponse": "Death Stranding",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel célèbre scientifique silencieux armé d'un pied-de-biche est le héros de Half-Life ?",
+    "reponse": "Gordon Freeman",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans Portal, comment s'appelle l'Intelligence Artificielle psychopathe qui gère le centre d'enrichissement ?",
+    "reponse": "GLaDOS",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle entreprise a développé les jeux World of Warcraft, Diablo et Overwatch ?",
+    "reponse": "Blizzard Entertainment",
+    "difficulte": 1
+  },
+  {
+    "question": "Que signifient les lettres CS dans le célèbre jeu de tir CS:GO ?",
+    "reponse": "Counter-Strike",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelles sont les trois races jouables dans Starcraft ?",
+    "reponse": "Terran, Zerg, Protoss",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle entreprise, créée par Gabe Newell, possède la plateforme Steam ?",
+    "reponse": "Valve",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui est le célèbre concepteur de jeux vidéo ayant créé SimCity et Les Sims ?",
+    "reponse": "Will Wright",
+    "difficulte": 3
+  },
+  {
+    "question": "Dans Age of Empires, quelle unité est célèbre pour crier 'Wololo' et convertir les ennemis ?",
+    "reponse": "Le Prêtre",
+    "difficulte": 2
+  },
+  {
+    "question": "Que signifie littéralement l'acronyme de l'arme 'BFG' dans la série Doom ?",
+    "reponse": "Big Fucking Gun",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel studio américain a créé le jeu League of Legends ?",
+    "reponse": "Riot Games",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le jeu vidéo le plus vendu de tous les temps ?",
+    "reponse": "Minecraft",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui est le développeur indépendant créateur du jeu Undertale ?",
+    "reponse": "Toby Fox",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel studio australien indépendant a développé le Metroidvania à succès Hollow Knight ?",
+    "reponse": "Team Cherry",
+    "difficulte": 3
+  },
+  {
+    "question": "Dans quel jeu rogue-like de Supergiant Games doit-on s'échapper des Enfers en défiant son père ?",
+    "reponse": "Hades",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui est le seul et unique développeur (alias ConcernedApe) derrière le jeu Stardew Valley ?",
+    "reponse": "Eric Barone",
+    "difficulte": 3
+  },
+  {
+    "question": "Dans quel jeu de plateforme très exigeant incarne-t-on Madeline gravissant une montagne canadienne ?",
+    "reponse": "Celeste",
+    "difficulte": 2
+  },
+  {
+    "question": "De quelle décennie de l'animation américaine s'inspire la direction artistique du jeu Cuphead ?",
+    "reponse": "Les années 1930",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans quel pays fictif d'inspiration soviétique travaillez-vous comme douanier dans 'Papers, Please' ?",
+    "reponse": "Arstotzka",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle l'ours animatronique principal de la franchise Five Nights at Freddy's ?",
+    "reponse": "Freddy Fazbear",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le créateur du célèbre jeu cubique Minecraft (son pseudo ou son vrai nom) ?",
+    "reponse": "Notch (ou Markus Persson)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la console de salon la plus vendue de l'histoire du jeu vidéo ?",
+    "reponse": "La PlayStation 2 (PS2)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel jeu vidéo d'arcade de 1972 simulait un match de tennis de table avec deux barres et un point ?",
+    "reponse": "Pong",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel informaticien soviétique est le créateur original de Tetris en 1984 ?",
+    "reponse": "Alexey Pajitnov",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle mascotte bleue ultra-rapide a été créée par Sega pour concurrencer Mario ?",
+    "reponse": "Sonic",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel robot humanoïde bleu, armé d'un canon à plasma, est la mascotte historique de Capcom ?",
+    "reponse": "Mega Man",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans Street Fighter, quels sont les deux karatékas célèbres pour utiliser l'attaque 'Hadouken' ?",
+    "reponse": "Ryu et Ken",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans Mortal Kombat, quel ninja jaune hurle 'Get over here!' en lançant son kunai ?",
+    "reponse": "Scorpion",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment appelle-t-on le célèbre code de triche de Konami (Haut Haut Bas Bas Gauche Droite Gauche Droite B A) ?",
+    "reponse": "Le Konami Code",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle a été la toute première console portable à cartouches interchangeables créée par Nintendo ?",
+    "reponse": "La Game Boy",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel héros au passé trouble, ex-SOLDAT, manie l'Épée Broyeuse dans Final Fantasy VII ?",
+    "reponse": "Cloud Strife",
+    "difficulte": 1
+  },
+  {
+    "question": "La série Kingdom Hearts est un crossover (mélange) entre les univers de Final Fantasy et quelle autre entreprise ?",
+    "reponse": "Disney",
+    "difficulte": 1
+  },
+  {
+    "question": "La célèbre série de J-RPG Persona est en réalité un spin-off de quelle grande franchise japonaise ?",
+    "reponse": "Shin Megami Tensei",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel créateur japonais de génie est à l'origine de la saga d'infiltration Metal Gear Solid ?",
+    "reponse": "Hideo Kojima",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel studio japonais réputé sadique a créé Demon's Souls, Dark Souls, Sekiro et Elden Ring ?",
+    "reponse": "FromSoftware",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans la série Resident Evil, comment s'appelle la société pharmaceutique responsable des épidémies de zombies ?",
+    "reponse": "Umbrella Corporation",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel ex-yakuza surnommé 'Le Dragon de Dojima' est le héros principal des premiers jeux de la saga Yakuza (Like a Dragon) ?",
+    "reponse": "Kazuma Kiryu",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle entreprise japonaise développe la très populaire série Monster Hunter ?",
+    "reponse": "Capcom",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans Nier Automata, quel est le nom court de l'androïde de combat féminin que l'on incarne au début ?",
+    "reponse": "2B",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans la série Castlevania, qui est systématiquement le boss final tapi au sommet du château ?",
+    "reponse": "Dracula",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel studio a développé Fortnite et créé le moteur graphique Unreal Engine ?",
+    "reponse": "Epic Games",
+    "difficulte": 1
+  },
+  {
+    "question": "Que signifie l'acronyme PUBG dans le jeu qui a popularisé le genre Battle Royale ?",
+    "reponse": "PlayerUnknown's Battlegrounds",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans le même univers que quel FPS de mechas (robots géants) se déroule le jeu Apex Legends ?",
+    "reponse": "Titanfall",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel studio polonais a développé la trilogie The Witcher et Cyberpunk 2077 ?",
+    "reponse": "CD Projekt Red",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le Sorceleur à la crinière blanche, héros de The Witcher ?",
+    "reponse": "Geralt de Riv",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle la ville parodique de Los Angeles dans laquelle se déroule Grand Theft Auto V ?",
+    "reponse": "Los Santos",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel hors-la-loi membre de la bande de Dutch van der Linde incarne-t-on dans Red Dead Redemption 2 ?",
+    "reponse": "Arthur Morgan",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel éditeur français est derrière les franchises Assassin's Creed, Far Cry et Rainbow Six ?",
+    "reponse": "Ubisoft",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle série de jeux mélange des matchs de football avec des voitures propulsées par des fusées ?",
+    "reponse": "Rocket League",
+    "difficulte": 1
+  },
+  {
+    "question": "Que signifient les trois 'E' du salon international du jeu vidéo, l'E3 ?",
+    "reponse": "Electronic Entertainment Expo",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle a été la toute première console de jeux vidéo de salon commerciale, sortie en 1972 ?",
+    "reponse": "La Magnavox Odyssey",
+    "difficulte": 3
+  },
+  {
+    "question": "Que fabriquait l'entreprise Nintendo à sa création en 1889, bien avant les jeux vidéo ?",
+    "reponse": "Des cartes à jouer (Hanafuda)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle couleur affichait l'anneau de la mort ('Ring of Death') qui signait la mort matérielle d'une Xbox 360 ?",
+    "reponse": "Rouge",
+    "difficulte": 1
+  },
+  {
+    "question": "Quels sont les quatre symboles géométriques présents sur les boutons d'une manette PlayStation ?",
+    "reponse": "Croix, Carré, Triangle, Rond",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel jeu vidéo adapté d'un film a été un tel échec qu'il a provoqué le krach du jeu vidéo en 1983 ?",
+    "reponse": "E.T. l'extra-terrestre",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est la profession officielle de l'aventurière Lara Croft ?",
+    "reponse": "Archéologue",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans Assassin's Creed, comment s'appelle la machine permettant de revivre les mémoires génétiques de ses ancêtres ?",
+    "reponse": "L'Animus",
+    "difficulte": 1
+  },
+  {
+    "question": "À quel numéro (en chiffres romains) de la saga 'The Elder Scrolls' correspond le jeu Skyrim ?",
+    "reponse": "V (5)",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le tournoi mondial annuel de Dota 2, connu pour avoir le plus gros cashprize de l'esport ?",
+    "reponse": "The International",
+    "difficulte": 2
+  },
+  {
+    "question": "Sur quel jeu le joueur sud-coréen 'Faker' est-il considéré comme le meilleur de tous les temps ?",
+    "reponse": "League of Legends",
+    "difficulte": 1
+  },
+  {
+    "question": "Sur quel FPS le joueur ukrainien 'S1mple' a-t-il bâti sa légende ?",
+    "reponse": "Counter-Strike (CS:GO)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel était le nom initial de la plateforme Twitch avant de se concentrer uniquement sur le jeu vidéo ?",
+    "reponse": "Justin.tv",
+    "difficulte": 3
+  },
+  {
+    "question": "Que signifie le sigle PNJ (ou NPC en anglais) dans l'univers du jeu vidéo ?",
+    "reponse": "Personnage Non Joueur",
+    "difficulte": 1
+  },
+  {
+    "question": "Que signifie le sigle RPG ?",
+    "reponse": "Role-Playing Game (Jeu de rôle)",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le personnage masculin par défaut, portant un t-shirt bleu, dans Minecraft ?",
+    "reponse": "Steve",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la monnaie virtuelle utilisée sur la plateforme Roblox ?",
+    "reponse": "Le Robux",
+    "difficulte": 1
+  },
+  {
+    "question": "Que signifie l'acronyme GTA ?",
+    "reponse": "Grand Theft Auto",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle la cité sous-marine dystopique construite par Andrew Ryan dans BioShock ?",
+    "reponse": "Rapture",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle le commandant que l'on incarne tout au long de la trilogie Mass Effect ?",
+    "reponse": "Commandant Shepard",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel célèbre garçon blond souriant, dessiné dans un style années 50, est la mascotte de la série Fallout ?",
+    "reponse": "Vault Boy",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans Silent Hill 2, quel monstre effrayant portant un grand casque métallique géométrique poursuit James Sunderland ?",
+    "reponse": "Pyramid Head",
+    "difficulte": 2
+  },
+  {
+    "question": "Sur quelle console Nintendo est sorti le très compétitif 'Super Smash Bros. Melee' ?",
+    "reponse": "La GameCube",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le nom géométrique et mathématique des petites pièces de blocs qui tombent dans Tetris ?",
+    "reponse": "Les Tetriminos",
+    "difficulte": 2
+  },
+  {
+    "question": "De quel jeu vidéo provient la célèbre réplique/mème 'The cake is a lie' (Le gâteau est un mensonge) ?",
+    "reponse": "Portal",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fut la toute dernière console de salon produite par Sega avant de se retirer du marché des consoles ?",
+    "reponse": "La Dreamcast",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans le jeu 'The Legend of Zelda', comment s'appelle la princesse qu'il faut sauver ?",
+    "reponse": "Zelda",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans 'Pac-Man', il y a 4 fantômes : Blinky, Pinky, Inky et... comment s'appelle le dernier (le orange) ?",
+    "reponse": "Clyde",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle entreprise a lancé la première console portable intégrant un double écran dont un tactile en 2004 ?",
+    "reponse": "Nintendo (la DS)",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le personnage principal et infecté dans The Last of Us, qui escorte la jeune Ellie ?",
+    "reponse": "Joel",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel jeu d'exploration spatiale procédurale, vivement critiqué à sa sortie en 2016, est aujourd'hui loué pour ses multiples mises à jour ?",
+    "reponse": "No Man's Sky",
+    "difficulte": 2
+  }
+]

@@ -1,0 +1,560 @@
+[
+  {
+    "question": "Quelle directive du préprocesseur permet d'inclure une bibliothèque ?",
+    "code": "#___ <stdio.h>\n\nint main() {\n    return 0;\n}",
+    "reponse": "include",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la fonction principale par laquelle tout programme C commence ?",
+    "code": "int ___() {\n    printf(\"Démarrage\");\n    return 0;\n}",
+    "reponse": "main",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction standard affiche du texte formaté dans la console ?",
+    "code": "#include <stdio.h>\n\nint main() {\n    ___(\"Hello World!\\n\");\n    return 0;\n}",
+    "reponse": "printf",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction standard permet de lire une saisie utilisateur formatée ?",
+    "code": "int age;\n___(\"%d\", &age);",
+    "reponse": "scanf",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé termine l'exécution d'une fonction et renvoie une valeur ?",
+    "code": "int carre(int x) {\n    ___ x * x;\n}",
+    "reponse": "return",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel spécificateur de format est utilisé pour afficher un entier décimal ?",
+    "code": "int score = 100;\nprintf(\"Score : ___\\n\", score);",
+    "reponse": "%d",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel spécificateur de format est utilisé pour afficher une chaîne de caractères ?",
+    "code": "char nom[] = \"Alice\";\nprintf(\"Nom : ___\\n\", nom);",
+    "reponse": "%s",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel spécificateur de format est utilisé pour afficher un nombre à virgule flottante ?",
+    "code": "float pi = 3.14;\nprintf(\"Pi vaut ___\\n\", pi);",
+    "reponse": "%f",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel caractère spécial représente un saut de ligne dans une chaîne ?",
+    "code": "printf(\"Ligne 1___Ligne 2\");",
+    "reponse": "\\n",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel en-tête standard (header) est requis pour utiliser printf et scanf ?",
+    "code": "#include <___>\n\nint main() {\n    printf(\"Test\");\n}",
+    "reponse": "stdio.h",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel type de données est utilisé pour stocker un nombre entier standard ?",
+    "code": "___ compteur = 10;",
+    "reponse": "int",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel type de données stocke un unique caractère (1 octet) ?",
+    "code": "___ lettre = 'A';",
+    "reponse": "char",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel type de données stocke un nombre à virgule en simple précision ?",
+    "code": "___ prix = 19.99f;",
+    "reponse": "float",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel type de données stocke un nombre à virgule en double précision ?",
+    "code": "___ precision = 3.1415926535;",
+    "reponse": "double",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur compile-time donne la taille en octets d'une variable ou d'un type ?",
+    "code": "int taille = ___(int);",
+    "reponse": "sizeof",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé indique qu'un type entier ne peut pas être négatif ?",
+    "code": "___ int age = 25;",
+    "reponse": "unsigned",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé rend une variable en lecture seule après son initialisation ?",
+    "code": "___ float PI = 3.14159f;",
+    "reponse": "const",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé indique qu'une fonction ne renvoie rien ou ne prend aucun paramètre ?",
+    "code": "___ dire_bonjour(___) {\n    printf(\"Salut\");\n}",
+    "reponse": "void",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel type entier est généralement plus petit que int (souvent 2 octets) ?",
+    "code": "___ int petit_nombre = 32000;",
+    "reponse": "short",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel type entier est au moins aussi grand que int (souvent 8 octets sur 64-bit) ?",
+    "code": "___ int grand_nombre = 10000000000L;",
+    "reponse": "long",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel opérateur incrémente une variable de 1 ?",
+    "code": "int x = 5;\nx___;\n// x vaut 6",
+    "reponse": "++",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur décrémente une variable de 1 ?",
+    "code": "int y = 10;\ny___;\n// y vaut 9",
+    "reponse": "--",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur relationnel vérifie l'égalité parfaite entre deux valeurs ?",
+    "code": "if (a ___ b) {\n    printf(\"Égaux\");\n}",
+    "reponse": "==",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur relationnel vérifie la différence entre deux valeurs ?",
+    "code": "if (a ___ b) {\n    printf(\"Différents\");\n}",
+    "reponse": "!=",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur logique ET nécessite que les deux conditions soient vraies ?",
+    "code": "if (x > 0 ___ x < 10) {\n    printf(\"Entre 1 et 9\");\n}",
+    "reponse": "&&",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur logique OU nécessite qu'au moins une condition soit vraie ?",
+    "code": "if (y == 0 ___ y == 1) {\n    printf(\"Binaire\");\n}",
+    "reponse": "||",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur logique NON inverse une condition booléenne ?",
+    "code": "int vrai = 1;\nif (___vrai) {\n    printf(\"C'est faux\");\n}",
+    "reponse": "!",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur arithmétique donne le reste d'une division entière (modulo) ?",
+    "code": "int reste = 10 ___ 3; // Reste vaut 1",
+    "reponse": "%",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur effectue un décalage de bits vers la gauche ?",
+    "code": "int x = 1 ___ 2; // Équivaut à 1 * 2^2 = 4",
+    "reponse": "<<",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel opérateur effectue un décalage de bits vers la droite ?",
+    "code": "int x = 8 ___ 1; // Équivaut à 8 / 2 = 4",
+    "reponse": ">>",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé lance un test conditionnel ?",
+    "code": "___ (age >= 18) {\n    printf(\"Majeur\");\n}",
+    "reponse": "if",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé accompagne le test conditionnel pour exécuter un code si c'est faux ?",
+    "code": "if (x > 0) {\n    printf(\"Positif\");\n} ___ {\n    printf(\"Négatif ou nul\");\n}",
+    "reponse": "else",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle boucle s'exécute TANT QU'une condition est vraie ?",
+    "code": "int i = 0;\n___ (i < 5) {\n    i++;\n}",
+    "reponse": "while",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle boucle est garantie de s'exécuter au moins une fois avant de tester la condition ?",
+    "code": "___\n{\n    printf(\"Une fois minimum\");\n} while (0);",
+    "reponse": "do",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle boucle compacte l'initialisation, la condition et l'incrémentation sur une ligne ?",
+    "code": "___ (int i = 0; i < 10; i++) {\n    printf(\"%d\", i);\n}",
+    "reponse": "for",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle structure conditionnelle est idéale pour tester de nombreuses valeurs d'une même variable ?",
+    "code": "___ (choix) {\n    case 1:\n        printf(\"Option 1\");\n        break;\n}",
+    "reponse": "switch",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé représente une valeur spécifique à tester dans un bloc switch ?",
+    "code": "switch (menu) {\n    ___ 1:\n        jouer();\n        break;\n}",
+    "reponse": "case",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé permet de sortir immédiatement d'une boucle ou d'un switch ?",
+    "code": "while (1) {\n    if (fini) ___;\n}",
+    "reponse": "break",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel cas s'exécute dans un switch si aucun autre ne correspond ?",
+    "code": "switch (cmd) {\n    case 1: start(); break;\n    ___: printf(\"Inconnu\");\n}",
+    "reponse": "default",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé passe directement à l'itération suivante d'une boucle ?",
+    "code": "for (int i=0; i<10; i++) {\n    if (i % 2 == 0) ___;\n    printf(\"Impair : %d\", i);\n}",
+    "reponse": "continue",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel symbole est utilisé pour déclarer un pointeur ?",
+    "code": "int ___ptr;",
+    "reponse": "*",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel opérateur permet de récupérer l'adresse mémoire d'une variable ?",
+    "code": "int nombre = 42;\nint *pointeur = ___nombre;",
+    "reponse": "&",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel opérateur permet d'accéder à la valeur pointée par un pointeur (déréférencement) ?",
+    "code": "int a = 10;\nint *p = &a;\n___p = 20; // a vaut maintenant 20",
+    "reponse": "*",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle macro représente un pointeur qui ne pointe vers aucune adresse valide ?",
+    "code": "int *p = ___;\nif (p == ___) {\n    printf(\"Pointeur vide\");\n}",
+    "reponse": "NULL",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel type de pointeur générique peut pointer vers n'importe quel type de donnée ?",
+    "code": "___ *ptr_generique = &n_importe_quoi;",
+    "reponse": "void",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction alloue de la mémoire dynamiquement sur le tas (heap) ?",
+    "code": "int *tab = (int *)___(10 * sizeof(int));",
+    "reponse": "malloc",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction libère la mémoire allouée dynamiquement pour éviter les fuites (memory leaks) ?",
+    "code": "int *ptr = malloc(100);\n___(ptr);\nptr = NULL;",
+    "reponse": "free",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction alloue de la mémoire et l'initialise à zéro ?",
+    "code": "int *tab = (int *)___(10, sizeof(int));",
+    "reponse": "calloc",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction permet de redimensionner un bloc de mémoire déjà alloué ?",
+    "code": "tab = (int *)___(tab, 20 * sizeof(int));",
+    "reponse": "realloc",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel fichier d'en-tête (header) est requis pour utiliser malloc, free, calloc et realloc ?",
+    "code": "#include <___>\n\nint main() {\n    void *m = malloc(10);\n    free(m);\n}",
+    "reponse": "stdlib.h",
+    "difficulte": 2
+  },
+  {
+    "question": "Quels symboles sont utilisés pour déclarer un tableau statique ?",
+    "code": "int nombres___ = {1, 2, 3, 4, 5};",
+    "reponse": "[]",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel caractère spécial, valant 0, marque obligatoirement la fin d'une chaîne de caractères en C ?",
+    "code": "char mot[] = {'O', 'K', '___'};",
+    "reponse": "\\0",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction donne la longueur d'une chaîne de caractères (sans compter le caractère de fin) ?",
+    "code": "char str[] = \"Hello\";\nint len = ___(str); // vaut 5",
+    "reponse": "strlen",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction copie le contenu d'une chaîne de caractères dans une autre ?",
+    "code": "char dest[20];\n___(dest, \"Copie ça\");",
+    "reponse": "strcpy",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction copie un nombre maximum défini de caractères (plus sécurisée) ?",
+    "code": "char dest[10];\n___(dest, \"TexteTropLong\", 9);\ndest[9] = '\\0';",
+    "reponse": "strncpy",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction compare deux chaînes et renvoie 0 si elles sont identiques ?",
+    "code": "if (___(str1, str2) == 0) {\n    printf(\"Les chaînes sont égales\");\n}",
+    "reponse": "strcmp",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction compare uniquement les N premiers caractères de deux chaînes ?",
+    "code": "if (___(str1, str2, 3) == 0) {\n    printf(\"Les 3 premiers chars sont identiques\");\n}",
+    "reponse": "strncmp",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction concatène (ajoute à la fin) une chaîne à une autre ?",
+    "code": "char base[50] = \"Hello \";\n___(base, \"World\");",
+    "reponse": "strcat",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel fichier d'en-tête (header) est indispensable pour utiliser strlen, strcpy, strcmp... ?",
+    "code": "#include <___>\n\nint len = strlen(\"C\");",
+    "reponse": "string.h",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction recherche la première occurrence d'un caractère dans une chaîne ?",
+    "code": "char *ptr = ___(\"Bonjour\", 'j');\nif (ptr != NULL) printf(\"Trouvé\");",
+    "reponse": "strchr",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction recherche une sous-chaîne complète à l'intérieur d'une chaîne ?",
+    "code": "char *ptr = ___(\"La maison bleue\", \"maison\");",
+    "reponse": "strstr",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction de stdlib.h convertit une chaîne de caractères en entier (ASCII to Integer) ?",
+    "code": "int valeur = ___(\"42\");",
+    "reponse": "atoi",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction permet de formater des données et de les écrire dans une chaîne plutôt qu'à l'écran ?",
+    "code": "char buffer[50];\n___(buffer, \"Mon score est %d\", 100);",
+    "reponse": "sprintf",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé crée un type de données composite regroupant plusieurs variables sous un même nom ?",
+    "code": "___ Joueur {\n    char nom[50];\n    int hp;\n};",
+    "reponse": "struct",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé crée un alias ou un nouveau nom pour un type existant ?",
+    "code": "___ unsigned char byte;",
+    "reponse": "typedef",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel opérateur permet d'accéder au membre d'une structure à partir de son instance ?",
+    "code": "struct Joueur j1;\nj1___hp = 100;",
+    "reponse": ".",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel opérateur permet d'accéder au membre d'une structure à partir d'un POINTEUR vers cette structure ?",
+    "code": "struct Joueur *p_j1 = &j1;\np_j1___hp = 50;",
+    "reponse": "->",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé définit un type d'énumération contenant des constantes nommées ?",
+    "code": "___ Jour { LUNDI, MARDI, MERCREDI };",
+    "reponse": "enum",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé crée un type où tous les membres partagent le MÊME espace mémoire ?",
+    "code": "___ Data {\n    int i;\n    float f;\n};\n// i et f occupent la même adresse",
+    "reponse": "union",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel est le type pointeur opaque utilisé pour représenter un flux de fichier ouvert ?",
+    "code": "___ *fichier = fopen(\"data.txt\", \"r\");",
+    "reponse": "FILE",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction ouvre un fichier selon un mode défini (\"r\", \"w\", \"a\") ?",
+    "code": "FILE *f = ___(\"log.txt\", \"w\");",
+    "reponse": "fopen",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction ferme proprement un fichier pour libérer les ressources système ?",
+    "code": "FILE *f = fopen(\"log.txt\", \"w\");\n___(f);",
+    "reponse": "fclose",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction permet d'écrire du texte formaté directement dans un fichier ?",
+    "code": "FILE *f = fopen(\"log.txt\", \"w\");\n___(f, \"Erreur n°%d\", 404);",
+    "reponse": "fprintf",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction permet de lire des données formatées depuis un fichier ?",
+    "code": "int id;\n___(f, \"%d\", &id);",
+    "reponse": "fscanf",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction lit une ligne complète d'un fichier (jusqu'à N caractères) ?",
+    "code": "char buffer[100];\n___(buffer, 100, f);",
+    "reponse": "fgets",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction écrit une chaîne de caractères dans un fichier (sans formater) ?",
+    "code": "___(\"Message simple\\n\", f);",
+    "reponse": "fputs",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction lit un seul et unique caractère depuis un fichier ?",
+    "code": "int c = ___(f);\nif (c != EOF) printf(\"%c\", c);",
+    "reponse": "fgetc",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction écrit un seul caractère dans un fichier ?",
+    "code": "___('A', f);",
+    "reponse": "fputc",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle macro (valant souvent -1) indique que la Fin du Fichier a été atteinte ?",
+    "code": "int c;\nwhile ((c = fgetc(f)) != ___) {\n    putchar(c);\n}",
+    "reponse": "EOF",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mode de fichier permet de l'ouvrir en Lecture (Read) uniquement ?",
+    "code": "FILE *f = fopen(\"config.ini\", \"___\");",
+    "reponse": "r",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mode de fichier l'ouvre en Écriture (Write) en effaçant son contenu précédent ?",
+    "code": "FILE *f = fopen(\"nouveau.txt\", \"___\");",
+    "reponse": "w",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mode de fichier l'ouvre en Ajout (Append) pour écrire à la fin sans effacer ?",
+    "code": "FILE *f = fopen(\"journal.log\", \"___\");",
+    "reponse": "a",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle directive du préprocesseur permet de créer une macro ou une constante ?",
+    "code": "#___ PI 3.14159\n\nfloat aire = PI * r * r;",
+    "reponse": "define",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle directive vérifie si une macro a été définie ?",
+    "code": "#___ DEBUG\n    printf(\"Mode debug actif\");\n#endif",
+    "reponse": "ifdef",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle directive vérifie si une macro n'a PAS été définie (souvent utilisé pour les Include Guards) ?",
+    "code": "#___ HEADER_H\n#define HEADER_H\n// Déclarations\n#endif",
+    "reponse": "ifndef",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle directive clôture un bloc conditionnel du préprocesseur (#ifdef ou #ifndef) ?",
+    "code": "#ifdef WINDOWS\n    #include <windows.h>\n#___",
+    "reponse": "endif",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle syntaxe d'include dit au compilateur de chercher le fichier dans le dossier du projet plutôt que dans les dossiers systèmes ?",
+    "code": "#include ___mon_header.h___",
+    "reponse": "\"",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé restreint la visibilité d'une variable ou fonction à son propre fichier de code (Internal Linkage) ?",
+    "code": "___ int variable_privee = 42;",
+    "reponse": "static",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé prolonge la durée de vie d'une variable locale à toute l'exécution du programme, en conservant sa valeur entre les appels ?",
+    "code": "void compter() {\n    ___ int compteur = 0;\n    compteur++;\n}",
+    "reponse": "static",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé indique au compilateur qu'une globale est déclarée dans un AUTRE fichier objet ?",
+    "code": "___ int configuration_globale;",
+    "reponse": "extern",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé avertit le compilateur que la valeur de la variable peut changer à tout moment (par un signal, le hardware, etc.) et empêche les optimisations abusives ?",
+    "code": "___ int flag_materiel = 0;",
+    "reponse": "volatile",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé suggère au compilateur de stocker la variable dans un registre du CPU pour des accès ultra-rapides ?",
+    "code": "___ int compteur_rapide = 0;",
+    "reponse": "register",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la syntaxe pour déclarer un tableau de pointeurs sur des caractères (souvent utilisé pour les arguments de main) ?",
+    "code": "int main(int argc, char *argv___) {\n    return 0;\n}",
+    "reponse": "[]",
+    "difficulte": 2
+  }
+]

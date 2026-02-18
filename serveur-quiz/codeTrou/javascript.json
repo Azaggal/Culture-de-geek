@@ -1,0 +1,15 @@
+
+[
+  {
+    "question": "Quelle méthode permet de filtrer ce tableau ?",
+    "code": "const ages = [12, 18, 25, 14];\nconst majeurs = ages.___(age => age >= 18);",
+    "reponse": "filter",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment écouter un clic sur un bouton en JS Vanilla ?",
+    "code": "const btn = document.getElementById('monBtn');\nbtn.___('click', () => {\n  console.log('Cliqué !');\n});",
+    "reponse": "addEventListener",
+    "difficulte": 2
+  }
+]

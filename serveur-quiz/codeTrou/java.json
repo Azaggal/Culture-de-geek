@@ -1,0 +1,602 @@
+[
+  {
+    "question": "Comment afficher du texte dans la console avec un retour à la ligne ?",
+    "code": "System.out.___(\"Hello World!\");",
+    "reponse": "println",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le nom de la méthode principale qui lance un programme Java ?",
+    "code": "public static void ___(String[] args) {\n    System.out.println(\"Démarrage\");\n}",
+    "reponse": "main",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel type de retour indique qu'une méthode ne renvoie aucune valeur ?",
+    "code": "public ___ afficher() {\n    System.out.println(\"Action\");\n}",
+    "reponse": "void",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé permet d'appeler une méthode sans instancier la classe ?",
+    "code": "public ___ void methodeGlobale() {\n    System.out.println(\"Accessible partout\");\n}",
+    "reponse": "static",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel modificateur d'accès rend une variable visible partout ?",
+    "code": "___ String nom = \"Global\";",
+    "reponse": "public",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel modificateur d'accès cache une variable à l'extérieur de la classe ?",
+    "code": "___ int age = 25;",
+    "reponse": "private",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel modificateur rend une variable accessible uniquement dans son package et ses enfants ?",
+    "code": "___ String secretDeFamille = \"Chut\";",
+    "reponse": "protected",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé déclare un nouveau modèle d'objet ?",
+    "code": "public ___ Voiture {\n    int vitesse;\n}",
+    "reponse": "class",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé instancie un nouvel objet en mémoire ?",
+    "code": "Voiture v = ___ Voiture();",
+    "reponse": "new",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé fait référence à l'instance actuelle de la classe ?",
+    "code": "public void setNom(String nom) {\n    ___.nom = nom;\n}",
+    "reponse": "this",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le type primitif pour vrai ou faux ?",
+    "code": "___ estMajeur = true;",
+    "reponse": "boolean",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le type primitif pour les nombres entiers classiques ?",
+    "code": "___ score = 100;",
+    "reponse": "int",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le type primitif pour les nombres à virgule avec une haute précision ?",
+    "code": "___ pi = 3.14159265;",
+    "reponse": "double",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le type (Objet) pour gérer du texte ?",
+    "code": "___ message = \"Bienvenue\";",
+    "reponse": "String",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé crée une constante qui ne peut plus être modifiée ?",
+    "code": "public ___ int MAX_JOUEURS = 4;",
+    "reponse": "final",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la valeur booléenne pour 'vrai' ?",
+    "code": "boolean actif = ___;",
+    "reponse": "true",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la valeur booléenne pour 'faux' ?",
+    "code": "boolean bloque = ___;",
+    "reponse": "false",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé représente l'absence d'objet en mémoire ?",
+    "code": "String texte = ___;\nif (texte == ___) { System.out.println(\"Vide\"); }",
+    "reponse": "null",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur vérifie si un objet provient d'une classe spécifique ?",
+    "code": "if (monAnimal ___ Chien) {\n    System.out.println(\"Ouaf\");\n}",
+    "reponse": "instanceof",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment renvoyer le résultat à la fin d'une méthode ?",
+    "code": "public int carre(int x) {\n    ___ x * x;\n}",
+    "reponse": "return",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé initie un test conditionnel ?",
+    "code": "___ (age >= 18) {\n    System.out.println(\"Majeur\");\n}",
+    "reponse": "if",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé s'exécute si la condition 'if' est fausse ?",
+    "code": "if (a > b) {\n    //...\n} ___ {\n    System.out.println(\"Plus petit\");\n}",
+    "reponse": "else",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle structure permet d'évaluer plusieurs valeurs spécifiques d'une variable ?",
+    "code": "___ (jour) {\n    case 1: System.out.println(\"Lundi\"); break;\n}",
+    "reponse": "switch",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans un switch, quel mot-clé définit un cas à tester ?",
+    "code": "switch (niveau) {\n    ___ 1: demarrerTuto(); break;\n}",
+    "reponse": "case",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment stopper l'exécution à la fin d'un cas dans un 'switch' ou sortir d'une boucle ?",
+    "code": "while (true) {\n    if (fini) ___;\n}",
+    "reponse": "break",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans un switch, quel cas s'exécute si aucun autre ne correspond ?",
+    "code": "switch (choix) {\n    case 1: start(); break;\n    ___: erreur();\n}",
+    "reponse": "default",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle boucle est idéale pour itérer un nombre précis de fois ?",
+    "code": "___ (int i = 0; i < 10; i++) {\n    System.out.println(i);\n}",
+    "reponse": "for",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle boucle s'exécute TANT QU'une condition est vraie ?",
+    "code": "___ (vie > 0) {\n    jouer();\n}",
+    "reponse": "while",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle boucle garantit de s'exécuter au moins une fois avant de tester la condition ?",
+    "code": "___\n{\n   saisirMotDePasse();\n} while (!valide);",
+    "reponse": "do",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé passe directement à la prochaine itération d'une boucle ?",
+    "code": "for (int i=0; i<10; i++) {\n    if (i % 2 == 0) ___;\n    System.out.println(\"Impair : \" + i);\n}",
+    "reponse": "continue",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour qu'une classe hérite d'une autre classe ?",
+    "code": "public class Chat ___ Animal {\n    // ...\n}",
+    "reponse": "extends",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour qu'une classe adopte une interface ?",
+    "code": "public class Oiseau ___ Volant {\n    // ...\n}",
+    "reponse": "implements",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé définit un contrat avec des méthodes vides à respecter ?",
+    "code": "public ___ Combattant {\n    void attaquer();\n}",
+    "reponse": "interface",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé permet d'appeler le constructeur ou la méthode de la classe parente ?",
+    "code": "public Enfant() {\n    ___(); // Appelle Parent()\n}",
+    "reponse": "super",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé empêche une classe d'être instanciée (elle doit être héritée) ?",
+    "code": "public ___ class Forme {\n    // ...\n}",
+    "reponse": "abstract",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle annotation indique qu'on redéfinit la méthode de la classe parente ?",
+    "code": "___ \npublic String toString() {\n    return \"Mon Objet\";\n}",
+    "reponse": "@Override",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé, tout en haut du fichier, définit le dossier logique de la classe ?",
+    "code": "___ com.monjeu.utils;\n\npublic class MathHelper {}",
+    "reponse": "package",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé permet d'inclure des classes externes à votre fichier ?",
+    "code": "___ java.util.ArrayList;\n\npublic class Main {}",
+    "reponse": "import",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé dans la signature d'une méthode avertit qu'elle peut renvoyer une erreur ?",
+    "code": "public void lireFichier() ___ IOException {\n    //...\n}",
+    "reponse": "throws",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé permet de déclencher manuellement une exception ?",
+    "code": "if (age < 0) {\n    ___ new Exception(\"Âge invalide\");\n}",
+    "reponse": "throw",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel bloc tente d'exécuter un code susceptible de planter ?",
+    "code": "___ {\n    int x = 10 / 0;\n} catch(Exception e) {}",
+    "reponse": "try",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel bloc intercepte l'erreur du bloc précédent ?",
+    "code": "try {\n    lireFichier();\n} ___(IOException e) {\n    System.out.println(\"Erreur\");\n}",
+    "reponse": "catch",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel bloc s'exécute toujours, qu'il y ait eu une erreur ou non ?",
+    "code": "try {\n    //...\n} catch(Exception e) {\n    //...\n} ___ {\n    fermerConnexion();\n}",
+    "reponse": "finally",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est la classe mère de toutes les erreurs capturables en Java ?",
+    "code": "try {\n    bug();\n} catch(___ e) {\n    e.printStackTrace();\n}",
+    "reponse": "Exception",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle sous-catégorie d'erreur n'oblige pas à utiliser un try/catch (Unchecked Exception) ?",
+    "code": "public void diviser() throws ___ {\n    //...\n}",
+    "reponse": "RuntimeException",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthode d'Exception récupère le petit texte explicatif de l'erreur ?",
+    "code": "catch(Exception e) {\n    System.out.println(\"Motif : \" + e.___());\n}",
+    "reponse": "getMessage",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode affiche l'historique en console rouge de l'origine du plantage ?",
+    "code": "catch(Exception e) {\n    e.___(); // Affiche la pile d'appels\n}",
+    "reponse": "printStackTrace",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle exception se déclenche si on divise par zéro en Java ?",
+    "code": "try { int x = 1/0; } \ncatch(___ e) { }",
+    "reponse": "ArithmeticException",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle exception jette-t-on si un paramètre fourni à la méthode est absurde ?",
+    "code": "if(vitesse < 0) {\n    throw new ___(\"Vitesse négative\");\n}",
+    "reponse": "IllegalArgumentException",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la pire erreur Java, causée par l'appel d'une méthode sur une variable 'null' ?",
+    "code": "String s = null;\n// s.length() déclenche une ___",
+    "reponse": "NullPointerException",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle PROPRIÉTÉ donne la taille d'un tableau natif [] ?",
+    "code": "int[] nombres = {1, 2, 3};\nint taille = nombres.___;",
+    "reponse": "length",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle MÉTHODE donne le nombre de caractères dans un String ?",
+    "code": "String mot = \"Java\";\nint taille = mot.___();",
+    "reponse": "length",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode String récupère le caractère à un index précis ?",
+    "code": "String mot = \"Hello\";\nchar c = mot.___(0); // 'H'",
+    "reponse": "charAt",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode String coupe une chaîne entre deux index ?",
+    "code": "String texte = \"Batman\";\nString fin = texte.___(3, 6); // 'man'",
+    "reponse": "substring",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode String découpe une phrase en tableau autour d'un caractère ?",
+    "code": "String liste = \"A,B,C\";\nString[] tab = liste.___(\",\");",
+    "reponse": "split",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode String vérifie si un bout de texte est présent à l'intérieur ?",
+    "code": "String mdp = \"admin123\";\nboolean faible = mdp.___(\"123\");",
+    "reponse": "contains",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode String vérifie si le texte COMMENCE par un mot précis ?",
+    "code": "String url = \"https://site.com\";\nif (url.___(\"https\")) {}",
+    "reponse": "startsWith",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode String transforme tout en majuscules ?",
+    "code": "String crier = \"attention\".___();",
+    "reponse": "toUpperCase",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode String transforme tout en minuscules ?",
+    "code": "String email = \"TEST@MAIL.COM\".___();",
+    "reponse": "toLowerCase",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode String supprime les espaces vides au début et à la fin ?",
+    "code": "String input = \"   ok   \";\nString propre = input.___();",
+    "reponse": "trim",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle classe instancie une liste dynamique en Java ?",
+    "code": "List<String> joueurs = new ___<>();",
+    "reponse": "ArrayList",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode ajoute un élément à la fin d'une List ou d'un Set ?",
+    "code": "List<String> inventaire = new ArrayList<>();\ninventaire.___(\"Épée\");",
+    "reponse": "add",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode récupère un élément dans une List selon son index ?",
+    "code": "String premier = liste.___(0);",
+    "reponse": "get",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode retire un élément d'une Collection ?",
+    "code": "liste.___(\"Malus\"); // Retire l'objet de la liste",
+    "reponse": "remove",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode donne le nombre d'éléments dans une List, Map ou Set ?",
+    "code": "int nbElements = maListe.___();",
+    "reponse": "size",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle classe instancie un ensemble (Set) empêchant les doublons et sans ordre ?",
+    "code": "Set<String> uniques = new ___<>();",
+    "reponse": "HashSet",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode vérifie si une List ou un Set contient un élément précis ?",
+    "code": "if (amis.___(\"Marc\")) {\n    System.out.println(\"Déjà ajouté\");\n}",
+    "reponse": "contains",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode vide complètement une Collection ?",
+    "code": "panier.___(); // Le panier est maintenant vide",
+    "reponse": "clear",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode vérifie si une Collection n'a aucun élément ?",
+    "code": "if (liste.___()) {\n    System.out.println(\"Vide !\");\n}",
+    "reponse": "isEmpty",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle classe utilitaire permet de trier (sort) ou mélanger (shuffle) une List ?",
+    "code": "___.sort(maListe);",
+    "reponse": "Collections",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle classe instancie un dictionnaire de type Clé -> Valeur ?",
+    "code": "Map<String, Integer> ages = new ___<>();",
+    "reponse": "HashMap",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode insère ou met à jour une paire Clé/Valeur dans une Map ?",
+    "code": "dico.___(\"Java\", 100);",
+    "reponse": "put",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode récupère la valeur associée à une Clé dans une Map ?",
+    "code": "int points = scores.___(\"Bob\");",
+    "reponse": "get",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode d'une Map retourne un Set contenant toutes les clés ?",
+    "code": "for (String cle : map.___()) {\n    System.out.println(cle);\n}",
+    "reponse": "keySet",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthode d'une Map retourne toutes les valeurs (sans les clés) ?",
+    "code": "for (int val : map.___()) {\n    System.out.println(val);\n}",
+    "reponse": "values",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthode vérifie si une Map possède une certaine clé ?",
+    "code": "if (map.___(\"cle_secrete\")) {\n    //...\n}",
+    "reponse": "containsKey",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction de la classe Math donne la valeur positive absolue ?",
+    "code": "int positif = Math.___(-10); // 10",
+    "reponse": "abs",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction de la classe Math garde le plus grand de deux nombres ?",
+    "code": "int meilleur = Math.___(score1, score2);",
+    "reponse": "max",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction de la classe Math calcule une puissance (A puissance B) ?",
+    "code": "double cube = Math.___(2, 3); // 2 au cube",
+    "reponse": "pow",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction de la classe Math génère un flottant aléatoire entre 0.0 et 1.0 ?",
+    "code": "double hasard = Math.___();",
+    "reponse": "random",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode ouvre un flux de données (Stream) depuis une Collection ?",
+    "code": "long count = liste.___().count();",
+    "reponse": "stream",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans un Stream, quelle méthode filtre les éléments via une condition ?",
+    "code": "liste.stream()\n     .___(x -> x > 10)\n     .collect(Collectors.toList());",
+    "reponse": "filter",
+    "difficulte": 3
+  },
+  {
+    "question": "Dans un Stream, quelle méthode transforme les éléments (ex: passe tout en majuscules) ?",
+    "code": "liste.stream()\n     .___(String::toUpperCase)\n     .collect(Collectors.toList());",
+    "reponse": "map",
+    "difficulte": 3
+  },
+  {
+    "question": "Dans un Stream ou une Collection, quelle méthode exécute une action pour chaque élément ?",
+    "code": "liste.___ (nom -> System.out.println(nom));",
+    "reponse": "forEach",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans un Stream, quelle méthode rassemble le résultat final dans une nouvelle List ?",
+    "code": "List<String> fin = stream.___ (Collectors.toList());",
+    "reponse": "collect",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthode d'Optional permet d'emballer une valeur qui peut potentiellement être nulle ?",
+    "code": "Optional<String> opt = Optional.___(valeurInconnue);",
+    "reponse": "ofNullable",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthode d'Optional renvoie True s'il contient bien une valeur ?",
+    "code": "if (opt.___()) {\n    System.out.println(opt.get());\n}",
+    "reponse": "isPresent",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode d'Optional retourne la valeur interne ou une valeur par défaut si c'est vide ?",
+    "code": "String nom = opt.___(\"Anonyme\");",
+    "reponse": "orElse",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel symbole magique sépare les paramètres du corps dans une expression Lambda ?",
+    "code": "Bouton.onClick((event) ___ {\n    System.out.println(\"Clic\");\n});",
+    "reponse": "->",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode statique d'Integer convertit une chaîne \"123\" en vrai int ?",
+    "code": "int num = Integer.___(\"123\");",
+    "reponse": "parseInt",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode de Thread met en pause l'exécution pendant des millisecondes ?",
+    "code": "try {\n    Thread.___(1000); // 1 seconde\n} catch(Exception e){}",
+    "reponse": "sleep",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode lance concrètement l'exécution d'un nouveau Thread en arrière-plan ?",
+    "code": "Thread t = new Thread(maTache);\nt.___();",
+    "reponse": "start",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle interface fonctionnelle (contenant la méthode run) passe-t-on à un Thread ?",
+    "code": "public class MaTache implements ___ {\n    public void run() { }\n}",
+    "reponse": "Runnable",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé dans la signature d'une méthode empêche deux Threads d'y entrer en même temps ?",
+    "code": "public ___ void methodeThreadSafe() {\n    // Code sensible\n}",
+    "reponse": "synchronized",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé indique qu'une variable sera modifiée par plusieurs Threads, empêchant le cache CPU ?",
+    "code": "private ___ boolean flag = true;",
+    "reponse": "volatile",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé définit un type spécial de classe représentant un groupe fixe de constantes ?",
+    "code": "public ___ Directions {\n    NORD, SUD, EST, OUEST\n}",
+    "reponse": "enum",
+    "difficulte": 2
+  },
+  {
+    "question": "Depuis Java 14, quel mot-clé crée une classe immuable parfaite pour transporter des données (DTO) ?",
+    "code": "public ___ UserDTO(int id, String nom) {}",
+    "reponse": "record",
+    "difficulte": 3
+  },
+  {
+    "question": "Depuis Java 10, quel mot-clé laisse le compilateur deviner le type de la variable locale ?",
+    "code": "___ liste = new ArrayList<String>();",
+    "reponse": "var",
+    "difficulte": 2
+  },
+  {
+    "question": "Depuis Java 14, dans un Switch Expression, quel mot-clé retourne la valeur du bloc ?",
+    "code": "int num = switch(jour) {\n    case \"LUNDI\" -> 1;\n    default -> { ___ 0; }\n};",
+    "reponse": "yield",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthode définie par l'interface Cloneable crée une copie d'un objet ?",
+    "code": "Object copie = monObjet.___();",
+    "reponse": "clone",
+    "difficulte": 3
+  }
+]

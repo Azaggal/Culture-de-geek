@@ -1,0 +1,492 @@
+[
+  {
+    "question": "Quel est le port par défaut pour le protocole HTTP ?",
+    "reponse": "80",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le port par défaut pour le protocole HTTPS ?",
+    "reponse": "443",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel protocole est utilisé pour résoudre un nom de domaine en adresse IP ?",
+    "reponse": "DNS",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle la couche 3 du modèle OSI ?",
+    "reponse": "Réseau",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle la couche 4 du modèle OSI ?",
+    "reponse": "Transport",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel protocole de la couche transport est orienté connexion et garantit la livraison ?",
+    "reponse": "TCP",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel protocole de la couche transport est non orienté connexion et très rapide (utilisé pour le streaming) ?",
+    "reponse": "UDP",
+    "difficulte": 1
+  },
+  {
+    "question": "Que signifie l'acronyme MAC dans 'adresse MAC' ?",
+    "reponse": "Media Access Control",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle commande permet d'afficher le chemin routé par les paquets IP sous Windows ?",
+    "reponse": "tracert",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle commande permet d'afficher le chemin routé par les paquets IP sous Linux ?",
+    "reponse": "traceroute",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le port par défaut pour une connexion SSH ?",
+    "reponse": "22",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel protocole permet d'attribuer automatiquement une adresse IP à un appareil sur un réseau ?",
+    "reponse": "DHCP",
+    "difficulte": 1
+  },
+  {
+    "question": "Combien de bits composent une adresse IPv4 ?",
+    "reponse": "32",
+    "difficulte": 2
+  },
+  {
+    "question": "Combien de bits composent une adresse IPv6 ?",
+    "reponse": "128",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le cœur d'un système d'exploitation, faisant le pont entre le matériel et le logiciel ?",
+    "reponse": "Le Noyau (Kernel)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle commande Linux permet de lister les fichiers, y compris les fichiers cachés ?",
+    "reponse": "ls -a",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle commande Linux permet de modifier les permissions d'un fichier ?",
+    "reponse": "chmod",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le PID (Process ID) du tout premier processus lancé par un système Linux ?",
+    "reponse": "1",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle le gestionnaire de services et système d'initialisation de la majorité des distributions Linux modernes ?",
+    "reponse": "systemd",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle commande Linux permet d'afficher l'espace disque disponible sur les partitions ?",
+    "reponse": "df",
+    "difficulte": 2
+  },
+  {
+    "question": "Que signifie l'acronyme récursif GNU ?",
+    "reponse": "GNU's Not Unix",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel est le système de fichiers par défaut utilisé par Windows ?",
+    "reponse": "NTFS",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel système de fichiers standard (et journalisé) est très largement utilisé sous Linux aujourd'hui ?",
+    "reponse": "ext4",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle commande permet d'arrêter un processus sous Linux à l'aide de son PID ?",
+    "reponse": "kill",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment appelle-t-on l'espace du disque dur utilisé par l'OS comme extension de la RAM ?",
+    "reponse": "Le Swap",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel raccourci clavier permet d'interrompre (SIGINT) un processus en cours dans un terminal ?",
+    "reponse": "Ctrl+C",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui est le créateur original du noyau Linux ?",
+    "reponse": "Linus Torvalds",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans quel fichier spécifique d'un système Linux les mots de passe des utilisateurs sont-ils stockés sous forme hachée ?",
+    "reponse": "/etc/shadow",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle structure de données fonctionne sur le principe LIFO (Last In, First Out) ?",
+    "reponse": "La Pile (Stack)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle structure de données fonctionne sur le principe FIFO (First In, First Out) ?",
+    "reponse": "La File (Queue)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la complexité temporelle moyenne de l'algorithme du Tri Rapide (Quicksort) ?",
+    "reponse": "O(n log n)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est la complexité temporelle dans le pire des cas de l'algorithme du Tri Rapide (Quicksort) ?",
+    "reponse": "O(n²)",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel algorithme de recherche optimal s'utilise exclusivement sur un tableau déjà trié ?",
+    "reponse": "Recherche dichotomique",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle structure de données relie des nœuds entre eux à l'aide de pointeurs mémoire ?",
+    "reponse": "Liste chaînée",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment appelle-t-on un arbre où chaque nœud possède au maximum deux enfants ?",
+    "reponse": "Un arbre binaire",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel algorithme célèbre permet de trouver le plus court chemin dans un graphe à poids positifs ?",
+    "reponse": "Dijkstra",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans un arbre binaire, comment appelle-t-on le parcours : Enfant Gauche -> Racine -> Enfant Droit ?",
+    "reponse": "Parcours infixe",
+    "difficulte": 3
+  },
+  {
+    "question": "Dans la théorie des graphes, comment appelle-t-on le lien qui relie deux sommets ?",
+    "reponse": "Une arête",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle structure de données utilise une fonction mathématique pour calculer l'index de stockage d'un élément ?",
+    "reponse": "Table de hachage (ou Dictionnaire)",
+    "difficulte": 2
+  },
+  {
+    "question": "En algorithmique, comment appelle-t-on une fonction qui s'appelle elle-même ?",
+    "reponse": "Une fonction récursive",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel algorithme de tri (O(n log n)) est basé sur le principe 'Diviser pour régner' en fusionnant des sous-listes ?",
+    "reponse": "Tri fusion (Merge sort)",
+    "difficulte": 2
+  },
+  {
+    "question": "À quelle classe de complexité algorithmique appartient le fameux problème du voyageur de commerce ?",
+    "reponse": "NP-difficile (ou NP-complet)",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel terme anglais est couramment utilisé pour désigner l'opération d'ajout d'un élément au sommet d'une pile ?",
+    "reponse": "Push",
+    "difficulte": 1
+  },
+  {
+    "question": "Que signifie le 'R' dans l'acronyme SGBDR ?",
+    "reponse": "Relationnel",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le langage standard utilisé pour interagir avec une base de données relationnelle ?",
+    "reponse": "SQL",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle clause SQL permet de filtrer des résultats APRÈS avoir effectué une agrégation (GROUP BY) ?",
+    "reponse": "HAVING",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel acronyme de 4 lettres décrit les propriétés garantissant la fiabilité d'une transaction en base de données ?",
+    "reponse": "ACID",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans les propriétés ACID, que signifie le 'A' ?",
+    "reponse": "Atomicité",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel type de jointure SQL retourne toutes les lignes de la table de gauche, même sans correspondance à droite ?",
+    "reponse": "LEFT JOIN (ou LEFT OUTER JOIN)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel théorème affirme qu'un système distribué ne peut garantir que 2 des 3 propriétés : Consistance, Disponibilité, Tolérance au partitionnement ?",
+    "reponse": "Théorème CAP",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la base de données NoSQL orientée documents la plus populaire au monde ?",
+    "reponse": "MongoDB",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle base de données de type 'clé-valeur' fonctionnant en mémoire est extrêmement utilisée comme système de cache ?",
+    "reponse": "Redis",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle commande SQL est utilisée pour ajouter une nouvelle ligne de données dans une table ?",
+    "reponse": "INSERT",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment appelle-t-on le champ permettant de lier une table à la clé primaire d'une autre table ?",
+    "reponse": "Clé étrangère",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle contrainte SQL garantit l'unicité et l'identification absolue de chaque ligne d'une table ?",
+    "reponse": "Clé primaire",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel SGBD relationnel open-source, très respectueux des standards SQL, a pour logo un éléphant ?",
+    "reponse": "PostgreSQL",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle clause SQL permet de trier le résultat d'une requête ?",
+    "reponse": "ORDER BY",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment appelle-t-on le problème où une transaction lit des données non encore validées (COMMIT) par une autre transaction ?",
+    "reponse": "Dirty read (Lecture sale)",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelle le composant matériel considéré comme le cerveau de l'ordinateur, qui exécute les instructions ?",
+    "reponse": "Le Processeur (CPU)",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment appelle-t-on la petite mémoire extrêmement rapide intégrée directement à l'intérieur du processeur (L1, L2, L3) ?",
+    "reponse": "La mémoire Cache",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est la plus petite unité d'information manipulable par un ordinateur ?",
+    "reponse": "Le Bit",
+    "difficulte": 1
+  },
+  {
+    "question": "Combien de bits y a-t-il dans un octet (byte) ?",
+    "reponse": "8",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment nomme-t-on l'architecture matérielle classique où les instructions et les données partagent le même espace mémoire ?",
+    "reponse": "Architecture de von Neumann",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel composant d'un ordinateur génère des impulsions électriques régulières pour synchroniser les opérations du processeur ?",
+    "reponse": "L'Horloge",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle le circuit logique à l'intérieur du CPU chargé d'effectuer les opérations mathématiques élémentaires ?",
+    "reponse": "UAL (Unité Arithmétique et Logique)",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle la mémoire volatile principale d'un ordinateur où sont stockés les programmes en cours d'exécution ?",
+    "reponse": "La RAM (Mémoire vive)",
+    "difficulte": 1
+  },
+  {
+    "question": "Que signifie l'acronyme SSD, désignant les disques durs modernes sans pièces mécaniques ?",
+    "reponse": "Solid State Drive",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle loi empirique prédisait que le nombre de transistors des microprocesseurs doublerait environ tous les deux ans ?",
+    "reponse": "Loi de Moore",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel type de cyberattaque consiste à submerger un serveur de fausses requêtes pour le rendre indisponible ?",
+    "reponse": "DDoS (Déni de service distribué)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle attaque exploite une faille applicative pour exécuter des requêtes en base de données non prévues par le développeur ?",
+    "reponse": "Injection SQL",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel algorithme de hachage, générant une empreinte de 128 bits, est aujourd'hui considéré comme obsolète et vulnérable aux collisions ?",
+    "reponse": "MD5",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle famille d'algorithmes de hachage, standardisée par la NSA (ex: version 256), est aujourd'hui la norme de l'industrie ?",
+    "reponse": "SHA",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment appelle-t-on l'attaque d'ingénierie sociale visant à tromper un utilisateur via un faux email ou un faux site web ?",
+    "reponse": "Le Phishing (Hameçonnage)",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment appelle-t-on un système de chiffrement qui utilise la MÊME clé pour chiffrer et déchiffrer le message ?",
+    "reponse": "Chiffrement symétrique",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment appelle-t-on un système de chiffrement utilisant une paire de clés (une publique, une privée) ?",
+    "reponse": "Chiffrement asymétrique",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le nom du très célèbre algorithme de chiffrement asymétrique dont la sécurité repose sur la difficulté de factoriser de grands nombres premiers ?",
+    "reponse": "RSA",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelle la technique d'attaque consistant à tester toutes les combinaisons possibles d'un mot de passe ?",
+    "reponse": "Brute force (Force brute)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel type de logiciel malveillant chiffre les données de sa victime et exige un paiement pour fournir la clé de déchiffrement ?",
+    "reponse": "Ransomware (Rançongiciel)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle faille web permet à un attaquant d'injecter et de faire exécuter du code JavaScript malveillant sur le navigateur d'autres utilisateurs ?",
+    "reponse": "XSS (Cross-Site Scripting)",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment appelle-t-on l'attaque réseau où un pirate intercepte secrètement et relaie les communications entre deux parties ?",
+    "reponse": "Man-in-the-Middle (L'homme du milieu)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel terme, issu des vieux westerns, est utilisé en sécurité informatique pour désigner un 'Hacker éthique' ?",
+    "reponse": "White hat",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment appelle-t-on la technique consistant à dissimuler un message secret à l'intérieur d'un autre fichier anodin (comme une image ou un son) ?",
+    "reponse": "La stéganographie",
+    "difficulte": 3
+  },
+  {
+    "question": "Que signifie l'acronyme VPN ?",
+    "reponse": "Virtual Private Network",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel langage de balisage est utilisé pour créer et structurer le contenu d'une page web ?",
+    "reponse": "HTML",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel langage est utilisé pour décrire la présentation et styliser une page web ?",
+    "reponse": "CSS",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel code de statut HTTP indique que la ressource demandée est introuvable sur le serveur ?",
+    "reponse": "404",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel code de statut HTTP générique indique qu'une erreur interne s'est produite côté serveur ?",
+    "reponse": "500",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel style d'architecture logicielle, reposant sur des requêtes HTTP sans état (stateless), est le standard actuel pour concevoir des API web ?",
+    "reponse": "REST (ou RESTful)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel format de données texte, très léger et lisible, a aujourd'hui largement remplacé le XML pour l'échange de données web ?",
+    "reponse": "JSON",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel célèbre outil de contrôle de version décentralisé a été initialement créé par Linus Torvalds en 2005 ?",
+    "reponse": "Git",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans les principes de conception de code SOLID, que signifie la lettre 'S' ?",
+    "reponse": "Single Responsibility (Responsabilité Unique)",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel paradigme de programmation est basé sur le concept de classes, d'instances, d'encapsulation et d'héritage ?",
+    "reponse": "Programmation Orientée Objet (POO)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel environnement d'exécution permet de faire tourner du code JavaScript côté serveur (hors d'un navigateur) ?",
+    "reponse": "Node.js",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle femme britannique du 19ème siècle est reconnue comme étant la toute première programmeuse de l'histoire de l'informatique ?",
+    "reponse": "Ada Lovelace",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel brillant mathématicien britannique est célèbre pour avoir théorisé l'ordinateur moderne et cassé le code de la machine Enigma ?",
+    "reponse": "Alan Turing",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle année marque le 'Temps 0' (l'Epoch) dans les systèmes Unix/Linux ?",
+    "reponse": "1970",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel insecte, retrouvé coincé dans un relais d'ordinateur en 1947 par Grace Hopper, a popularisé le terme de 'Bug' informatique ?",
+    "reponse": "Une mite (ou un papillon de nuit)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel raccourci clavier universel sauve quotidiennement la vie des développeurs en annulant la dernière action ?",
+    "reponse": "Ctrl + Z",
+    "difficulte": 1
+  }
+]

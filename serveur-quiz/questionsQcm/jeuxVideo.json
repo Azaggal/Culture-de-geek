@@ -1,0 +1,602 @@
+[
+  {
+    "question": "Quelle est la console de salon la plus vendue de l'histoire du jeu vidéo ?",
+    "options": ["PlayStation 2", "Nintendo DS", "Nintendo Wii", "PlayStation 4"],
+    "reponse": "PlayStation 2",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le jeu vidéo le plus vendu de tous les temps ?",
+    "options": ["Grand Theft Auto V", "Minecraft", "Tetris", "Wii Sports"],
+    "reponse": "Minecraft",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui est le créateur emblématique de Mario, Zelda et Donkey Kong ?",
+    "options": ["Hideo Kojima", "Shinji Mikami", "Shigeru Miyamoto", "Satoru Iwata"],
+    "reponse": "Shigeru Miyamoto",
+    "difficulte": 1
+  },
+  {
+    "question": "En quelle année est sortie la toute première PlayStation (PS1) au Japon ?",
+    "options": ["1992", "1994", "1996", "1998"],
+    "reponse": "1994",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans le jeu Portal, quel célèbre mensonge (devenu un mème) est inscrit sur les murs ?",
+    "options": ["The cake is a lie", "The exit is a trap", "GLaDOS is watching", "There is no spoon"],
+    "reponse": "The cake is a lie",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le nom du studio de développement derrière la saga 'The Last of Us' ?",
+    "options": ["Insomniac Games", "Naughty Dog", "Santa Monica Studio", "Bungie"],
+    "reponse": "Naughty Dog",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le nom complet et l'immatriculation du Master Chief dans Halo ?",
+    "options": ["John-117", "James-104", "Carter-259", "Noble-6"],
+    "reponse": "John-117",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans The Witcher 3, comment s'appelle le jeu de cartes extrêmement populaire dans les tavernes ?",
+    "options": ["Le Pazaak", "Le Gwynt", "Hearthstone", "Le Triple Triad"],
+    "reponse": "Le Gwynt",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle l'entreprise pharmaceutique à l'origine de l'épidémie dans Resident Evil ?",
+    "options": ["Aperture Science", "Tricell", "Umbrella Corporation", "Abstergo Industries"],
+    "reponse": "Umbrella Corporation",
+    "difficulte": 1
+  },
+  {
+    "question": "Sur quelle console historique est sorti le premier jeu 'Sonic the Hedgehog' en 1991 ?",
+    "options": ["Super Nintendo", "Sega Master System", "Sega Mega Drive", "Sega Saturn"],
+    "reponse": "Sega Mega Drive",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans le jargon du jeu vidéo, que signifie l'acronyme FPS ?",
+    "options": ["First Person Shooter", "Fast Playing System", "Final Player Score", "Free Play Style"],
+    "reponse": "First Person Shooter",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel héros de Nintendo portait initialement le nom de 'Jumpman' ?",
+    "options": ["Luigi", "Donkey Kong", "Mario", "Link"],
+    "reponse": "Mario",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans Pokémon, quel est le type de Pikachu ?",
+    "options": ["Normal", "Électrik", "Acier", "Fée"],
+    "reponse": "Électrik",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle cité dystopique sous-marine explore-t-on dans le premier jeu BioShock ?",
+    "options": ["Columbia", "Atlantis", "Rapture", "Midgar"],
+    "reponse": "Rapture",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel célèbre informaticien soviétique a créé le jeu Tetris en 1984 ?",
+    "options": ["Hironobu Sakaguchi", "Alexey Pajitnov", "Markus Persson", "Gabe Newell"],
+    "reponse": "Alexey Pajitnov",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment appelle-t-on le 'Ring of Death' (Anneau de la mort) qui signalait une panne matérielle sur la Xbox 360 ?",
+    "options": ["Red Ring of Death", "Blue Ring of Death", "Yellow Ring of Death", "Black Ring of Death"],
+    "reponse": "Red Ring of Death",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans l'E-sport, quel tournoi annuel de Dota 2 est réputé pour avoir le plus gros cashprize au monde ?",
+    "options": ["Les Worlds", "Le Major", "The International", "L'EVO"],
+    "reponse": "The International",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle la célèbre héroïne archéologue de Tomb Raider ?",
+    "options": ["Elena Fisher", "Chloe Frazer", "Aloy", "Lara Croft"],
+    "reponse": "Lara Croft",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel studio écossais (anciennement DMA Design) a créé la série Grand Theft Auto (GTA) ?",
+    "options": ["Rockstar North", "Ubisoft Montreal", "Epic Games", "Bethesda Game Studios"],
+    "reponse": "Rockstar North",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans World of Warcraft Classic (Vanilla), quel était le niveau maximum atteignable par un joueur ?",
+    "options": ["Niveau 40", "Niveau 60", "Niveau 80", "Niveau 100"],
+    "reponse": "Niveau 60",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans Mass Effect, comment s'appelle le vaisseau commandé par Shepard ?",
+    "options": ["L'Hyperion", "Le Faucon", "Le Normandy", "Le Pillar of Autumn"],
+    "reponse": "Le Normandy",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est l'ordre correct du célèbre 'Konami Code' ?",
+    "options": ["Haut Bas Gauche Droite A B", "Haut Haut Bas Bas Gauche Droite Gauche Droite B A", "A B B A Haut Bas", "Gauche Droite Haut Bas B A Select Start"],
+    "reponse": "Haut Haut Bas Bas Gauche Droite Gauche Droite B A",
+    "difficulte": 2
+  },
+  {
+    "question": "Qui est le grand antagoniste armé de l'épée Masamune dans Final Fantasy VII ?",
+    "options": ["Kefka", "Sephiroth", "Sin", "Kuja"],
+    "reponse": "Sephiroth",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle la mégalopole futuriste dans laquelle se déroule Cyberpunk 2077 ?",
+    "options": ["Neon City", "New Los Angeles", "Night City", "Eden Prime"],
+    "reponse": "Night City",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle l'héroïne aux cheveux roux qui chasse des machines dans 'Horizon Zero Dawn' ?",
+    "options": ["Senua", "Aloy", "Ellie", "Clementine"],
+    "reponse": "Aloy",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel studio japonais sadique est célèbre pour avoir créé Dark Souls, Bloodborne et Elden Ring ?",
+    "options": ["FromSoftware", "PlatinumGames", "Capcom", "Square Enix"],
+    "reponse": "FromSoftware",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le chien qui nous accompagne fidèlement dans Fallout 4 ?",
+    "options": ["Rex", "Canigou (Dogmeat)", "D-Dog", "Chop"],
+    "reponse": "Canigou (Dogmeat)",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans quel jeu vidéo indépendant les personnages de Sans et Papyrus apparaissent-ils ?",
+    "options": ["Celeste", "Hollow Knight", "Undertale", "Cuphead"],
+    "reponse": "Undertale",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui est le développeur solo, véritable homme-orchestre, derrière le jeu Stardew Valley ?",
+    "options": ["Toby Fox", "Notch", "Jonathan Blow", "Eric Barone (ConcernedApe)"],
+    "reponse": "Eric Barone (ConcernedApe)",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelle la monnaie utilisée dans la série de jeux The Legend of Zelda ?",
+    "options": ["Les Gils", "Les Rubis", "Les Anneaux", "Les Pièces"],
+    "reponse": "Les Rubis",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est l'arme de prédilection de Sora, le héros de Kingdom Hearts ?",
+    "options": ["L'Épée Broyeuse", "La Master Sword", "La Keyblade", "La Lame Secrète"],
+    "reponse": "La Keyblade",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel moteur de jeu extrêmement populaire a été développé par Epic Games ?",
+    "options": ["Unity", "CryEngine", "Source Engine", "Unreal Engine"],
+    "reponse": "Unreal Engine",
+    "difficulte": 1
+  },
+  {
+    "question": "Combien de Pokémon originaux composent le premier Pokédex de la région de Kanto ?",
+    "options": ["100", "150", "151", "251"],
+    "reponse": "151",
+    "difficulte": 2
+  },
+  {
+    "question": "Sur quel jeu E-sport le joueur sud-coréen 'Faker' est-il considéré comme le meilleur de l'histoire ?",
+    "options": ["StarCraft II", "League of Legends", "Dota 2", "Valorant"],
+    "reponse": "League of Legends",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle l'Intelligence Artificielle qui accompagne le Spartan dans la saga Halo ?",
+    "options": ["Siri", "Cortana", "GLaDOS", "SHODAN"],
+    "reponse": "Cortana",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel jeu d'Atari de 1982 a été un tel échec qu'il a été massivement enterré dans un désert du Nouveau-Mexique ?",
+    "options": ["Pac-Man", "E.T. l'extra-terrestre", "Space Invaders", "Asteroids"],
+    "reponse": "E.T. l'extra-terrestre",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le vrai nom du héros appelé 'Joker' dans Persona 5 ?",
+    "options": ["Yu Narukami", "Makoto Yuki", "Ren Amamiya", "Tatsuya Suou"],
+    "reponse": "Ren Amamiya",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle touche est devenue un célèbre mème pour 'Pay Respects' dans Call of Duty: Advanced Warfare ?",
+    "options": ["E", "R", "F", "X"],
+    "reponse": "F",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le champignon parasite responsable de l'apocalypse dans The Last of Us ?",
+    "options": ["Le Cordyceps", "Le Virus T", "Le Plagas", "Le Flood"],
+    "reponse": "Le Cordyceps",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans quel studio de développement indépendant australien le jeu Hollow Knight a-t-il vu le jour ?",
+    "options": ["Supergiant Games", "Team Cherry", "Motion Twin", "Playdead"],
+    "reponse": "Team Cherry",
+    "difficulte": 3
+  },
+  {
+    "question": "Dans quel jeu les joueurs conduisent-ils des voitures propulsées par des roquettes pour jouer au football ?",
+    "options": ["Twisted Metal", "Mario Kart 8", "TrackMania", "Rocket League"],
+    "reponse": "Rocket League",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle héroïne canadienne doit gravir une montagne pour vaincre ses crises d'angoisse dans un jeu de plateforme très exigeant ?",
+    "options": ["Madeline (Celeste)", "Ori (Ori and the Blind Forest)", "Meat Boy", "Shovel Knight"],
+    "reponse": "Madeline (Celeste)",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle le scientifique obèse, à la moustache rousse, pire ennemi de Sonic ?",
+    "options": ["Dr. Cortex", "Dr. Wily", "Dr. Nefarious", "Dr. Eggman (Robotnik)"],
+    "reponse": "Dr. Eggman (Robotnik)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel studio a créé la franchise Destiny après avoir quitté le giron de Microsoft ?",
+    "options": ["343 Industries", "Bungie", "Respawn Entertainment", "Infinity Ward"],
+    "reponse": "Bungie",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans WoW, comment s'appelle la première zone de départ des Humains ?",
+    "options": ["Durotar", "La Forêt d'Elwynn", "Dun Morogh", "Teldrassil"],
+    "reponse": "La Forêt d'Elwynn",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans Red Dead Redemption 2, quel personnage hors-la-loi incarne-t-on la majeure partie du jeu ?",
+    "options": ["John Marston", "Dutch van der Linde", "Arthur Morgan", "Micah Bell"],
+    "reponse": "Arthur Morgan",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le gros oiseau jaune servant de monture dans l'univers de Final Fantasy ?",
+    "options": ["Moogle", "Pampa", "Chocobo", "Béhémoth"],
+    "reponse": "Chocobo",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans Mortal Kombat, quel personnage crie l'iconique phrase 'Get over here!' ?",
+    "options": ["Sub-Zero", "Raiden", "Scorpion", "Shao Kahn"],
+    "reponse": "Scorpion",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans le jargon du MMO, que signifie l'acronyme PNJ (ou NPC en anglais) ?",
+    "options": ["Personnage Non Joueur", "Point Non Jouable", "Prochain Niveau Jouable", "Puissance Nette du Joueur"],
+    "reponse": "Personnage Non Joueur",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle a été la toute première console de jeu vidéo commercialisée en 1972 ?",
+    "options": ["L'Atari 2600", "La Magnavox Odyssey", "La ColecoVision", "La NES"],
+    "reponse": "La Magnavox Odyssey",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle entreprise japonaise éditait des cartes à jouer (Hanafuda) en 1889 bien avant les jeux vidéo ?",
+    "options": ["Sony", "Sega", "Nintendo", "Konami"],
+    "reponse": "Nintendo",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle figure géométrique est absente des boutons classiques d'une manette PlayStation ?",
+    "options": ["Croix", "Carré", "Hexagone", "Triangle"],
+    "reponse": "Hexagone",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans Assassin's Creed, quelle est la devise de la Confrérie des Assassins ?",
+    "options": ["Agir dans l'ombre pour servir la lumière", "Rien n'est vrai, tout est permis", "La lame cachée est la seule vérité", "Vivre par le Credo, mourir par le Credo"],
+    "reponse": "Rien n'est vrai, tout est permis",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est l'énorme monstre terrifiant à tête pyramidale que l'on affronte dans Silent Hill 2 ?",
+    "options": ["Nemesis", "Mr. X", "Pyramid Head", "Le Bourreau"],
+    "reponse": "Pyramid Head",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel célèbre FPS très compétitif de Valve oppose les Terroristes aux Anti-Terroristes ?",
+    "options": ["Valorant", "Overwatch", "Rainbow Six Siege", "Counter-Strike"],
+    "reponse": "Counter-Strike",
+    "difficulte": 1
+  },
+  {
+    "question": "Combien d'étoiles de puissance y a-t-il à récolter au total dans Super Mario 64 ?",
+    "options": ["100", "120", "150", "200"],
+    "reponse": "120",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le nom de l'ordinateur de bord psychopathe dans le jeu System Shock ?",
+    "options": ["SHODAN", "HAL 9000", "GLaDOS", "AM"],
+    "reponse": "SHODAN",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel studio a développé l'ultra-populaire Gacha Game 'Genshin Impact' ?",
+    "options": ["Tencent", "Square Enix", "miHoYo", "Cygames"],
+    "reponse": "miHoYo",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle ville américaine est parodiée sous le nom de 'Liberty City' dans la série GTA ?",
+    "options": ["Los Angeles", "New York", "Miami", "Las Vegas"],
+    "reponse": "New York",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans quel univers post-apocalyptique se trouve la mascotte souriante Vault Boy ?",
+    "options": ["Wasteland", "Rage", "Borderlands", "Fallout"],
+    "reponse": "Fallout",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel était le nom de la plateforme de streaming Twitch avant qu'elle ne se spécialise dans le jeu vidéo ?",
+    "options": ["Justin.tv", "Own3d.tv", "Stream.me", "Ustream"],
+    "reponse": "Justin.tv",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelle le personnage principal masculin, cubique et muet de Minecraft ?",
+    "options": ["Alex", "Notch", "Steve", "Herobrine"],
+    "reponse": "Steve",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans le tout premier Zelda (NES), quelle célèbre phrase le vieil homme prononce-t-il en donnant l'épée ?",
+    "options": ["It's dangerous to go alone! Take this.", "A sword to save the princess.", "May the Triforce be with you.", "Kill Ganon and save Hyrule."],
+    "reponse": "It's dangerous to go alone! Take this.",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans Pac-Man, les fantômes s'appellent Blinky, Pinky, Inky et...",
+    "options": ["Clyde", "Dinky", "Sue", "Winky"],
+    "reponse": "Clyde",
+    "difficulte": 3
+  },
+  {
+    "question": "La console 'Super Famicom' au Japon était connue chez nous en Europe sous le nom de :",
+    "options": ["Nintendo 64", "Super Nintendo (SNES)", "GameCube", "Famicom Disk System"],
+    "reponse": "Super Nintendo (SNES)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel jeu d'exploration spatiale procédurale, très critiqué à sa sortie en 2016, est aujourd'hui encensé pour ses mises à jour ?",
+    "options": ["Star Citizen", "Elite Dangerous", "No Man's Sky", "EVE Online"],
+    "reponse": "No Man's Sky",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle le commandant humain que l'on incarne de bout en bout dans la trilogie Mass Effect ?",
+    "options": ["Commandant Anderson", "Commandant Shepard", "Commandant Ryder", "Commandant Hackett"],
+    "reponse": "Commandant Shepard",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui est la mascotte rose et très gloutonne de Nintendo, créée par Masahiro Sakurai ?",
+    "options": ["Jigglypuff", "Kirby", "Birdo", "Toadette"],
+    "reponse": "Kirby",
+    "difficulte": 1
+  },
+  {
+    "question": "Combien de boutons possédait la manette originale de la NES (en comptant la croix directionnelle comme 1 bouton) ?",
+    "options": ["2", "4", "6", "8"],
+    "reponse": "4",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel est le nom de l'ours mécatronique effrayant de la franchise Five Nights at Freddy's ?",
+    "options": ["Foxy", "Bonnie", "Freddy Fazbear", "Chica"],
+    "reponse": "Freddy Fazbear",
+    "difficulte": 1
+  },
+  {
+    "question": "Sur quelle console la série de combats très techniques 'Super Smash Bros. Melee' a-t-elle vu le jour en 2001 ?",
+    "options": ["Nintendo 64", "GameCube", "Wii", "Wii U"],
+    "reponse": "GameCube",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle la petite monnaie virtuelle utilisée par les joueurs sur la plateforme Roblox ?",
+    "options": ["Les Minecoins", "Les Robux", "Les V-Bucks", "Les Tix"],
+    "reponse": "Les Robux",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel jeu Rockstar de 2006 vous mettait dans la peau d'un adolescent rebelle dans un pensionnat privé ?",
+    "options": ["Manhunt", "L.A. Noire", "Bully (Canis Canem Edit)", "The Warriors"],
+    "reponse": "Bully (Canis Canem Edit)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle série de jeux de combat comporte les célèbres 'Fatality' à la fin des matchs ?",
+    "options": ["Street Fighter", "Tekken", "SoulCalibur", "Mortal Kombat"],
+    "reponse": "Mortal Kombat",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui a fondé l'entreprise Valve et possède la plateforme Steam ?",
+    "options": ["Tim Sweeney", "Gabe Newell", "John Carmack", "Todd Howard"],
+    "reponse": "Gabe Newell",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle le dinosaure vert de Nintendo qui sert souvent de monture à Mario ?",
+    "options": ["Toad", "Yoshi", "Bowser", "Rex"],
+    "reponse": "Yoshi",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel célèbre studio français a créé les Lapins Crétins et Rayman ?",
+    "options": ["Arkane Studios", "Asobo Studio", "Ubisoft", "Quantic Dream"],
+    "reponse": "Ubisoft",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le créateur historique de la saga SimCity et Les Sims ?",
+    "options": ["Will Wright", "Peter Molyneux", "Sid Meier", "Ken Levine"],
+    "reponse": "Will Wright",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel jeu de stratégie spatial oppose les Terrans, les Zergs et les Protoss ?",
+    "options": ["Command & Conquer", "Warhammer 40,000", "Halo Wars", "StarCraft"],
+    "reponse": "StarCraft",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel était le surnom de la console de salon lancée par Sega après la Mega Drive ?",
+    "options": ["La Saturn", "La Dreamcast", "Le Mega-CD", "La Game Gear"],
+    "reponse": "La Saturn",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans le jeu vidéo 'Hades', qui est le père despotique de Zagreus que l'on doit fuir ?",
+    "options": ["Zeus", "Poséidon", "Hadès", "Arès"],
+    "reponse": "Hadès",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle l'épée la plus légendaire de la saga Zelda, souvent plantée dans un piédestal ?",
+    "options": ["L'Épée de Biggoron", "L'Épée de Légende (Master Sword)", "L'Épée des Quatre", "L'Épée de Lumière"],
+    "reponse": "L'Épée de Légende (Master Sword)",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans quel pays se déroulent les événements du jeu Papers, Please ?",
+    "options": ["Kolechia", "Obristan", "Arstotzka", "Cobrastan"],
+    "reponse": "Arstotzka",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel éditeur de jeu a sorti 'Apex Legends' comme un Battle Royale surprise gratuit en 2019 ?",
+    "options": ["Activision", "Electronic Arts (EA)", "Ubisoft", "Epic Games"],
+    "reponse": "Electronic Arts (EA)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le grade et le nom complet du méchant principal dans Far Cry 3 ?",
+    "options": ["Pagan Min", "Joseph Seed", "Vaas Montenegro", "Anton Castillo"],
+    "reponse": "Vaas Montenegro",
+    "difficulte": 2
+  },
+  {
+    "question": "Dans League of Legends, comment s'appelle la carte principale sur laquelle se jouent les parties classées en 5v5 ?",
+    "options": ["L'Abîme Hurlant", "La Faille de l'Invocateur", "La Forêt Torturée", "La Brèche de Cristal"],
+    "reponse": "La Faille de l'Invocateur",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le nom de la ville flottante dans les nuages visitée dans BioShock Infinite ?",
+    "options": ["Rapture", "Columbia", "Arcadia", "Zion"],
+    "reponse": "Columbia",
+    "difficulte": 2
+  },
+  {
+    "question": "À l'origine, quel studio polonais a développé l'adaptation en jeu vidéo de The Witcher ?",
+    "options": ["Techland", "11 bit studios", "CD Projekt Red", "People Can Fly"],
+    "reponse": "CD Projekt Red",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appellent les pièces géométriques qui tombent et s'emboîtent dans Tetris ?",
+    "options": ["Les Blocs", "Les Tetriminos", "Les Briques", "Les Polyominos"],
+    "reponse": "Les Tetriminos",
+    "difficulte": 3
+  },
+  {
+    "question": "Dans le jeu de survie Subnautica, sur quelle planète océanique le vaisseau Aurora s'écrase-t-il ?",
+    "options": ["Planète 4546B", "Planète SR388", "Planète Zebes", "Planète Reach"],
+    "reponse": "Planète 4546B",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle touche faut-il enfoncer pour courir dans les premiers Super Mario Bros (NES et SNES) ?",
+    "options": ["A", "B", "X", "Y"],
+    "reponse": "B",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel développeur de génie a créé la licence Doom et Quake au sein d'id Software ?",
+    "options": ["John Romero", "John Carmack", "Cliff Bleszinski", "Ken Levine"],
+    "reponse": "John Carmack",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelle l'ultime et redoutable boss du jeu Sekiro: Shadows Die Twice ?",
+    "options": ["Genichiro Ashina", "Le Démon de la Haine", "Isshin le Maître Épéiste", "La Chouette"],
+    "reponse": "Isshin le Maître Épéiste",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle série de jeux met en scène un assassin chauve portant un code-barres à l'arrière de la tête ?",
+    "options": ["Splinter Cell", "Hitman", "Dishonored", "Assassin's Creed"],
+    "reponse": "Hitman",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel était le tout premier nom du personnage de Crash Bandicoot pendant son développement ?",
+    "options": ["Willy the Wombat", "Dash the Dingo", "Crash the Fox", "Spinning Macaque"],
+    "reponse": "Willy the Wombat",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fut l'ultime console de jeu développée et vendue par SEGA en 1998 ?",
+    "options": ["La Mega Drive", "Le Mega-CD", "La Saturn", "La Dreamcast"],
+    "reponse": "La Dreamcast",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle le petit robot, alter-ego de Ratchet, dans les jeux d'Insomniac Games ?",
+    "options": ["Daxter", "Clank", "Bender", "Wheatley"],
+    "reponse": "Clank",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle entreprise japonaise a créé la très populaire licence 'Monster Hunter' ?",
+    "options": ["Bandai Namco", "Capcom", "Square Enix", "Koei Tecmo"],
+    "reponse": "Capcom",
+    "difficulte": 2
+  },
+  {
+    "question": "De quel jeu multijoueur vient l'expression toxique bien connue 'GG EZ' ?",
+    "options": ["Call of Duty", "C'est une expression universelle dans l'Esport", "Valorant", "Overwatch"],
+    "reponse": "C'est une expression universelle dans l'Esport",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le nom de famille de la Princesse Peach dans l'univers de Super Mario ?",
+    "options": ["Toadstool", "Mushroom", "Daisy", "Rosalina"],
+    "reponse": "Toadstool",
+    "difficulte": 3
+  }
+]

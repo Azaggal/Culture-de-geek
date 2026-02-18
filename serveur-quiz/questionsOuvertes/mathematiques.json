@@ -1,0 +1,502 @@
+[
+  {
+    "question": "Quelle est la dérivée de la fonction f(x) = ln(x) ?",
+    "reponse": "1/x",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la dérivée de la fonction f(x) = e^(2x) ?",
+    "reponse": "2e^(2x)",
+    "difficulte": 1
+  },
+  {
+    "question": "Que vaut la limite de e^(-x) quand x tend vers +l'infini ?",
+    "reponse": "0",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le module du nombre complexe z = 3 + 4i ?",
+    "reponse": "5",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est l'argument principal du nombre complexe i ?",
+    "reponse": "pi/2",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est l'argument principal du nombre complexe -1 ?",
+    "reponse": "pi",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la primitive de 2x sur R ?",
+    "reponse": "x^2",
+    "difficulte": 1
+  },
+  {
+    "question": "Que vaut l'intégrale de 0 à 1 de la fonction f(x) = x ?",
+    "reponse": "1/2",
+    "difficulte": 1
+  },
+  {
+    "question": "Trigonométrie : que vaut cos(pi/3) ?",
+    "reponse": "1/2",
+    "difficulte": 1
+  },
+  {
+    "question": "Trigonométrie : que vaut sin(pi/6) ?",
+    "reponse": "1/2",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est l'espérance mathématique d'une loi binomiale de paramètres n et p ?",
+    "reponse": "np",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la dérivée de cos(x) ?",
+    "reponse": "-sin(x)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la dérivée de sin(x) ?",
+    "reponse": "cos(x)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est l'unique solution de l'équation ln(x) = 0 ?",
+    "reponse": "1",
+    "difficulte": 1
+  },
+  {
+    "question": "Que vaut le logarithme népérien de e, noté ln(e) ?",
+    "reponse": "1",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la partie réelle du nombre complexe (1 + i)^2 ?",
+    "reponse": "0",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la dérivée de racine de x ?",
+    "reponse": "1/(2*racine(x))",
+    "difficulte": 1
+  },
+  {
+    "question": "Que vaut la limite de sin(x)/x quand x tend vers 0 ?",
+    "reponse": "1",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le conjugué du nombre complexe z = 1 - i ?",
+    "reponse": "1 + i",
+    "difficulte": 1
+  },
+  {
+    "question": "Que vaut 5 factorielle (5!) ?",
+    "reponse": "120",
+    "difficulte": 1
+  },
+  {
+    "question": "Que vaut le discriminant (Delta) de l'équation x^2 + x + 1 = 0 ?",
+    "reponse": "-3",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans le trinôme ax^2 + bx + c, que vaut la somme des deux racines ?",
+    "reponse": "-b/a",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans le trinôme ax^2 + bx + c, que vaut le produit des deux racines ?",
+    "reponse": "c/a",
+    "difficulte": 1
+  },
+  {
+    "question": "Géométriquement, que représente f'(a) pour la courbe de f au point d'abscisse a ?",
+    "reponse": "Le coefficient directeur de la tangente",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la probabilité de tirer un As dans un jeu de 52 cartes (en fraction simple) ?",
+    "reponse": "1/13",
+    "difficulte": 1
+  },
+  {
+    "question": "D'après la célèbre identité d'Euler, que vaut e^(i*pi) + 1 ?",
+    "reponse": "0",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la forme exponentielle du nombre complexe i ?",
+    "reponse": "e^(i*pi/2)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la primitive de la fonction 1/x sur les réels strictement positifs ?",
+    "reponse": "ln(x)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel type d'asymptote possède la fonction ln(x) en x = 0 ?",
+    "reponse": "Verticale",
+    "difficulte": 1
+  },
+  {
+    "question": "Formule de dérivation : quelle est la dérivée d'un produit (u*v) ?",
+    "reponse": "u'v + uv'",
+    "difficulte": 1
+  },
+  {
+    "question": "Formule de dérivation : quelle est la dérivée de (1/u) ?",
+    "reponse": "-u'/u^2",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la dérivée de x^3 ?",
+    "reponse": "3x^2",
+    "difficulte": 1
+  },
+  {
+    "question": "Trigonométrie : que vaut cos^2(x) + sin^2(x) ?",
+    "reponse": "1",
+    "difficulte": 1
+  },
+  {
+    "question": "Calcul mental rapide : combien font 23 multiplié par 7 ?",
+    "reponse": "161",
+    "difficulte": 2
+  },
+  {
+    "question": "Calcul mental rapide : combien font 15 multiplié par 16 ?",
+    "reponse": "240",
+    "difficulte": 2
+  },
+  {
+    "question": "Calculez de tête : 2 + 5 * 3 - 4 * 2 ?",
+    "reponse": "9",
+    "difficulte": 2
+  },
+  {
+    "question": "Calculez de tête : (10 * 9 * 8 * 7 * 0 * 5) + 42 ?",
+    "reponse": "42",
+    "difficulte": 2
+  },
+  {
+    "question": "Que vaut la somme de tous les entiers de 1 à 100 ?",
+    "reponse": "5050",
+    "difficulte": 2
+  },
+  {
+    "question": "Calculez la somme des puissances de 2 : 2^0 + 2^1 + 2^2 + 2^3 + 2^4 ?",
+    "reponse": "31",
+    "difficulte": 2
+  },
+  {
+    "question": "Une urne contient 3 boules rouges et 2 bleues. On tire 2 boules sans remise. Quelle est la probabilité d'avoir 2 rouges (en fraction) ?",
+    "reponse": "3/10",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le module du nombre complexe z = 5 + 12i ?",
+    "reponse": "13",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le module du nombre complexe z = 8 + 15i ?",
+    "reponse": "17",
+    "difficulte": 2
+  },
+  {
+    "question": "Un train part à 120 km/h. Un autre part sur la même voie 1h plus tard à 150 km/h. Dans combien d'heures (après le départ du 2e) le rattrape-t-il ?",
+    "reponse": "4",
+    "difficulte": 2
+  },
+  {
+    "question": "Si 3 chats mangent 3 souris en 3 minutes, combien de minutes faut-il à 100 chats pour manger 100 souris ?",
+    "reponse": "3",
+    "difficulte": 2
+  },
+  {
+    "question": "Calcul mental astucieux : combien font 35 au carré ?",
+    "reponse": "1225",
+    "difficulte": 2
+  },
+  {
+    "question": "Un nénuphar double de surface chaque jour. S'il remplit un étang en 40 jours, en combien de jours en remplit-il le quart ?",
+    "reponse": "38",
+    "difficulte": 2
+  },
+  {
+    "question": "Soit U_n une suite arithmétique de raison 3 avec U_0 = 5. Que vaut U_10 ?",
+    "reponse": "35",
+    "difficulte": 2
+  },
+  {
+    "question": "Calcul mental astucieux : combien font 99 multiplié par 99 ?",
+    "reponse": "9801",
+    "difficulte": 2
+  },
+  {
+    "question": "Que vaut le coefficient binomial '3 parmi 5' (C de 5 par 3) ?",
+    "reponse": "10",
+    "difficulte": 2
+  },
+  {
+    "question": "Que vaut le coefficient binomial '2 parmi 10' (C de 10 par 2) ?",
+    "reponse": "45",
+    "difficulte": 2
+  },
+  {
+    "question": "Que vaut l'addition de fractions : 1/2 + 1/4 + 1/8 + 1/16 ?",
+    "reponse": "15/16",
+    "difficulte": 2
+  },
+  {
+    "question": "Dérivez le produit suivant : (x * e^x)' ?",
+    "reponse": "(x+1)e^x",
+    "difficulte": 2
+  },
+  {
+    "question": "Calcul mental rapide : combien font 13 multiplié par 14 ?",
+    "reponse": "182",
+    "difficulte": 2
+  },
+  {
+    "question": "Un article à 200 euros baisse de 50%, puis augmente de 50%. Quel est son prix final ?",
+    "reponse": "150",
+    "difficulte": 2
+  },
+  {
+    "question": "Calculez : 1 - 2 + 3 - 4 + 5 - 6 + 7 - 8 + 9 - 10 ?",
+    "reponse": "-5",
+    "difficulte": 2
+  },
+  {
+    "question": "Calculez de tête la racine carrée de (144 + 25) ?",
+    "reponse": "13",
+    "difficulte": 2
+  },
+  {
+    "question": "Que vaut l'intégrale de x^3 calculée de -1 à 1 ?",
+    "reponse": "0",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est la valeur exacte de : ln(e^5) - ln(e^2) ?",
+    "reponse": "3",
+    "difficulte": 2
+  },
+  {
+    "question": "Si je roule à 60 km/h constants, quelle distance en km ai-je parcourue en 45 minutes ?",
+    "reponse": "45",
+    "difficulte": 2
+  },
+  {
+    "question": "Calcul mental rapide : combien font 125 multiplié par 8 ?",
+    "reponse": "1000",
+    "difficulte": 2
+  },
+  {
+    "question": "Calculez la différence de puissances : 2^7 - 2^6 ?",
+    "reponse": "64",
+    "difficulte": 2
+  },
+  {
+    "question": "Que vaut la limite en +l'infini de la fraction (x^3 - 5x^2 + 10) / (2x^3 + x) ?",
+    "reponse": "1/2",
+    "difficulte": 2
+  },
+  {
+    "question": "J'ai 3 chemises, 4 pantalons et 2 paires de chaussures. Combien de tenues différentes puis-je faire ?",
+    "reponse": "24",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le reste de la division euclidienne de 2024 par 9 ?",
+    "reponse": "8",
+    "difficulte": 2
+  },
+  {
+    "question": "Simplifiez et calculez la fraction : (5 * 6 * 7) / (2 * 3) ?",
+    "reponse": "35",
+    "difficulte": 2
+  },
+  {
+    "question": "Que vaut la somme en base 10 : log(1000) + log(100) ?",
+    "reponse": "5",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel est le Développement Limité (DL) de e^x à l'ordre 2 en 0 ?",
+    "reponse": "1 + x + x^2/2",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel est le Développement Limité (DL) de sin(x) à l'ordre 3 en 0 ?",
+    "reponse": "x - x^3/6",
+    "difficulte": 3
+  },
+  {
+    "question": "Que vaut la Trace de la matrice Identité de taille n x n ?",
+    "reponse": "n",
+    "difficulte": 3
+  },
+  {
+    "question": "Le déterminant d'une matrice orthogonale peut valoir 1, ou bien...",
+    "reponse": "-1",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel théorème fondamental relie la dimension du noyau, de l'image et de l'espace de départ ?",
+    "reponse": "Le théorème du rang",
+    "difficulte": 3
+  },
+  {
+    "question": "En algèbre linéaire, comment s'appelle un endomorphisme p tel que p^2 = p ?",
+    "reponse": "Un projecteur",
+    "difficulte": 3
+  },
+  {
+    "question": "En algèbre linéaire, comment s'appelle un endomorphisme s tel que s^2 = Identité ?",
+    "reponse": "Une symétrie",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment qualifie-t-on un endomorphisme dont une certaine puissance est égale à l'endomorphisme nul ?",
+    "reponse": "Nilpotent",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est l'unique valeur propre possible pour un endomorphisme nilpotent ?",
+    "reponse": "0",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel théorème stipule que toute matrice carrée annule son propre polynôme caractéristique ?",
+    "reponse": "Théorème de Cayley-Hamilton",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la dérivée de la fonction Arc-tangente, arctan(x) ?",
+    "reponse": "1/(1+x^2)",
+    "difficulte": 3
+  },
+  {
+    "question": "Pour n supérieur ou égal à 2, que vaut la somme des racines n-ièmes de l'unité ?",
+    "reponse": "0",
+    "difficulte": 3
+  },
+  {
+    "question": "Pour une matrice carrée, le produit de toutes ses valeurs propres donne son...",
+    "reponse": "Déterminant",
+    "difficulte": 3
+  },
+  {
+    "question": "Pour une matrice carrée, la somme de toutes ses valeurs propres donne sa...",
+    "reponse": "Trace",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel théorème d'arithmétique affirme que a^(p-1) est congru à 1 modulo p (si p est premier) ?",
+    "reponse": "Le petit théorème de Fermat",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel théorème d'analyse affirme l'existence d'un c tel que f(b)-f(a) = f'(c)(b-a) ?",
+    "reponse": "Le théorème des accroissements finis (TAF)",
+    "difficulte": 3
+  },
+  {
+    "question": "Une matrice à coefficients réels est toujours diagonalisable (dans R) si elle est...",
+    "reponse": "Symétrique",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelle une structure algébrique possédant une loi interne associative, un élément neutre et des symétriques ?",
+    "reponse": "Un groupe",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment qualifie-t-on spécifiquement un groupe dont la loi de composition interne est commutative ?",
+    "reponse": "Abélien",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle célèbre inégalité affirme que la valeur absolue du produit scalaire de deux vecteurs est inférieure au produit de leurs normes ?",
+    "reponse": "Inégalité de Cauchy-Schwarz",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelle l'espace vectoriel constitué de toutes les formes linéaires sur un espace E ?",
+    "reponse": "L'espace dual",
+    "difficulte": 3
+  },
+  {
+    "question": "La solution générale de l'équation différentielle y'' + w^2 y = 0 fait appel à quelles fonctions ?",
+    "reponse": "Cosinus et Sinus",
+    "difficulte": 3
+  },
+  {
+    "question": "Que vaut le déterminant d'une matrice triangulaire supérieure ?",
+    "reponse": "Le produit de sa diagonale (ou de ses éléments diagonaux)",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle célèbre règle utilise les dérivées successives pour calculer la limite d'une indéterminée 0/0 ?",
+    "reponse": "La règle de L'Hôpital",
+    "difficulte": 3
+  },
+  {
+    "question": "En calcul différentiel, comment s'appelle la matrice contenant toutes les dérivées partielles d'ordre 1 ?",
+    "reponse": "La matrice jacobienne",
+    "difficulte": 3
+  },
+  {
+    "question": "En calcul différentiel, comment s'appelle la matrice carrée contenant toutes les dérivées partielles secondes ?",
+    "reponse": "La matrice hessienne",
+    "difficulte": 3
+  },
+  {
+    "question": "Vers quelle valeur tend l'expression (1 + 1/n)^n quand n tend vers l'infini ?",
+    "reponse": "e (le nombre d'Euler)",
+    "difficulte": 3
+  },
+  {
+    "question": "Que vaut la célèbre intégrale de Gauss (intégrale de e^(-x^2) sur R entier) ?",
+    "reponse": "Racine de pi",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelle la fonction mathématique complexe qui permet de prolonger la factorielle aux nombres réels ?",
+    "reponse": "La fonction Gamma",
+    "difficulte": 3
+  },
+  {
+    "question": "Lors d'une division euclidienne de polynômes A / B, le reste a obligatoirement un degré strictement inférieur à celui de...",
+    "reponse": "B",
+    "difficulte": 3
+  },
+  {
+    "question": "Combien de générateurs possède le groupe cyclique (Z/pZ, +) si p est un nombre premier ?",
+    "reponse": "p - 1",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment appelle-t-on une famille de vecteurs qui est à la fois libre et génératrice d'un espace vectoriel ?",
+    "reponse": "Une base",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction indicatrice bien connue vaut 1 sur les nombres rationnels (Q) et 0 sur les irrationnels ?",
+    "reponse": "La fonction de Dirichlet",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle est la primitive exacte de la fonction ln(x) ?",
+    "reponse": "x*ln(x) - x",
+    "difficulte": 3
+  }
+]

@@ -1,0 +1,596 @@
+[
+  {
+    "question": "Comment afficher un message dans la console ?",
+    "code": "___('Hello World!')",
+    "reponse": "print",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment obtenir la longueur d'une liste ou d'une chaîne ?",
+    "code": "ma_liste = [1, 2, 3]\ntaille = ___(ma_liste)",
+    "reponse": "len",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction permet de connaître le type d'une variable ?",
+    "code": "nombre = 42\nprint(___(nombre))",
+    "reponse": "type",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment convertir une chaîne de caractères en entier ?",
+    "code": "chaine = '10'\nnombre = ___(chaine)",
+    "reponse": "int",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment convertir un nombre en chaîne de caractères ?",
+    "code": "age = 25\ntexte = 'J ai ' + ___(age) + ' ans'",
+    "reponse": "str",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment demander une saisie à l'utilisateur ?",
+    "code": "nom = ___('Quel est ton nom ? ')",
+    "reponse": "input",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour créer une boucle itérant sur une séquence ?",
+    "code": "___ i in range(5):\n    print(i)",
+    "reponse": "for",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé accompagne 'for' pour vérifier la présence dans une liste ?",
+    "code": "lettres = ['a', 'b', 'c']\nfor lettre ___ lettres:\n    print(lettre)",
+    "reponse": "in",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction génère une séquence de nombres pour une boucle ?",
+    "code": "for i in ___(10):\n    print(i)",
+    "reponse": "range",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé crée une boucle qui s'exécute tant qu'une condition est vraie ?",
+    "code": "compteur = 0\n___ compteur < 5:\n    compteur += 1",
+    "reponse": "while",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé introduit une condition ?",
+    "code": "___ age >= 18:\n    print('Majeur')",
+    "reponse": "if",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé permet d'enchaîner une autre condition si la première est fausse ?",
+    "code": "if x > 0:\n    print('Positif')\n___ x < 0:\n    print('Négatif')",
+    "reponse": "elif",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé s'exécute si toutes les conditions précédentes sont fausses ?",
+    "code": "if x == 1:\n    print('Un')\n___:\n    print('Autre')",
+    "reponse": "else",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé permet de définir une fonction ?",
+    "code": "___ ma_fonction():\n    print('Exécutée !')",
+    "reponse": "def",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment renvoyer une valeur à la fin d'une fonction ?",
+    "code": "def carre(x):\n    ___ x * x",
+    "reponse": "return",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur logique vérifie que deux conditions sont vraies ?",
+    "code": "if x > 0 ___ y > 0:\n    print('Les deux sont positifs')",
+    "reponse": "and",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur logique vérifie qu'au moins une des conditions est vraie ?",
+    "code": "if x == 0 ___ y == 0:\n    print('Au moins un est nul')",
+    "reponse": "or",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur logique inverse une condition ?",
+    "code": "if ___ a_paye:\n    print('Accès refusé')",
+    "reponse": "not",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel opérateur vérifie si deux variables pointent vers le même objet en mémoire ?",
+    "code": "a = [1, 2]\nb = a\nif a ___ b:\n    print('Même objet')",
+    "reponse": "is",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé représente l'absence de valeur (l'équivalent de null) ?",
+    "code": "resultat = ___\nif resultat is None:\n    print('Rien à afficher')",
+    "reponse": "None",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode ajoute un élément à la fin d'une liste ?",
+    "code": "fruits = ['Pomme']\nfruits.___('Banane')",
+    "reponse": "append",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode retire et renvoie le dernier élément d'une liste ?",
+    "code": "pile = [1, 2, 3]\ndernier = pile.___()",
+    "reponse": "pop",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode ajoute un élément à un index spécifique d'une liste ?",
+    "code": "lettres = ['a', 'c']\nlettres.___(1, 'b')",
+    "reponse": "insert",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode enlève la première occurrence d'une valeur dans une liste ?",
+    "code": "nombres = [1, 2, 3, 2]\nnombres.___('2')",
+    "reponse": "remove",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode trie une liste sur place ?",
+    "code": "scores = [4, 1, 9, 3]\nscores.___()",
+    "reponse": "sort",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode inverse l'ordre des éléments d'une liste ?",
+    "code": "mots = ['Salut', 'Bonjour']\nmots.___()",
+    "reponse": "reverse",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode trouve la position de la première occurrence d'une valeur ?",
+    "code": "voyelles = ['a', 'e', 'i']\nposition_e = voyelles.___('e')",
+    "reponse": "index",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode compte le nombre de fois qu'un élément apparaît ?",
+    "code": "votes = ['A', 'B', 'A', 'A']\ntotal_A = votes.___('A')",
+    "reponse": "count",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode découpe une chaîne de caractères en une liste ?",
+    "code": "phrase = 'Bonjour le monde'\nmots = phrase.___(' ')",
+    "reponse": "split",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode recolle une liste de chaînes en une seule chaîne ?",
+    "code": "mots = ['C', 'est', 'cool']\nphrase = ' '.___ (mots)",
+    "reponse": "join",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode met une chaîne tout en majuscules ?",
+    "code": "texte = 'attention'\ntexte_crie = texte.___()",
+    "reponse": "upper",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode met une chaîne tout en minuscules ?",
+    "code": "email = 'Admin@Site.com'\nemail_propre = email.___()",
+    "reponse": "lower",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode retire les espaces au début et à la fin d'une chaîne ?",
+    "code": "saisie = '   oui   '\nreponse = saisie.___()",
+    "reponse": "strip",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode remplace une sous-chaîne par une autre ?",
+    "code": "texte = 'J aime Java'\ntexte_nouveau = texte.___('Java', 'Python')",
+    "reponse": "replace",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode retourne l'index où commence une sous-chaîne (-1 si introuvable) ?",
+    "code": "url = 'www.monsite.fr'\npos = url.___('.fr')",
+    "reponse": "find",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode d'un dictionnaire récupère toutes ses clés ?",
+    "code": "user = {'nom': 'Marc', 'age': 30}\ncles = user.___()",
+    "reponse": "keys",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode d'un dictionnaire récupère toutes ses valeurs ?",
+    "code": "prix = {'pomme': 2, 'poire': 3}\nvaleurs = prix.___()",
+    "reponse": "values",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode d'un dictionnaire récupère ses paires clé-valeur ?",
+    "code": "data = {'x': 1, 'y': 2}\nfor cle, val in data.___():\n    print(cle, val)",
+    "reponse": "items",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode récupère une valeur de dico sans faire d'erreur si la clé n'existe pas ?",
+    "code": "config = {'theme': 'sombre'}\nlang = config.___('langue', 'fr')",
+    "reponse": "get",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode fusionne un dictionnaire avec un autre ?",
+    "code": "a = {'x': 1}\nb = {'y': 2}\na.___ (b)",
+    "reponse": "update",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode ajoute un élément à un set (ensemble) ?",
+    "code": "vus = set()\nvus.___('page_1')",
+    "reponse": "add",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle méthode crée un ensemble contenant les éléments de deux ensembles ?",
+    "code": "set1 = {1, 2}\nset2 = {2, 3}\nfusion = set1.___(set2)",
+    "reponse": "union",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthode crée un ensemble avec les éléments communs à deux ensembles ?",
+    "code": "a = {'A', 'B'}\nb = {'B', 'C'}\ncommuns = a.___(b)",
+    "reponse": "intersection",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé permet de créer une fonction anonyme sur une ligne ?",
+    "code": "carre = ___ x: x * x\nprint(carre(4))",
+    "reponse": "lambda",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction applique une autre fonction à chaque élément d'une liste ?",
+    "code": "nombres = [1, 2, 3]\ndoubles = list(___(lambda x: x*2, nombres))",
+    "reponse": "map",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction conserve uniquement les éléments respectant une condition ?",
+    "code": "ages = [12, 18, 25]\nmajeurs = list(___(lambda x: x>=18, ages))",
+    "reponse": "filter",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction permet de combiner deux listes élément par élément ?",
+    "code": "noms = ['A', 'B']\nnotes = [10, 20]\npaires = list(___(noms, notes))",
+    "reponse": "zip",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction boucle sur une liste en fournissant à la fois l'index et l'élément ?",
+    "code": "mots = ['a', 'b']\nfor index, mot in ___(mots):\n    print(index, mot)",
+    "reponse": "enumerate",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé déclare un objet orienté-objet ?",
+    "code": "___ Chien:\n    def aboyer(self):\n        pass",
+    "reponse": "class",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment nomme-t-on le constructeur d'une classe en Python ?",
+    "code": "class Joueur:\n    def ___(self, pseudo):\n        self.pseudo = pseudo",
+    "reponse": "__init__",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot représente l'instance actuelle de la classe dans ses méthodes ?",
+    "code": "class Compte:\n    def deposer(___, montant):\n        ___.solde += montant",
+    "reponse": "self",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction appelle la méthode d'une classe parente ?",
+    "code": "class Chat(Animal):\n    def __init__(self):\n        ___().__init__()",
+    "reponse": "super",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthode magique définit comment l'objet s'affiche en texte (avec print) ?",
+    "code": "class User:\n    def ___(self):\n        return 'User: ' + self.nom",
+    "reponse": "__str__",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel décorateur permet d'utiliser une méthode comme un simple attribut ?",
+    "code": "class Cercle:\n    @___\n    def surface(self):\n        return 3.14 * self.r ** 2",
+    "reponse": "property",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel décorateur attache une méthode à la classe plutôt qu'à l'instance ?",
+    "code": "class Outil:\n    @___\n    def creer_defaut(cls):\n        return cls('Defaut')",
+    "reponse": "classmethod",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel décorateur crée une méthode qui n'utilise ni 'self' ni 'cls' ?",
+    "code": "class Math:\n    @___\n    def addition(a, b):\n        return a + b",
+    "reponse": "staticmethod",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé introduit un bloc de code susceptible de planter ?",
+    "code": "___:\n    x = 1 / 0\nexcept:\n    print('Erreur')",
+    "reponse": "try",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé gère l'erreur capturée ?",
+    "code": "try:\n    fichier.read()\n___ FileNotFoundError:\n    print('Introuvable')",
+    "reponse": "except",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé exécute un bloc quoiqu'il arrive, erreur ou non ?",
+    "code": "try:\n    f = open('test.txt')\n___:\n    f.close()",
+    "reponse": "finally",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé permet de déclencher intentionnellement une erreur ?",
+    "code": "if age < 0:\n    ___ ValueError('Age invalide')",
+    "reponse": "raise",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé crée un contexte qui nettoie les ressources automatiquement (ex: fermer un fichier) ?",
+    "code": "___ open('fichier.txt') as f:\n    print(f.read())",
+    "reponse": "with",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction native ouvre un fichier sur le disque ?",
+    "code": "fichier = ___('donnees.csv', 'r')\ncontenu = fichier.read()",
+    "reponse": "open",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode récupère tout le texte d'un fichier ouvert ?",
+    "code": "with open('texte.txt', 'r') as f:\n    tout_le_texte = f.___()",
+    "reponse": "read",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle méthode écrit du texte dans un fichier ouvert en mode 'w' ?",
+    "code": "with open('log.txt', 'w') as f:\n    f.___('Erreur 404')",
+    "reponse": "write",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé permet de faire une fonction ou condition vide sans erreur de syntaxe ?",
+    "code": "def fonction_pas_finie():\n    ___",
+    "reponse": "pass",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé stoppe et quitte immédiatement une boucle ?",
+    "code": "while True:\n    if condition:\n        ___",
+    "reponse": "break",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé passe directement à la prochaine itération de la boucle ?",
+    "code": "for i in range(10):\n    if i % 2 == 0:\n        ___\n    print('Impair:', i)",
+    "reponse": "continue",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé transforme une fonction en générateur ?",
+    "code": "def compter(max):\n    for i in range(max):\n        ___ i",
+    "reponse": "yield",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction permet de récupérer la valeur suivante d'un itérateur/générateur ?",
+    "code": "generateur = iter([1, 2])\nval1 = ___(generateur)\nval2 = ___(generateur)",
+    "reponse": "next",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction transforme une collection en itérateur ?",
+    "code": "liste = [1, 2, 3]\nmon_iterateur = ___(liste)",
+    "reponse": "iter",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel mot-clé inclut une bibliothèque entière dans votre code ?",
+    "code": "___ math\n\nprint(math.pi)",
+    "reponse": "import",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé spécifie l'origine exacte lors d'une importation ?",
+    "code": "___ random import randint\n\nval = randint(1, 10)",
+    "reponse": "from",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel mot-clé permet de renommer un module importé ?",
+    "code": "import numpy ___ np\n\ntab = np.array([1, 2])",
+    "reponse": "as",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction renvoie un dictionnaire des variables globales actuelles ?",
+    "code": "var_globale = 10\nprint(___())",
+    "reponse": "globals",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction renvoie un dictionnaire des variables locales actuelles ?",
+    "code": "def test():\n    x = 5\n    print(___())\ntest()",
+    "reponse": "locals",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction vérifie si un objet possède un attribut donné ?",
+    "code": "if ___(mon_objet, 'age'):\n    print('Il a un age')",
+    "reponse": "hasattr",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction récupère la valeur d'un attribut dynamiquement par son nom (string) ?",
+    "code": "nom_attr = 'couleur'\nval = ___(voiture, nom_attr)",
+    "reponse": "getattr",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction modifie la valeur d'un attribut dynamiquement ?",
+    "code": "nom_attr = 'vitesse'\n___(voiture, nom_attr, 130)",
+    "reponse": "setattr",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction supprime un attribut dynamiquement d'un objet ?",
+    "code": "___(voiture, 'vitesse_max')",
+    "reponse": "delattr",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction vérifie si un objet provient d'une classe spécifique ?",
+    "code": "if ___(mon_chien, Animal):\n    print('C est un animal')",
+    "reponse": "isinstance",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction vérifie si une classe hérite d'une autre classe ?",
+    "code": "if ___(Chat, Animal):\n    print('Héritage validé')",
+    "reponse": "issubclass",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction vérifie si un objet peut être appelé comme une fonction ?",
+    "code": "def test(): pass\nprint(___(test))  # True",
+    "reponse": "callable",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction renvoie l'adresse mémoire unique d'un objet ?",
+    "code": "a = [1, 2]\nprint(___(a))",
+    "reponse": "id",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction calcule l'empreinte numérique d'un objet immuable (utile pour les dictionnaires) ?",
+    "code": "cle = 'mot_de_passe'\nempreinte = ___(cle)",
+    "reponse": "hash",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction liste toutes les méthodes et attributs d'un objet ?",
+    "code": "ma_liste = []\nprint(___(ma_liste))",
+    "reponse": "dir",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction affiche la documentation officielle d'un objet ou d'une fonction ?",
+    "code": "___(len)\n# Affiche à quoi sert len()",
+    "reponse": "help",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction native renvoie la plus grande valeur d'un itérable ?",
+    "code": "notes = [10, 15, 12]\nmeilleure = ___(notes)",
+    "reponse": "max",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction native renvoie la plus petite valeur d'un itérable ?",
+    "code": "temps = [12.4, 13.1, 11.9]\nrecord = ___(temps)",
+    "reponse": "min",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction native additionne tous les éléments d'un itérable ?",
+    "code": "depenses = [10, 20, 5]\ntotal = ___(depenses)",
+    "reponse": "sum",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction native renvoie la valeur positive (absolue) d'un nombre ?",
+    "code": "ecart = ___(-15)\n# ecart vaut 15",
+    "reponse": "abs",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction native arrondit un nombre flottant ?",
+    "code": "pi = 3.14159\npi_court = ___(pi, 2)",
+    "reponse": "round",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle fonction renvoie True si au moins UN élément de l'itérable est vrai ?",
+    "code": "bools = [False, False, True]\nif ___(bools):\n    print('Au moins un vrai !')",
+    "reponse": "any",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction renvoie True uniquement si TOUS les éléments sont vrais ?",
+    "code": "bools = [True, True, True]\nif ___(bools):\n    print('Que du vrai !')",
+    "reponse": "all",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction très dangereuse interprète une chaîne de caractères comme du code Python ?",
+    "code": "formule = '2 + 2'\nresultat = ___(formule)",
+    "reponse": "eval",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle méthode de chaîne formate un texte en remplaçant les accolades {} ?",
+    "code": "phrase = 'Score: {}'.___(100)",
+    "reponse": "format",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle fonction renvoie le caractère Unicode correspondant à un entier ?",
+    "code": "lettre = ___(65)\n# lettre vaut 'A'",
+    "reponse": "chr",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction renvoie l'entier Unicode d'un caractère ?",
+    "code": "code = ___('A')\n# code vaut 65",
+    "reponse": "ord",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle fonction native renvoie un itérateur qui lit une séquence à l'envers ?",
+    "code": "compte_a_rebours = list(___([1, 2, 3]))\n# Renvoie [3, 2, 1]",
+    "reponse": "reversed",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mot-clé est utilisé pour gérer manuellement les variables partagées hors d'une fonction locale (souvent utilisé dans les fermetures) ?",
+    "code": "def compteur():\n    c = 0\n    def incremente():\n        ___ c\n        c += 1\n    return incremente",
+    "reponse": "nonlocal",
+    "difficulte": 3
+  }
+]

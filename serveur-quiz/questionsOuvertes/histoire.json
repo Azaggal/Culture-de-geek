@@ -1,0 +1,502 @@
+[
+  {
+    "question": "En quelle année Christophe Colomb a-t-il découvert l'Amérique ?",
+    "reponse": "1492",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel événement marque le début de la Révolution française en 1789 ?",
+    "reponse": "La prise de la Bastille",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel est le surnom du roi de France Louis XIV ?",
+    "reponse": "Le Roi-Soleil",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui a été le tout premier empereur romain ?",
+    "reponse": "Auguste (ou Octave)",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle l'héroïne française brûlée vive à Rouen en 1431 ?",
+    "reponse": "Jeanne d'Arc",
+    "difficulte": 1
+  },
+  {
+    "question": "Dans quelle ville l'archiduc François-Ferdinand a-t-il été assassiné en 1914 ?",
+    "reponse": "Sarajevo",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel traité a mis fin officiellement à la Première Guerre mondiale ?",
+    "reponse": "Le traité de Versailles",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel pharaon égyptien est célèbre pour la découverte de son tombeau intact en 1922 ?",
+    "reponse": "Toutânkhamon",
+    "difficulte": 1
+  },
+  {
+    "question": "Quels étaient les deux principaux belligérants de la guerre du Péloponnèse ?",
+    "reponse": "Athènes et Sparte",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel général carthaginois a franchi les Alpes avec des éléphants ?",
+    "reponse": "Hannibal",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel nom donne-t-on à la période préhistorique de la pierre taillée ?",
+    "reponse": "Le Paléolithique",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelle le plus ancien système d'écriture, inventé en Mésopotamie ?",
+    "reponse": "L'écriture cunéiforme",
+    "difficulte": 2
+  },
+  {
+    "question": "Grâce à quelle célèbre pierre Champollion a-t-il pu déchiffrer les hiéroglyphes ?",
+    "reponse": "La pierre de Rosette",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle est la seule des sept merveilles du monde antique encore debout aujourd'hui ?",
+    "reponse": "La pyramide de Khéops",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel philosophe grec, condamné à boire de la ciguë, était le maître de Platon ?",
+    "reponse": "Socrate",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel conquérant macédonien a bâti un empire s'étendant jusqu'à l'Inde avant de mourir à 32 ans ?",
+    "reponse": "Alexandre le Grand",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel chef gaulois a jeté ses armes aux pieds de Jules César à Alésia ?",
+    "reponse": "Vercingétorix",
+    "difficulte": 1
+  },
+  {
+    "question": "En quelle année l'Empire romain d'Occident s'est-il effondré ?",
+    "reponse": "476",
+    "difficulte": 3
+  },
+  {
+    "question": "Comment s'appelait la capitale de l'Empire romain d'Orient ?",
+    "reponse": "Constantinople",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel maire du palais franc a arrêté l'avancée omeyyade à Poitiers en 732 ?",
+    "reponse": "Charles Martel",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel roi des Francs est célèbre pour s'être converti au catholicisme et avoir été baptisé ?",
+    "reponse": "Clovis",
+    "difficulte": 1
+  },
+  {
+    "question": "En quelle année Charlemagne a-t-il été couronné empereur par le pape ?",
+    "reponse": "800",
+    "difficulte": 2
+  },
+  {
+    "question": "Quels pays se sont affrontés lors de la guerre de Cent Ans ?",
+    "reponse": "La France et l'Angleterre",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle ville du sud de la France a accueilli la résidence des Papes au XIVe siècle ?",
+    "reponse": "Avignon",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel prophète a fondé la religion musulmane au VIIe siècle ?",
+    "reponse": "Mahomet",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel explorateur portugais a été le premier à atteindre l'Inde par voie maritime en 1498 ?",
+    "reponse": "Vasco de Gama",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel navigateur a initié le premier tour du monde de l'histoire (achevée par Elcano) ?",
+    "reponse": "Magellan",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel conquérant espagnol (conquistador) a provoqué la chute de l'Empire aztèque ?",
+    "reponse": "Hernán Cortés",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel empire précolombien régnait sur la cordillère des Andes avant l'arrivée de Pizarro ?",
+    "reponse": "L'Empire inca",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle l'invention révolutionnaire de Gutenberg vers 1450 ?",
+    "reponse": "L'imprimerie",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle dynastie royale a régné sur la France de Henri IV (1589) jusqu'à la Révolution ?",
+    "reponse": "Les Bourbons",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel roi d'Angleterre a créé l'Église anglicane pour pouvoir divorcer ?",
+    "reponse": "Henri VIII",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel massacre de protestants a eu lieu à Paris le 24 août 1572 ?",
+    "reponse": "Le massacre de la Saint-Barthélemy",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel édit a accordé la liberté de culte aux protestants français en 1598 ?",
+    "reponse": "L'édit de Nantes",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel roi a révoqué l'édit de Nantes avec l'édit de Fontainebleau ?",
+    "reponse": "Louis XIV",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel philosophe italien a écrit 'Le Prince' ?",
+    "reponse": "Nicolas Machiavel",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel mouvement intellectuel du XVIIIe siècle regroupe Voltaire, Rousseau et Montesquieu ?",
+    "reponse": "Les Lumières",
+    "difficulte": 1
+  },
+  {
+    "question": "Quels sont les deux principaux rédacteurs de l'Encyclopédie ?",
+    "reponse": "Diderot et d'Alembert",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est la date exacte (jour, mois, année) de la Déclaration d'indépendance des États-Unis ?",
+    "reponse": "Le 4 juillet 1776",
+    "difficulte": 2
+  },
+  {
+    "question": "Qui fut le tout premier président des États-Unis ?",
+    "reponse": "George Washington",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel roi de France a été guillotiné publiquement en 1793 ?",
+    "reponse": "Louis XVI",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle reine de France était surnommée 'L'Autrichienne' ?",
+    "reponse": "Marie-Antoinette",
+    "difficulte": 1
+  },
+  {
+    "question": "Lors de quelle célèbre bataille surnommée 'des Trois Empereurs' Napoléon s'illustre-t-il en 1805 ?",
+    "reponse": "Austerlitz",
+    "difficulte": 2
+  },
+  {
+    "question": "Lors de quelle bataille navale la flotte franco-espagnole est-elle détruite par Nelson en 1805 ?",
+    "reponse": "Trafalgar",
+    "difficulte": 2
+  },
+  {
+    "question": "Où Napoléon Ier a-t-il subi sa défaite définitive en 1815 ?",
+    "reponse": "Waterloo",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel événement géologique catastrophique a détruit Pompéi en l'an 79 ?",
+    "reponse": "L'éruption du Vésuve",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle la guerre civile américaine de 1861 à 1865 ?",
+    "reponse": "La guerre de Sécession",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel président américain a aboli l'esclavage ?",
+    "reponse": "Abraham Lincoln",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle grande affaire d'espionnage sur fond d'antisémitisme a divisé la France à la fin du 19e siècle ?",
+    "reponse": "L'affaire Dreyfus",
+    "difficulte": 1
+  },
+  {
+    "question": "En quelle année l'Empire de Napoléon III s'effondre-t-il face à la Prusse ?",
+    "reponse": "1870",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel surnom affectueux donnait-on aux soldats français des tranchées durant la Première Guerre mondiale ?",
+    "reponse": "Les Poilus",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appellent les accords secrets de 1916 partageant le Moyen-Orient entre la France et la Grande-Bretagne ?",
+    "reponse": "Les accords Sykes-Picot",
+    "difficulte": 3
+  },
+  {
+    "question": "En quelle année a éclaté la Révolution russe menant à la chute du Tsar ?",
+    "reponse": "1917",
+    "difficulte": 2
+  },
+  {
+    "question": "Qui fut le principal dirigeant et théoricien de la Révolution bolchevique ?",
+    "reponse": "Lénine",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui a succédé à Lénine à la tête de l'URSS ?",
+    "reponse": "Joseph Staline",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel nom de code a été donné au débarquement de Normandie le 6 juin 1944 ?",
+    "reponse": "Opération Overlord",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle base navale américaine a été attaquée par surprise par le Japon le 7 décembre 1941 ?",
+    "reponse": "Pearl Harbor",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelait la police secrète d'État du régime nazi ?",
+    "reponse": "La Gestapo",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel nom hébreu (signifiant 'catastrophe') est couramment utilisé pour désigner l'extermination des Juifs par les nazis ?",
+    "reponse": "La Shoah",
+    "difficulte": 1
+  },
+  {
+    "question": "Lors de quelle conférence en 1945 Churchill, Roosevelt et Staline se sont-ils partagé l'Europe ?",
+    "reponse": "La conférence de Yalta",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle expression, popularisée par Churchill, désigne la frontière coupant l'Europe en deux durant la guerre froide ?",
+    "reponse": "Le Rideau de fer",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle alliance militaire a été créée en 1949 par les pays de l'Ouest ?",
+    "reponse": "L'OTAN",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle alliance militaire liait l'URSS à ses pays satellites d'Europe de l'Est ?",
+    "reponse": "Le Pacte de Varsovie",
+    "difficulte": 2
+  },
+  {
+    "question": "Sur quelle île l'URSS a-t-elle tenté de placer des missiles nucléaires en 1962, déclenchant une crise mondiale ?",
+    "reponse": "Cuba",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel leader a mené la révolution cubaine et dirigé le pays pendant plusieurs décennies ?",
+    "reponse": "Fidel Castro",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle vaste attaque surprise menée par le Nord-Vietnam en 1968 a changé le cours de la guerre du Vietnam ?",
+    "reponse": "L'offensive du Tết",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel célèbre pasteur a prononcé le discours 'I have a dream' en 1963 ?",
+    "reponse": "Martin Luther King",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel président américain a été assassiné à Dallas en 1963 ?",
+    "reponse": "John F. Kennedy",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel scandale d'espionnage politique a contraint le président Richard Nixon à démissionner ?",
+    "reponse": "Le Watergate",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel régime de ségrégation raciale a été officiellement en vigueur en Afrique du Sud jusqu'en 1991 ?",
+    "reponse": "L'apartheid",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui est devenu le premier président noir d'Afrique du Sud en 1994 après 27 ans de prison ?",
+    "reponse": "Nelson Mandela",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel pays d'Afrique centrale a été le théâtre d'un terrible génocide des Tutsis en 1994 ?",
+    "reponse": "Le Rwanda",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui a été le tout premier être humain à voyager dans l'espace en 1961 ?",
+    "reponse": "Youri Gagarine",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel astronaute a été le premier homme à poser le pied sur la Lune en 1969 ?",
+    "reponse": "Neil Armstrong",
+    "difficulte": 1
+  },
+  {
+    "question": "En quelle année le mur de Berlin est-il tombé ?",
+    "reponse": "1989",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui a été le premier président de la Ve République en France ?",
+    "reponse": "Charles de Gaulle",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel navire réputé insubmersible a coulé lors de son voyage inaugural en 1912 ?",
+    "reponse": "Le Titanic",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle guerre a opposé le Royaume-Uni et l'Argentine en 1982 pour le contrôle de petites îles ?",
+    "reponse": "La guerre des Malouines",
+    "difficulte": 2
+  },
+  {
+    "question": "Où ont eu lieu les pires attentats terroristes de l'Histoire le 11 septembre 2001 ?",
+    "reponse": "Aux États-Unis (ou à New York)",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel était le nom de l'empire dirigé par Soliman le Magnifique ?",
+    "reponse": "L'Empire ottoman",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle célèbre reine égyptienne a eu des relations avec Jules César et Marc Antoine ?",
+    "reponse": "Cléopâtre",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelait le roi de France qui a remporté la bataille de Marignan en 1515 ?",
+    "reponse": "François Ier",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle l'ensemble de guerres religieuses menées par les chrétiens pour reprendre Jérusalem ?",
+    "reponse": "Les Croisades",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel grand chef militaire a uni les tribus mongoles au XIIIe siècle ?",
+    "reponse": "Gengis Khan",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel empereur byzantin est célèbre pour son code de lois (Corpus Juris Civilis) et la basilique Sainte-Sophie ?",
+    "reponse": "Justinien",
+    "difficulte": 3
+  },
+  {
+    "question": "Quel célèbre dirigeant romain a été assassiné aux Ides de mars en 44 av. J.-C. ?",
+    "reponse": "Jules César",
+    "difficulte": 1
+  },
+  {
+    "question": "Qui était le chef de la résistance française à Londres pendant la Seconde Guerre mondiale ?",
+    "reponse": "Charles de Gaulle",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle le traité de paix signé en 1648 qui met fin à la guerre de Trente Ans ?",
+    "reponse": "Les traités de Westphalie",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle maladie a décimé environ un tiers de la population européenne au XIVe siècle ?",
+    "reponse": "La Peste noire",
+    "difficulte": 1
+  },
+  {
+    "question": "Quel terme japonais désigne les puissants seigneurs de guerre de l'époque féodale ?",
+    "reponse": "Shogun (ou Daimyo)",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle reine d'Angleterre, restée célèbre pour sa longévité, a donné son nom à l'époque victorienne ?",
+    "reponse": "La reine Victoria",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle l'inventeur de la machine à vapeur moderne, moteur de la Révolution industrielle ?",
+    "reponse": "James Watt",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel scientifique a formulé la théorie de la relativité au début du XXe siècle ?",
+    "reponse": "Albert Einstein",
+    "difficulte": 1
+  },
+  {
+    "question": "Quelle figure emblématique de la Révolution russe a été assassinée à coups de piolet au Mexique en 1940 ?",
+    "reponse": "Léon Trotski",
+    "difficulte": 2
+  },
+  {
+    "question": "Quelle est l'année de l'abolition définitive de l'esclavage en France ?",
+    "reponse": "1848",
+    "difficulte": 2
+  },
+  {
+    "question": "Comment s'appelait la ligne de fortifications construite par la France avant la Seconde Guerre mondiale ?",
+    "reponse": "La ligne Maginot",
+    "difficulte": 1
+  },
+  {
+    "question": "Comment s'appelle l'archipel hawaïen découvert par James Cook en 1778 où il perdra finalement la vie ?",
+    "reponse": "Les îles Sandwich (Hawaï)",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle révolution ouvrière a eu lieu à Paris au printemps 1871 ?",
+    "reponse": "La Commune de Paris",
+    "difficulte": 2
+  },
+  {
+    "question": "Quel empereur a fondé l'Empire du Mali au XIIIe siècle, réputé pour son immense richesse ?",
+    "reponse": "Soundiata Keïta (ou Mansa Moussa plus tard)",
+    "difficulte": 3
+  },
+  {
+    "question": "Quelle cité antique d'Asie mineure, théâtre d'une célèbre guerre mythologique, a été fouillée par Heinrich Schliemann ?",
+    "reponse": "Troie",
+    "difficulte": 2
+  }
+]
