@@ -311,8 +311,8 @@ function nextBombPlayer(room) {
 
     // Si tout le monde est mort, on accélère la fin du jeu
     let playersAlive = room.joueurs.filter(j => room.bombData.vies[j.permanentId] > 0).length;
-    if (playersAlive === 0) {
-        room.tempsRestant = 1; // Fera terminer le chrono global à la prochaine seconde
+    if (playersAlive <= 1) {
+        room.tempsRestant = 5; // Fera terminer le chrono global à la prochaine seconde
     }
 }
 
@@ -597,8 +597,8 @@ function rejoindreLobby({ socket,pseudo, permanentId, roomCode }){
 
 async function nouvelleQuestion(roomCode) {
   const room = rooms[roomCode];
-  const type = typesDisponibles[Math.floor(Math.random() * typesDisponibles.length)];
-  //const type = "wikipedia";
+  //const type = typesDisponibles[Math.floor(Math.random() * typesDisponibles.length)];
+  const type = "bombParty";
   room.type = type;
   
   let quizData;
@@ -963,10 +963,12 @@ io.on('connection', (socket) => {
 
     socket.on('change_nb_questions', (n) => {
       const room = rooms[socket.roomCode];
-      if (socket.id === room.joueurs[0].id) {
-        room.nbQuestionsActuel = n;
-        io.to(socket.roomCode).emit("updateNbQuestions", n);
-        
+      if (room.joueurs.length > 0) {
+        if (socket.id === room.joueurs[0].id) {
+          room.nbQuestionsActuel = n;
+          io.to(socket.roomCode).emit("updateNbQuestions", n);
+          
+        }
       }
     })
 

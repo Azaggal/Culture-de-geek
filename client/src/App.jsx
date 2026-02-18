@@ -93,7 +93,7 @@ const THEMES_CONFIG = {
     container: {
       centered: "flex items-center justify-center min-h-screen bg-cover bg-center",
       // La carte principale (Lobby, Jeu, etc.)
-      card: `${COLORS.purple.bg} ${BASES_COMIC.card} p-10 flex flex-row gap-4 justify-center `,
+      card: `${COLORS.purple.bg} ${BASES_COMIC.card} flex flex-row gap-4 justify-center `,
       // Le header blanc "verre" pour les questions
       glassHeader: "flex-1 p-8 text-3xl font-black text-purple-700 bg-white/90 backdrop-blur-md rounded-3xl border-b-[10px] border-purple-900/20 text-center uppercase",
     },
@@ -929,6 +929,136 @@ const PhotoProfil = () => {
   );
 }
 
+const QuestionBombParty = ({ socket, review, pseudoReview, estBon, theme }) => {
+  const [bombState, setBombState] = useState(null);
+  const [inputValue, setInputValue] = useState("");
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    if (!socket || review) return;
+
+    socket.on('bomb_update', (state) => {
+      setBombState(state);
+      setError("");
+      // Si ce n'est plus notre tour, on vide l'input local
+      if (state.currentPlayerId !== socket.id) {
+        setInputValue("");
+      }
+    });
+
+    socket.on('bomb_error', (msg) => {
+      setError(msg);
+      socket.emit('submit_bomb_letters', ""); // On prévient les autres qu'on a effacé
+      setTimeout(() => setError(""), 1500);
+    });
+
+    return () => {
+      socket.off('bomb_update');
+      socket.off('bomb_error');
+    };
+  }, [socket, review]);
+
+  const handleChange = (e) => {
+    const val = e.target.value.toUpperCase();
+    setInputValue(val);
+    // On envoie ce qu'on écrit pour que les autres voient en direct
+    socket.emit('submit_bomb_letters', val);
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      socket.emit('submit_bomb_word', inputValue);
+      setInputValue(""); 
+    }
+  };
+
+  if (review) {
+    return (
+      <div className="flex flex-col items-center gap-6 animate-fade-in">
+        <div className="relative">
+           <div className="absolute inset-0 bg-rose-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
+           <div className="relative bg-slate-800 border-4 border-slate-700 p-8 rounded-full shadow-2xl">
+              <span className="text-6xl">💣</span>
+           </div>
+        </div>
+        <h2 className="text-4xl font-black text-slate-100 uppercase tracking-widest">{pseudoReview}</h2>
+        <div className="flex flex-col items-center gap-2">
+           <p className="text-slate-400 font-bold uppercase text-sm">Vies restantes</p>
+           <div className="flex gap-2">
+              {[...Array(3)].map((_, i) => (
+                <span key={i} className={`text-4xl ${i < estBon ? 'grayscale-0 animate-bounce' : 'grayscale opacity-30'}`} style={{animationDelay: `${i*0.1}s`}}>❤️</span>
+              ))}
+           </div>
+        </div>
+        <p className={`text-5xl font-black mt-4 ${estBon > 0 ? 'text-emerald-400' : 'text-rose-500'}`}>
+          {estBon > 0 ? `+${estBon} points !` : 'ÉLIMINÉ'}
+        </p>
+      </div>
+    );
+  }
+
+  if (!bombState) return <div className="text-white animate-pulse font-bold text-2xl">Initialisation de la bombe...</div>;
+
+  
+  const isMyTurn = bombState.currentPlayerId === socket.id;
+
+  return (
+    <div className="flex flex-col items-center w-full gap-8">
+      <div className="relative flex items-center justify-center"> 
+        <div className="relative bg-slate-900 w-48 h-48 rounded-full flex flex-col items-center justify-center border-4 border-slate-800 shadow-2xl z-10">
+          <p className="text-slate-400 text-xs font-black uppercase tracking-widest mb-1">Contient</p>
+          <p className="text-6xl font-black text-white">{bombState.syllabe}</p>
+          <div className={`mt-2 text-2xl font-black ${bombState.turnTimeLeft < 4 ? 'text-rose-500 animate-ping' : 'text-emerald-400'}`}>
+            {bombState.turnTimeLeft}s
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full max-w-md flex flex-col items-center gap-4">
+        {isMyTurn ? (
+          <div className="w-full flex flex-col items-center gap-2">
+            <input
+              autoFocus
+              type="text"
+              value={inputValue}
+              onChange={handleChange}
+              onKeyDown={handleKeyDown}
+              placeholder="Tape ton mot..."
+              className={`${theme.input.game} border-rose-500 text-rose-500 placeholder-rose-900/30 text-3xl h-20 shadow-[0_8px_0_rgb(159,18,57)] transition-all`}
+            />
+            {error && <p className="text-rose-500 font-bold animate-bounce uppercase text-sm tracking-tighter">{error}</p>}
+          </div>
+        ) : (
+          <div className="bg-slate-800/50 p-6 rounded-2xl border-2 border-slate-700 flex flex-col items-center gap-1 w-full">
+            <p className="text-slate-500 text-xs font-bold uppercase">Tour de</p>
+            <p className="text-3xl font-black text-blue-400 uppercase">{bombState.currentPlayerPseudo}</p>
+            {/* ICI ON VOIT CE QUE L'AUTRE JOUEUR ÉCRIT */}
+            <div className="mt-2 h-12 flex items-center justify-center bg-slate-900/50 w-full rounded-lg border border-slate-700">
+               <p className="text-white font-mono text-2xl tracking-[0.2em] uppercase">
+                  {bombState.joueursStatus.find(j => j.isCurrent)?.rep || "..."}
+               </p>
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-4 w-full">
+        {bombState.joueursStatus.map((j, idx) => (
+          <div key={idx} className={`flex flex-col items-center p-3 rounded-xl border-2 transition-all duration-300 ${j.isCurrent ? 'bg-rose-500/10 border-rose-500 scale-110 shadow-lg' : 'bg-slate-800/40 border-slate-700 opacity-60'}`}>
+            <p className="font-bold text-sm text-white mb-2">{j.pseudo}</p>
+            <div className="flex gap-1">
+              {[...Array(3)].map((_, i) => (
+                <span key={i} className={`text-sm ${i < j.vies ? 'grayscale-0' : 'grayscale opacity-20'}`}>❤️</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+
 const QuestionOuverte = ({remplirText, valueText, review, theme}) => {
   return (
     <div className='w-200'>
@@ -1021,14 +1151,24 @@ const BorderTimer = ({ children, visible, progress, color = "#3b82f6", isFullscr
         {/* Les <rect> n'ont plus de calculs complexes, juste x=0, y=0 et 100% */}
         <rect 
           x="0" y="0" width="100%" height="100%" 
-          style={{ transition: 'all 0.5s ease-in-out' }} 
+          style={{ transition: 'rx 0.5s ease-in-out' }} 
           rx={radius} fill="none" stroke="rgba(226, 232, 240, 0.2)" strokeWidth={strokeWidth} 
         />
+        
+        {/* Le rectangle coloré du timer qui se vide */}
         <rect 
           x="0" y="0" width="100%" height="100%" 
-          style={{ transition: 'stroke-dashoffset 0.1s linear, all 0.5s ease-in-out' }} 
+          style={{ 
+            // On transitionne UNIQUEMENT le rayon et la couleur (rouge à 5s).
+            // AUCUNE transition sur le tracé car requestAnimationFrame fait du 60 FPS parfait !
+            transition: 'rx 0.5s ease-in-out, stroke 0.5s ease-in-out',
+            opacity: progress > 0 ? 1 : 0 
+          }} 
           rx={radius} fill="none" stroke={color} strokeWidth={strokeWidth} 
-          pathLength="1" strokeDasharray="1" strokeDashoffset={1 - progress} strokeLinecap="round" 
+          pathLength="1" 
+          strokeDasharray="1" 
+          strokeDashoffset={1 - progress} 
+          strokeLinecap="round" 
         />
       </svg>
       
@@ -1324,7 +1464,8 @@ export default function App() {
   const [indexResultat, setIndexResultat] = useState(0);
   const [hasSent, setHasSent] = useState(false);
   const [progress, setProgress] = useState(1);
-  const endTimeRef = useRef(null);    
+  const endTimeRef = useRef(null);
+  const durationRef = useRef(0);
   const [roomCode, setRoomCode] = useState("");
   const [cantJoin, setCantJoin] = useState(false);
   const [difficulty, setDifficulty] = useState(0);
@@ -1334,7 +1475,6 @@ export default function App() {
   useEffect(() => {
   const permanentPseudo = localStorage.getItem('pseudoQuiz');
   if (permanentPseudo) {
-    console.log("Pseudo récupéré du stockage :", permanentPseudo);
     setPseudo(permanentPseudo);
   }
 }, []); 
@@ -1370,7 +1510,8 @@ export default function App() {
       }
       const now = Date.now();
       const remaining = endTimeRef.current - now;
-      const newProgress = Math.max(0, remaining / ((tempsQuestion-0.5) * 1000));
+      const currentDuration = durationRef.current || 1;
+      const newProgress = Math.max(0, remaining / ((currentDuration-0.5) * 1000));
       setProgress(newProgress);
       if (newProgress > 0) {
         frame = requestAnimationFrame(update);
@@ -1400,7 +1541,7 @@ export default function App() {
 
   useEffect(() => {
     if (!socket) {
-      socket = io('https://culture-de-geek.onrender.com', { reconnectionAttempts: 5 });
+      socket = io('http://localhost:3001');
       socket.on('connect', () => { console.log("Connecté avec le socket :", socket.id); });
     }
 
@@ -1432,6 +1573,7 @@ export default function App() {
     })
     socket.on('game_started', ({data,type,difficulty,duration}) => {
       setTempsQuestion(duration);
+      durationRef.current = duration;
       setTimeLeft(duration);
       setDifficulty(difficulty);
       setIndexQuestion(1);
@@ -1447,6 +1589,7 @@ export default function App() {
       setTimeLeft(duration);
       console.log(data);
       setTempsQuestion(duration);
+      durationRef.current = duration;
       setDifficulty(difficulty);
       endTimeRef.current = Date.now() + (duration * 1000);
       setTypeJeu(type);
