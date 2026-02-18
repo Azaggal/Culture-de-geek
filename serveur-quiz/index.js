@@ -31,7 +31,7 @@ const io = require('socket.io')(server, {
 
 let rooms = {};
 
-const typesDisponibles = ['qcm', 'ouverte', 'drapeau',"devineMeme", "codeTrou", "chronologie", "petitBac", "bombParty", "wikipedia"];
+const typesDisponibles = ['qcm', 'ouverte', 'drapeau',"devineMeme", "codeTrou", "chronologie", "petitBac", "bombParty", "wikipedia", "wordle"];
 
 const tempsType = {
   "qcm": 20,
@@ -43,6 +43,7 @@ const tempsType = {
   "petitBac" : 40,
   "bombParty": 60,
   "wikipedia": 120,
+  "wordle": 90,
 }
 
 const chronologieData = require('./chronologie.json');
@@ -110,6 +111,8 @@ const dictionnaireFr = new Set(
            .toUpperCase()
     )
 );
+
+const wordleWords = Array.from(dictionnaireFr).filter(mot => mot.length === 5);
 
 const wikiConcepts = JSON.parse(fs.readFileSync('./concepts.json', 'utf8')).cibles;
 
@@ -209,7 +212,14 @@ async function passerALaSuite(roomCode) {
         const reponseInfo = dataJ.reponses[room.indexQuestionReview] || ["Aucune réponse", false];
         const questionPosee = room.questionsDejaPosees[room.indexQuestionReview];
 
-        if (questionPosee.data.reponse === reponseInfo[0]) {
+        if (questionPosee.type === "wordle") {
+            try {
+                const wordleData = JSON.parse(reponseInfo[0]);
+                io.to(roomCode).emit("update_etat", wordleData.won);
+            } catch (e) {
+                io.to(roomCode).emit("update_etat", false);
+            }
+        } else if (questionPosee.data.reponse === reponseInfo[0]) {
           io.to(roomCode).emit("update_etat", true);
         }
         else {
@@ -252,6 +262,18 @@ async function passerALaSuite(roomCode) {
         io.to(roomCode).emit('loading_status', false);
     }
 }
+
+function genererWordleLocal() {
+    const word = wordleWords[Math.floor(Math.random() * wordleWords.length)];
+    return {
+        quizData: {
+            question: "Wordle : Devine le mot de 5 lettres !",
+            reponse: word,
+        },
+        difficulty: 5
+    };
+}
+
 
 async function genererWikipedia() {
     try {
@@ -597,8 +619,8 @@ function rejoindreLobby({ socket,pseudo, permanentId, roomCode }){
 
 async function nouvelleQuestion(roomCode) {
   const room = rooms[roomCode];
-  //const type = typesDisponibles[Math.floor(Math.random() * typesDisponibles.length)];
-  const type = "bombParty";
+  const type = typesDisponibles[Math.floor(Math.random() * typesDisponibles.length)];
+  //const type = "wordle";
   room.type = type;
   
   let quizData;
@@ -740,6 +762,22 @@ async function nouvelleQuestion(roomCode) {
       demarrerTimer(roomCode);
       
       return { quizData, type, difficulty };
+
+    case 'wordle':
+      room.joueurs.forEach(joueur => { 
+          room.reponsesGlobales[joueur.permanentId].reponses[room.questionsDejaPosees.length] = ["---", false]; 
+      });
+      const wordleInfo = genererWordleLocal();
+      quizData = { ...wordleInfo.quizData };
+      const realAnswer = quizData.reponse;
+      
+      // On stocke la réponse secrète dans la room mais on l'enlève du quizData envoyé aux clients
+      room.wordleSecret = realAnswer;
+      delete quizData.reponse; 
+
+      room.questionsDejaPosees.push({ data: { ...quizData, reponse: realAnswer }, type: type, difficulty: wordleInfo.difficulty });
+      demarrerTimer(roomCode);
+      return { quizData, type, difficulty: wordleInfo.difficulty };
   }
 }
 
@@ -747,6 +785,45 @@ async function nouvelleQuestion(roomCode) {
 // --- FONCTIONS SOCKET.IO ---
 
 io.on('connection', (socket) => {
+    
+    socket.on('wordle_check_word', (word) => {
+        const room = rooms[socket.roomCode];
+        if (!room || room.type !== 'wordle' || !room.wordleSecret) return;
+
+        const upperWord = word.toUpperCase();
+        const target = room.wordleSecret.toUpperCase();
+
+        // 1. Vérification dictionnaire
+        if (!dictionnaireFr.has(upperWord)) {
+            socket.emit('wordle_res', { isValid: false, message: "Mot inconnu !" });
+            return;
+        }
+
+        // 2. Calcul des statuts (Vert, Jaune, Gris)
+        const result = new Array(5).fill("absent");
+        const targetLetters = target.split("");
+        const guessLetters = upperWord.split("");
+
+        // Pass 1: Verts
+        guessLetters.forEach((letter, i) => {
+            if (letter === targetLetters[i]) {
+                result[i] = "correct";
+                targetLetters[i] = null;
+                guessLetters[i] = null;
+            }
+        });
+
+        // Pass 2: Jaunes
+        guessLetters.forEach((letter, i) => {
+            if (letter && targetLetters.includes(letter)) {
+                result[i] = "present";
+                targetLetters[targetLetters.indexOf(letter)] = null;
+            }
+        });
+
+        const won = upperWord === target;
+        socket.emit('wordle_res', { isValid: true, result, won });
+    });
     
     socket.on('create_lobby', ({ pseudo, permanentId }) => {
       let code;
