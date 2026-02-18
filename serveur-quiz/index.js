@@ -597,8 +597,8 @@ function rejoindreLobby({ socket,pseudo, permanentId, roomCode }){
 
 async function nouvelleQuestion(roomCode) {
   const room = rooms[roomCode];
-  //const type = typesDisponibles[Math.floor(Math.random() * typesDisponibles.length)];
-  const type = "wikipedia";
+  const type = typesDisponibles[Math.floor(Math.random() * typesDisponibles.length)];
+  //const type = "wikipedia";
   room.type = type;
   
   let quizData;
