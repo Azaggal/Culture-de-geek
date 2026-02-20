@@ -58,14 +58,14 @@ const PALETTE_LUMIERE = {
 const CONFIG_VISUELLE = {
   MOBILE: {
     card: "w-full h-full rounded-none border-none p-4 ring-0",
-    lobby: "w-full flex-col p-4",
-    room: "w-full flex-col p-4",
+    lobby: "flex w-full flex-col p-4",
+    room: "w-full flex-col",
     timerText: "text-3xl",
     glassHeader: "p-4 text-xl",
   },
   COMPUTER: {
     card: "md:rounded-3xl md:ring-8 md:p-8 md:shadow-2xl",
-    lobby: "md:w-96 md:flex-col md:p-7",
+    lobby: "md:w-96 md:flex-col md:p-7 md:gap-3",
     room: "md:w-full md:flex-col md:p-5",
     timerText: "md:text-4xl",
     glassHeader: "md:p-8 md:text-3xl",
@@ -83,9 +83,9 @@ const DIMENSIONS = {
   },
   // Ordinateur (Appliqué avec md:)
   COMPUTER: {
-    lobby: "w-100 h-155",
+    lobby: "w-115 h-180",
     loading: "w-180 h-40",
-    playing: "w-400 h-220",
+    playing: "w-400 h-250",
     review: "w-400 h-220",
     resultat: "w-200 h-200"
   }
@@ -100,24 +100,24 @@ const LAYOUTS = {
   // Lobby
   lobby: `${CONFIG_VISUELLE.MOBILE.lobby} ${CONFIG_VISUELLE.COMPUTER.lobby} rounded-xl items-center`,
   room: `${CONFIG_VISUELLE.MOBILE.room} ${CONFIG_VISUELLE.COMPUTER.room} flex flex-col items-center`,
-  playersList: "grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-h-[300px] overflow-y-auto custom-scrollbar p-2 mb-6",
-  playersListTitle: "font-black text-xl mb-4 text-purple-900 uppercase tracking-widest text-center w-full block",
+  playersList: `grid grid-cols-1 gap-3 w-full h-[35vh] overflow-y-auto custom-scrollbar p-2 mb-6 rounded-xl ${COLORS.slate.bg} ${COLORS.purple.border} ${COLORS.purple.textDark} ${SHADOWS.input.css} text-2xl text-center`,
+  playersListTitle: "mb-1 font-black text-base text-purple-900 uppercase tracking-widest text-center w-full block",
 
   // Game & UI
   gameView: "h-full w-full flex flex-col",
   timerContainer: "shrink-0 flex flex-col items-center pt-4 md:pt-6 z-10",
-  contentArea: "flex-1 w-full flex flex-col items-center overflow-y-auto custom-scrollbar",
+  contentArea: "flex-1 w-full flex flex-col items-center overflow-y-auto md:overflow-hidden custom-scrollbar",
   progressBar: "shrink-0 w-full p-4 md:p-6 pt-2 z-10",
   progressBarBg: "w-full h-4 rounded-full overflow-hidden shadow-inner",
   
   // Question internals
-  questionHeader: "flex flex-col w-full gap-2 items-center text-center",
+  questionHeader: "flex flex-col w-full gap-2 items-center text-center ",
   optionsGrid: "flex flex-wrap justify-center mb-5 gap-2 md:gap-4",
 
   // Review
   reviewView: "h-full w-full flex flex-col",
   reviewContent: "flex-1 overflow-y-auto w-full p-4 md:p-6 pb-2 flex flex-col items-center custom-scrollbar",
-  reviewFooter: "shrink-0 w-full p-4 px-6 bg-slate-800/50 border-t border-slate-700/50 flex justify-end gap-4 z-10",
+  reviewFooter: "shrink-0 w-full p-4 px-6 flex justify-end gap-4 z-10",
 
   // Results
   results: "w-full max-w-4xl p-4 md:p-5",
@@ -935,7 +935,7 @@ const QuestionPetitBac = ({ categories, lettre, theme, remplirText, review, valu
       
       {/* LA LETTRE GÉANTE */}
       <div className="relative">
-        <div className="absolute inset-0 bg-emerald-500 rounded-2xl transform rotate-3 shadow-lg"></div>
+        <div className="absolute inset-0 bg-purple-500 rounded-2xl transform rotate-3 shadow-lg"></div>
         <div className="relative text-7xl font-black text-purple-600 bg-white w-28 h-28 flex items-center justify-center rounded-2xl shadow-xl border-4 border-slate-200 transform -rotate-3 z-10">
           {lettre}
         </div>
@@ -1348,7 +1348,7 @@ const QuestionBombParty = ({ socket, review, pseudoReview, estBon, theme }) => {
             {error && <p className="text-rose-500 font-bold animate-bounce uppercase text-sm tracking-tighter">{error}</p>}
           </div>
         ) : (
-          <div className="bg-slate-800/50 p-6 rounded-2xl border-2 border-slate-700 flex flex-col items-center gap-1 w-full">
+          <div className=" p-6 rounded-2xl border-2 border-slate-700 flex flex-col items-center gap-1 w-full">
             <p className="text-slate-500 text-xs font-bold uppercase">Tour de</p>
             <p className="text-3xl font-black text-blue-400 uppercase">{bombState.currentPlayerPseudo}</p>
             {/* ICI ON VOIT CE QUE L'AUTRE JOUEUR ÉCRIT */}
@@ -1426,7 +1426,7 @@ const ButtonPret = ({ tousPrets, lancerPartieSocket, texte, theme }) => {
     <button
       disabled={!tousPrets}
       onClick={lancerPartieSocket}
-      className={` 
+      className={` min-w-35
         ${!tousPrets ? theme.button.disabled : theme.button.primary}
       `} 
     >
@@ -1602,7 +1602,7 @@ const OtpInput = ({ length = 6, onComplete , theme, pseudoExist, cantJoin}) => {
             value={data}
             onChange={(e) => handleChange(e.target, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
-            className={`w-10 h-12 text-center ${!pseudoExist ? "cursor-not-allowed" : ""}  ${cantJoin ? theme.text.code.wrong : theme.text.code.normal}  `}
+            className={`w-full h-12 text-center ${!pseudoExist ? "cursor-not-allowed" : ""}  ${cantJoin ? theme.text.code.wrong : theme.text.code.normal}  `}
           />
         </div>
       ))}
@@ -1734,7 +1734,7 @@ const QuestionCodeTrou = ({ code, langage, theme, remplirText, review, valueText
         </div>
         
         {/* LA ZONE DE CODE AVEC LE SCROLL (max-h-64 crée la limite de hauteur) */}
-        <div className="p-4 md:p-6 overflow-y-auto overflow-x-hidden max-h-64 custom-scrollbar">
+        <div className="p-4 md:p-6 overflow-y-auto overflow-x-hidden md:overflow-hidden max-h-64 custom-scrollbar ">
           <pre className="font-mono text-emerald-400 text-base md:text-lg leading-relaxed whitespace-pre-wrap break-words">
             {renderCodeAvecTrou(code)}
           </pre>
@@ -2368,14 +2368,14 @@ export default function App() {
               </div>
             </>
             :
-            <div className='flex flex-col w-full h-full p-4 items-center'>
+            <div className='flex flex-col w-full h-full items-center'>
               <div className={LAYOUTS.room}>
                 
                 {/* 1. CODE DE LA PARTIE (Stylisé et sans préfixe textuel lourd) */}
                 <div className="flex flex-col items-center mb-8">
                    <p className="text-purple-900 font-black uppercase text-[10px] tracking-[0.3em] mb-2 opacity-70">Salon Privé</p>
-                   <div className="bg-white/40 backdrop-blur-sm px-10 py-4 rounded-3xl border-4 border-purple-600 shadow-[0_10px_0_rgb(147,51,234)] transform -rotate-1">
-                      <h2 className="text-5xl md:text-6xl font-black text-purple-700 tracking-[0.15em] drop-shadow-sm">
+                   <div className="bg-slate-200 backdrop-blur-sm px-10 py-4 rounded-3xl border-4 border-purple-600 shadow-[0_10px_0_rgb(147,51,234)] transform -rotate-1">
+                      <h2 className="text-4xl md:text-6xl font-black text-purple-700 tracking-[0.15em] drop-shadow-sm">
                         {roomCode}
                       </h2>
                    </div>
@@ -2386,11 +2386,11 @@ export default function App() {
                   <h2 className={LAYOUTS.playersListTitle}>Joueurs connectés ({lobby.length})</h2>
                   <div className={LAYOUTS.playersList}>
                     {lobby.map((j,index) => (
-                      <div key={j.id} className={`flex items-center justify-between p-4 rounded-2xl border-2 transition-all duration-300 transform hover:scale-[1.02]
+                      <div key={j.id} className={`flex h-[40px] items-center justify-between pr-1 rounded-2xl border-2 transition-all duration-300 transform
                         ${j.pret ? "bg-emerald-500/10 border-emerald-500 shadow-[0_4px_0_rgb(16,185,129)]" : "bg-white/80 border-purple-200 shadow-[0_4px_0_rgb(233,213,255)]"}
                         ${j.id === socket?.id ? "ring-4 ring-purple-400/30" : ""}
                       `}>
-                        <div className="flex items-center gap-3">
+                        <div className="flex items-center">
                            {index === 0 ? 
                              <div className="relative">
                                <img className='w-8 h-8 animate-bounce' src='/images/couronne.png' alt="chef" />
@@ -2416,14 +2416,13 @@ export default function App() {
                 </div>
                 
                 {/* 3. OPTIONS DE JEU (Nombre de questions) */}
-                <div className='flex flex-col items-center mb-10 w-full'>
-                  <div className="w-full h-[2px] bg-purple-900/10 mb-8 rounded-full"></div>
-                  <label className={`${theme.text.label} text-center mb-5 block text-lg`}>Combien de questions ?</label>
-                  <div className='flex flex-wrap justify-center gap-3'>
+                <div className='flex flex-col items-center mb-2 w-full'>
+                  <label className={`${theme.text.label} text-center mb-3 block text-lg`}>Combien de questions ?</label>
+                  <div className='flex flex-wrap justify-center gap-1'>
                     {choixNombreQuestions.map((nb,index) => {
                       const isSelect = nombreQuestions === nb;
                       return (
-                        <div key={index} className="transform hover:scale-105 transition-transform">
+                        <div key={index} className="transform transition-transform">
                           <ButtonChoix valeur={nb} changerChoix={changerNbQuestions} isSelected={isSelect} isChef={isChef} theme={theme}/>
                         </div>
                       )
@@ -2433,12 +2432,12 @@ export default function App() {
                 
                 {/* 4. BOUTON D'ACTION (Gros et centré) */}
                 <div className="w-full flex justify-center mt-2">
-                  <div className="w-full max-w-xs transform hover:scale-105 transition-transform">
+                  <div className="flex w-full max-w-xs transform transition-transform justify-center">
                     {isChef 
                       ? <ButtonPret theme={theme} tousPrets={tousPrets()} lancerPartieSocket={() => lancerPartieSocket()} texte="🚀 LANCER LA PARTIE"/>
                       : isPret 
-                        ? <ButtonPret theme={theme} tousPrets={isinRoom()} lancerPartieSocket={() => annulerPretSocket()} texte="🛑 PAS PRÊT"/>
-                        : <ButtonPret theme={theme} tousPrets={isinRoom()} lancerPartieSocket={() => seMettrePretSocket()} texte="✅ JE SUIS PRÊT"/>
+                        ? <ButtonPret theme={theme} tousPrets={isinRoom()} lancerPartieSocket={() => annulerPretSocket()} texte="PAS PRÊT"/>
+                        : <ButtonPret theme={theme} tousPrets={isinRoom()} lancerPartieSocket={() => seMettrePretSocket()} texte="PRÊT"/>
                     }
                   </div>
                 </div>
