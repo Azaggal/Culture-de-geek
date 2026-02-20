@@ -51,39 +51,76 @@ const PALETTE_LUMIERE = {
 }
 
 // ==================================================================================
-// 4. STRUCTURES ET MISES EN PAGE (Layouts)
+// 4. STRUCTURES ET MISES EN PAGE (Layouts Responsifs)
 // ==================================================================================
+
+// Vous pouvez modifier ici séparément l'aspect Mobile et Ordinateur
+const CONFIG_VISUELLE = {
+  MOBILE: {
+    card: "w-full h-full rounded-none border-none p-4 ring-0",
+    lobby: "w-full flex-col p-4",
+    room: "w-full flex-col p-4",
+    timerText: "text-3xl",
+    glassHeader: "p-4 text-xl",
+  },
+  COMPUTER: {
+    card: "md:rounded-3xl md:ring-8 md:p-8 md:shadow-2xl",
+    lobby: "md:w-96 md:flex-col md:p-7",
+    room: "md:w-full md:flex-col md:p-5",
+    timerText: "md:text-4xl",
+    glassHeader: "md:p-8 md:text-3xl",
+  }
+};
+
+const DIMENSIONS = {
+  // Mobile (Valeurs par défaut)
+  MOBILE: {
+    lobby: "w-full h-full",
+    loading: "w-full h-60",
+    playing: "w-full h-full",
+    review: "w-full h-full",
+    resultat: "w-full h-full"
+  },
+  // Ordinateur (Appliqué avec md:)
+  COMPUTER: {
+    lobby: "w-100 h-155",
+    loading: "w-180 h-40",
+    playing: "w-400 h-220",
+    review: "w-400 h-220",
+    resultat: "w-200 h-200"
+  }
+};
 
 const LAYOUTS = {
   // Global
   main: "bg-cover bg-center h-screen w-screen overflow-hidden flex items-center justify-center relative",
-  card: "transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ring-8 ring-inset ring-[rgba(226,232,240,0.3)] flex flex-col relative overflow-hidden",
+  card: `transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ring-inset ring-[rgba(226,232,240,0.3)] flex flex-col relative overflow-hidden ${CONFIG_VISUELLE.MOBILE.card} ${CONFIG_VISUELLE.COMPUTER.card}`,
   fullscreen: "fixed inset-0 !max-w-none !max-h-none bg-slate-900 rounded-none border-none !p-0 z-[101]",
 
   // Lobby
-  lobby: "flex flex-col gap-8 w-96 rounded-xl items-center p-7",
-  room: "w-full flex flex-col p-5",
+  lobby: `${CONFIG_VISUELLE.MOBILE.lobby} ${CONFIG_VISUELLE.COMPUTER.lobby} rounded-xl items-center`,
+  room: `${CONFIG_VISUELLE.MOBILE.room} ${CONFIG_VISUELLE.COMPUTER.room}`,
   playersList: "bg-slate-100 p-4 rounded-xl min-h-[100px] mb-4 shadow-inner",
   playersListTitle: "font-bold border-b mb-2 text-purple-800",
 
   // Game & UI
   gameView: "h-full w-full flex flex-col",
-  timerContainer: "shrink-0 flex flex-col items-center pt-6 z-10",
-  contentArea: "flex-1 w-full flex flex-col items-center overflow-hidden",
-  progressBar: "shrink-0 w-full p-6 pt-2 z-10",
+  timerContainer: "shrink-0 flex flex-col items-center pt-4 md:pt-6 z-10",
+  contentArea: "flex-1 w-full flex flex-col items-center overflow-y-auto custom-scrollbar",
+  progressBar: "shrink-0 w-full p-4 md:p-6 pt-2 z-10",
   progressBarBg: "w-full h-4 rounded-full overflow-hidden shadow-inner",
   
   // Question internals
-  questionHeader: "flex flex-row w-full gap-2",
-  optionsGrid: "flex flex-wrap justify-center mb-5 gap-4",
+  questionHeader: "flex flex-col w-full gap-2 items-center text-center",
+  optionsGrid: "flex flex-wrap justify-center mb-5 gap-2 md:gap-4",
 
   // Review
   reviewView: "h-full w-full flex flex-col",
-  reviewContent: "flex-1 overflow-y-auto w-full p-6 pb-2 flex flex-col items-center custom-scrollbar",
+  reviewContent: "flex-1 overflow-y-auto w-full p-4 md:p-6 pb-2 flex flex-col items-center custom-scrollbar",
   reviewFooter: "shrink-0 w-full p-4 px-6 bg-slate-800/50 border-t border-slate-700/50 flex justify-end gap-4 z-10",
 
   // Results
-  results: "w-full max-w-4xl p-5",
+  results: "w-full max-w-4xl p-4 md:p-5",
   resultsList: "flex flex-col gap-2",
   resultsItem: "bg-white/90 p-4 rounded-xl flex justify-between items-center font-bold text-purple-800 animate-bounce",
 };
@@ -97,10 +134,10 @@ const COMPONENTS = {
     sendBtn: "w-max border border-[rgba(0,0,0,0.3)] rounded-xl font-bold text-[rgba(0,0,0,0.5)] shadow-[0_3px_0_rgba(0,0,0,0.3)] hover:cursor-pointer active:translate-y-[3px] active:shadow-none mt-1 ml-1 mb-1 p-1 pl-5 pr-5",
   },
   photoProfil: {
-    container: "relative h-44 w-40 flex items-end justify-center group cursor-pointer",
+    container: "relative h-44 w-40 flex items-end justify-center group cursor-pointer mx-auto z-0",
     bgCircle: "absolute bottom-0 w-40 h-40 bg-white rounded-full border-4 border-purple-600 transition-all duration-300",
     avatarWrapper: "relative z-10 w-36 h-full mb-1 items-end justify-center overflow-visible transition-all duration-300 -translate-y-3",
-    cache: "absolute top-full z-20 w-50 h-50 bg-purple-400 pointer-events-none",
+    cache: "absolute top-full z-0 w-50 h-50 bg-purple-400 pointer-events-none",
     bottomRim: "absolute bottom-0 z-20 w-40 h-20 rounded-b-full border-b-4 border-l-4 border-r-4 border-purple-600 pointer-events-none transition-all duration-300",
   }
 };
@@ -114,7 +151,7 @@ const BASES_COMIC = {
   btn: `transition-all ease-in-out font-bold z-45 rounded-xl border-2 flex items-center justify-center`,
   
   // Le squelette de tous les inputs
-  input: "p-2 border-2 rounded-xl w-full text-xl font-bold outline-none placeholder-slate-300 transition-all",
+  input: "p-2 border-2 rounded-xl w-full text-xl z-45 font-bold outline-none placeholder-slate-300 transition-all",
   
   // Le squelette des cartes/conteneurs
   card: "transition-all duration-500 ease-in-out rounded-3xl"
@@ -178,12 +215,12 @@ const THEMES_CONFIG = {
         p-4 text-xl
       `,
       
-      // Gros bouton de réponse (Jeu)
+      // Gros bouton de réponse (Jeu) - ADAPTÉ MOBILE
       gameAnswer: `
         ${BASES_COMIC.btn} ${COLORS.hover}
         ${COLORS.slate.bg} ${COLORS.purple.text} ${COLORS.purple.border}
         ${SHADOWS.large.css} ${SHADOWS.large.active}
-        p-2 w-120 h-50 mr-15 mt-5 mb-5 text-xl
+        p-2 w-full md:w-120 h-16 md:h-50 md:mr-15 mt-2 md:mt-5 mb-2 md:mb-5 text-lg md:text-xl
       `,
 
       // Petit bouton carré (Choix nombres)
@@ -206,17 +243,17 @@ const THEMES_CONFIG = {
         wrong: `font-bold rounded-xl border-2
           ${COLORS.status.error} ${COLORS.purple.text} ${COLORS.purple.border}
           ${SHADOWS.large.css}
-          p-2 w-120 h-50 mr-15 mt-5 mb-5 text-xl}`,
+          p-2 w-full md:w-120 h-16 md:h-50 md:mr-15 mt-2 md:mt-5 mb-2 md:mb-5 text-lg md:text-xl}`,
 
         correct: `font-bold rounded-xl border-2
           ${COLORS.status.success} ${COLORS.purple.text} ${COLORS.purple.border}
           ${SHADOWS.large.css}
-          p-2 w-120 h-50 mr-15 mt-5 mb-5 text-xl}`,
+          p-2 w-full md:w-120 h-16 md:h-50 md:mr-15 mt-2 md:mt-5 mb-2 md:mb-5 text-lg md:text-xl}`,
 
         neutral: `font-bold rounded-xl border-2
           ${COLORS.status.neutral} ${COLORS.purple.text} ${COLORS.purple.border}
           ${SHADOWS.large.css}
-          p-2 w-120 h-50 mr-15 mt-5 mb-5 text-xl}`,
+          p-2 w-full md:w-120 h-16 md:h-50 md:mr-15 mt-2 md:mt-5 mb-2 md:mb-5 text-lg md:text-xl}`,
           pressed: "translate-y-[6px] shadow-none brightness-100",
           pressedGame: "translate-y-[15px] shadow-none brightness-100",
           disabled: "opacity-50 cursor-not-allowed active:translate-y-0 active:shadow-[0_6px_0_rgb(147,51,234)]"
@@ -912,11 +949,11 @@ const QuestionPetitBac = ({ categories, lettre, theme, remplirText, review, valu
 
           return (
             <div key={i} className={`flex flex-col md:flex-row items-center gap-2 md:gap-4 p-3 md:p-4 rounded-xl border-2 shadow-sm w-full transition-colors duration-300
-              ${review ? (estLigneBonne ? 'bg-emerald-900/40 border-emerald-500' : 'bg-rose-900/40 border-rose-500') : 'bg-slate-800 border-slate-700'}
+              ${review ? (estLigneBonne ? 'bg-emerald-900/40 border-emerald-500' : 'bg-rose-900/40 border-rose-500') : 'bg-purple-500 border-purple-600'}
             `}>
               
               <span className={`font-bold w-full md:w-1/3 text-center md:text-right uppercase tracking-wider text-sm
-                ${review ? (estLigneBonne ? 'text-emerald-400' : 'text-rose-400') : 'text-emerald-400'}
+                ${review ? (estLigneBonne ? 'text-emerald-400' : 'text-rose-400') : 'text-slate-100 font-bold'}
               `}>
                 {cat}
               </span>
@@ -1343,7 +1380,7 @@ const QuestionBombParty = ({ socket, review, pseudoReview, estBon, theme }) => {
 
 const QuestionOuverte = ({remplirText, valueText, review, theme}) => {
   return (
-    <div className='w-200'>
+    <div className='w-full'>
       {!review ? // NORMAL
       
       <input 
@@ -1587,7 +1624,6 @@ const QuestionDrapeau = ({image,theme,remplirText,review,valueText}) => {
     {!review 
     ? //NORMAL
 
-    <div className='w-200'>
     <input 
           disabled={review} 
           type="text" 
@@ -1596,11 +1632,9 @@ const QuestionDrapeau = ({image,theme,remplirText,review,valueText}) => {
           onChange={(e) => remplirText(e.target.value)} 
           className={`${theme.input.game} ${review ? "text-center" : ""}`}
         ></input>
-      </div>
 
     : //REVIEW
 
-    <div className='w-200'>
     <input 
           disabled={review} 
           type="text" 
@@ -1609,7 +1643,6 @@ const QuestionDrapeau = ({image,theme,remplirText,review,valueText}) => {
           onChange={(e) => remplirText(e.target.value)} 
           className={`${theme.input.game} ${review ? "text-center" : ""}`}
         ></input>
-      </div>
 
 
   }
@@ -1631,7 +1664,6 @@ const MemeFlou = ({image,theme,remplirText,review,valueText}) => {
     {!review 
     ? //NORMAL
 
-    <div className='w-200'>
     <input 
           disabled={review} 
           type="text" 
@@ -1640,11 +1672,9 @@ const MemeFlou = ({image,theme,remplirText,review,valueText}) => {
           onChange={(e) => remplirText(e.target.value)} 
           className={`${theme.input.game} ${review ? "text-center" : ""}`}
         ></input>
-      </div>
 
     : //REVIEW
 
-    <div className='w-200'>
     <input 
           disabled={review} 
           type="text" 
@@ -1653,7 +1683,6 @@ const MemeFlou = ({image,theme,remplirText,review,valueText}) => {
           onChange={(e) => remplirText(e.target.value)} 
           className={`${theme.input.game} ${review ? "text-center" : ""}`}
         ></input>
-      </div>
 
 
   }
@@ -1768,20 +1797,22 @@ export default function App() {
 
   const choixNombreQuestions = ["5", "10", "20", "30"]
 
-  let dimensionDico = {
-    lobby : "w-100 h-155",
-    loading : "w-180 h-40",
-    playing : "w-400 h-220",
-    review : "w-400 h-220",
-    resultat : "w-200 h-200"
-  }
+  // --- GESTION RESPONSIVE DES DIMENSIONS ---
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  let dimensionContour;
-  if (loading) {
-    dimensionContour = dimensionDico["loading"];
-  } else {
-    dimensionContour = dimensionDico[gameStat] || "w-300 h-150";
-  }
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const getDimension = () => {
+    const currentStatus = loading ? "loading" : (gameStat || "lobby");
+    const device = isMobile ? "MOBILE" : "COMPUTER";
+    return DIMENSIONS[device][currentStatus] || DIMENSIONS[device].lobby;
+  };
+
+  const dimensionContour = getDimension();
 
   useEffect(() => {
     let frame;
@@ -1983,7 +2014,7 @@ export default function App() {
             theme={theme}
         />
 
-       {isReviewing ? <div className="w-200 mt-10">
+       {isReviewing ? <div className="w-full mt-10">
                     <label className={`${theme.text.label} ml-15`}> Réponse : </label>
                     <div className={theme.input.game}>{questionData.reponse}</div>
                     </div> : "" }
@@ -2057,7 +2088,7 @@ export default function App() {
 
       {isReviewing ? <p className={theme.text.reviewPseudo}> {pseudoReview} </p> : ""}
 
-      {isReviewing ? <div className="w-200 mt-10">
+      {isReviewing ? <div className="w-full mt-10">
                     <label className={`${theme.text.label} ml-15`}> Réponse : </label>
                     <div className={theme.input.game}>{questionData.reponse}</div>
                     </div> : "" }  
@@ -2135,7 +2166,7 @@ export default function App() {
 
       {isReviewing ? <p className={theme.text.reviewPseudo}> {pseudoReview} </p> : ""}
  
-      {isReviewing ? <div className="w-200 mt-10">
+      {isReviewing ? <div className="w-full mt-10">
                     <label className={`${theme.text.label} ml-15`}> Réponse : </label>
                     <div className={theme.input.game}>{questionData.reponse}</div>
                     </div> : "" }  
@@ -2306,8 +2337,8 @@ export default function App() {
     }`}
   style={{
     // Si on n'est pas en plein écran, on applique les dimensions du dico manuellement
-    width: isWikiFullscreen ? '100vw' : `${dimensionContour.split(' ')[0].replace('w-', '') * 4}px`,
-    height: isWikiFullscreen ? '100vh' : `${dimensionContour.split(' ')[1].replace('h-', '') * 4}px`,
+    width: isWikiFullscreen ? '100vw' : (isMobile ? '100vw' : `${dimensionContour.split(' ')[0].replace('w-', '') * 4}px`),
+    height: isWikiFullscreen ? '100vh' : (isMobile ? '100vh' : `${dimensionContour.split(' ')[1].replace('h-', '') * 4}px`),
   }}
 >
           
@@ -2316,7 +2347,7 @@ export default function App() {
             <>
               <div className={LAYOUTS.lobby}>
                 <PhotoProfil />
-                <div className="w-full z-45">
+                <div className="w-full relative z-45">
                   <label className={theme.text.title}> Pseudo </label>
                   <input 
                     value={pseudo} 
@@ -2326,7 +2357,7 @@ export default function App() {
                   />
                 </div>  
 
-                <button onClick={creerLobby} className={`w-full ${theme.button.primary}`}>
+                <button onClick={creerLobby} className={`w-full relative z-45 ${theme.button.primary}`}>
                   {isinRoom() ? "Changer de pseudo" : "Créer le salon"}
                 </button>
 
@@ -2340,7 +2371,7 @@ export default function App() {
             <div className='flex flex-row w-full'>
               <div className={LAYOUTS.room}>
                 <div>
-                  <h2>
+                  <h2 className="text-xl md:text-2xl font-black">
                     Code de la partie : {roomCode}
                   </h2>
                 </div>
@@ -2382,14 +2413,14 @@ export default function App() {
               {/* NOUVEAU : On cache le chrono si isWikiFullscreen est vrai */}
               {(!loading && !isWikiFullscreen) && (
                 <div className={LAYOUTS.timerContainer}>
-                  <div className={`${theme.text.timer} ${timeLeft < 5 ? 'text-red-500 animate-pulse ease-linear' : 'text-blue-600'}`}>
+                  <div className={`${CONFIG_VISUELLE.MOBILE.timerText} ${CONFIG_VISUELLE.COMPUTER.timerText} font-bold ${timeLeft < 5 ? 'text-red-500 animate-pulse ease-linear' : 'text-blue-600'}`}>
                       {timeLeft}s
                   </div>
                 </div>
               )}
 
               {/* NOUVEAU : On supprime les paddings (p-6) de la zone centrale si on est en plein écran */}
-              <div className={`${LAYOUTS.contentArea} ${isWikiFullscreen ? "p-0" : "p-6"}`}>
+              <div className={`${LAYOUTS.contentArea} ${isWikiFullscreen ? "p-0" : "p-4 md:p-6"}`}>
                 {loading ? (
                   <div className="m-auto flex items-center justify-center">
                     <h1 className={theme.text.loading}>{gameStat === "review" ? "Résultats..." :  "Génération de la question..."}</h1>

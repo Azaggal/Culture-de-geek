@@ -186,7 +186,7 @@ const demarrerTimer = (roomCode) => {
 // Fonction utilitaire pour éviter la répétition de code
 async function passerALaSuite(roomCode) {
     const room = rooms[roomCode];
-    
+
     if (room.questionsDejaPosees.length >= room.nombreQuestions) {
         if (room.indexQuestionReview >= room.questionsDejaPosees.length) {
             io.to(roomCode).emit("resultats", getResultatFin(room));
@@ -619,8 +619,8 @@ function rejoindreLobby({ socket,pseudo, permanentId, roomCode }){
 
 async function nouvelleQuestion(roomCode) {
   const room = rooms[roomCode];
-  const type = typesDisponibles[Math.floor(Math.random() * typesDisponibles.length)];
-  //const type = "wordle";
+  //const type = typesDisponibles[Math.floor(Math.random() * typesDisponibles.length)];
+  const type = "petitBac";
   room.type = type;
   
   let quizData;
@@ -1011,7 +1011,7 @@ io.on('connection', (socket) => {
     
 
     // Lancement de la partie par un joueur
-    socket.on('start_game', async (theme,nombreQuestions) => {
+    socket.on('start_game', async (nombreQuestions) => {
       const room = rooms[socket.roomCode];
       const isChef = socket.id === room.joueurs[0].id;
       if (!isChef) {
