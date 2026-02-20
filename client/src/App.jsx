@@ -51,6 +51,61 @@ const PALETTE_LUMIERE = {
 }
 
 // ==================================================================================
+// 4. STRUCTURES ET MISES EN PAGE (Layouts)
+// ==================================================================================
+
+const LAYOUTS = {
+  // Global
+  main: "bg-cover bg-center h-screen w-screen overflow-hidden flex items-center justify-center relative",
+  card: "transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ring-8 ring-inset ring-[rgba(226,232,240,0.3)] flex flex-col relative overflow-hidden",
+  fullscreen: "fixed inset-0 !max-w-none !max-h-none bg-slate-900 rounded-none border-none !p-0 z-[101]",
+
+  // Lobby
+  lobby: "flex flex-col gap-8 w-96 rounded-xl items-center p-7",
+  room: "w-full flex flex-col p-5",
+  playersList: "bg-slate-100 p-4 rounded-xl min-h-[100px] mb-4 shadow-inner",
+  playersListTitle: "font-bold border-b mb-2 text-purple-800",
+
+  // Game & UI
+  gameView: "h-full w-full flex flex-col",
+  timerContainer: "shrink-0 flex flex-col items-center pt-6 z-10",
+  contentArea: "flex-1 w-full flex flex-col items-center overflow-hidden",
+  progressBar: "shrink-0 w-full p-6 pt-2 z-10",
+  progressBarBg: "w-full h-4 rounded-full overflow-hidden shadow-inner",
+  
+  // Question internals
+  questionHeader: "flex flex-row w-full gap-2",
+  optionsGrid: "flex flex-wrap justify-center mb-5 gap-4",
+
+  // Review
+  reviewView: "h-full w-full flex flex-col",
+  reviewContent: "flex-1 overflow-y-auto w-full p-6 pb-2 flex flex-col items-center custom-scrollbar",
+  reviewFooter: "shrink-0 w-full p-4 px-6 bg-slate-800/50 border-t border-slate-700/50 flex justify-end gap-4 z-10",
+
+  // Results
+  results: "w-full max-w-4xl p-5",
+  resultsList: "flex flex-col gap-2",
+  resultsItem: "bg-white/90 p-4 rounded-xl flex justify-between items-center font-bold text-purple-800 animate-bounce",
+};
+
+const COMPONENTS = {
+  chat: {
+    container: "fixed bottom-0 right-10 z-50 flex flex-col bg-purple-400 w-80 h-96 rounded-2xl shadow-[0_120px_0_rgb(147,51,234)] transition-transform duration-500 ease-[cubic-bezier(0.34,1.20,0.64,1)]",
+    button: `absolute -top-12 right-0 h-12 px-6 ounded-t-xl border-t-4 border-l-4 border-r-4 border-purple-600 border-b-0 font-bold text-lg transition-all duration-300 flex items-center gap-2 border-2 border-purple-600  bg-slate-100 text-purple-600 p-2 rounded-xl font-bold text-xl transition-all shadow-[0_6px_0_rgb(147,51,234)] ${COLORS.hover} active:translate-y-[6px] active:shadow-none`,
+    history: "h-70 overflow-y-scroll shadow-[inset_0_2px_10px_rgba(0,0,0,0.3)] rounded-xl p-2 text-purple-900",
+    input: "p-3 border-2 mt-1 text-purple-800 border-[rgba(0,0,0,0.1)] transition-all duration-100 outline-none focus:shadow-[inset_0_2px_8px_rgba(0,0,0,0.3)] rounded-xl w-full",
+    sendBtn: "w-max border border-[rgba(0,0,0,0.3)] rounded-xl font-bold text-[rgba(0,0,0,0.5)] shadow-[0_3px_0_rgba(0,0,0,0.3)] hover:cursor-pointer active:translate-y-[3px] active:shadow-none mt-1 ml-1 mb-1 p-1 pl-5 pr-5",
+  },
+  photoProfil: {
+    container: "relative h-44 w-40 flex items-end justify-center group cursor-pointer",
+    bgCircle: "absolute bottom-0 w-40 h-40 bg-white rounded-full border-4 border-purple-600 transition-all duration-300",
+    avatarWrapper: "relative z-10 w-36 h-full mb-1 items-end justify-center overflow-visible transition-all duration-300 -translate-y-3",
+    cache: "absolute top-full z-20 w-50 h-50 bg-purple-400 pointer-events-none",
+    bottomRim: "absolute bottom-0 z-20 w-40 h-20 rounded-b-full border-b-4 border-l-4 border-r-4 border-purple-600 pointer-events-none transition-all duration-300",
+  }
+};
+
+// ==================================================================================
 // 2. STRUCTURES DE BASE (Molécules - Formes réutilisables)
 // ==================================================================================
 
@@ -189,6 +244,10 @@ const THEMES_CONFIG = {
     text: {
       label: "text-purple-900 font-black text-sm uppercase ml-1",
       title: "text-slate-100 font-bold text-sm uppercase ml-1",
+      timer: "text-4xl font-bold",
+      loading: "text-slate-100 font-black text-5xl text-center",
+      reviewPseudo: "text-center text-4xl mb-5 font-bold text-slate-100 drop-shadow-md w-full",
+      resultTitle: "text-3xl font-black text-white text-center mb-8",
       code: {
         normal: "text-purple-900 font-black text-2xl ml-1 font-semibold outline-none border-b-2 border-cyan-500 focus:border-purple-400 transition-colors uppercase",
         wrong: "text-rose-500 font-black text-2xl ml-1 font-semibold outline-none border-b-2 border-rose-500 focus:border-rose-400 transition-colors uppercase",
@@ -256,6 +315,10 @@ const THEMES_CONFIG = {
     text: {
       label: "text-purple-900 font-black text-sm uppercase ml-1",
       title: "text-slate-100 font-bold text-sm uppercase ml-1",
+      timer: "text-4xl font-bold",
+      loading: "text-slate-100 font-black text-5xl text-center",
+      reviewPseudo: "text-center text-4xl mb-5 font-bold text-slate-100 drop-shadow-md w-full",
+      resultTitle: "text-3xl font-black text-white text-center mb-8",
     }
   }
 };
@@ -1132,17 +1195,17 @@ const PhotoProfil = () => {
   }
 
   return (
-    <div className="relative h-44 w-40 flex items-end justify-center group cursor-pointer" onClick={changerPhoto}>
+    <div className={COMPONENTS.photoProfil.container} onClick={changerPhoto}>
       {/* 1. COUCHE ARRIÈRE */}
-      <div className={`absolute bottom-0 w-40 h-40 bg-white rounded-full border-4 border-purple-600 transition-all duration-300`}></div>
+      <div className={COMPONENTS.photoProfil.bgCircle}></div>
       {/* 2. COUCHE MILIEU */}
-      <div className={`relative z-10 w-36 h-full mb-1 items-end justify-center overflow-visible transition-all duration-300 -translate-y-3 ${transition ? "translate-y-50" : "translate-y-0 opacity-100 group-hover:-translate-y-6"}`}>
+      <div className={`${COMPONENTS.photoProfil.avatarWrapper} ${transition ? "translate-y-50" : "translate-y-0 opacity-100 group-hover:-translate-y-6"}`}>
          <img className="h-40 w-40 object-contain drop-shadow-xl" src={`/images/avatar/${photoProfil}`} alt="Avatar" />
       </div>
       {/* 3. COUCHE AVANT (Cache) */}
-      <div className="absolute top-full z-20 w-50 h-50 bg-purple-400 pointer-events-none "></div>
-      <div className={`absolute bottom-0 z-20 w-40 h-20 rounded-b-full border-b-4 border-l-4 border-r-4 border-purple-600 pointer-events-none transition-all duration-300 shadow-[0_30px_0_#c084fc]`}></div>
-      <div className={`absolute bottom-0 z-20 w-40 h-20 rounded-b-full border-b-4 border-l-4 border-r-4 border-purple-600 pointer-events-none transition-all duration-300 shadow-[0_12px_0_rgb(147,51,234)]`}></div>
+      <div className={COMPONENTS.photoProfil.cache}></div>
+      <div className={`${COMPONENTS.photoProfil.bottomRim} shadow-[0_30px_0_#c084fc]`}></div>
+      <div className={`${COMPONENTS.photoProfil.bottomRim} shadow-[0_12px_0_rgb(147,51,234)]`}></div>
       
     </div>
   );
@@ -1412,16 +1475,16 @@ const Chat = ({ onClick, historiqueChat, theme }) => {
   }, [historiqueChat, open]);
 
   return (
-    <div className={`fixed bottom-0 right-10 z-50 flex flex-col bg-purple-400 w-80 h-96 rounded-2xl shadow-[0_120px_0_rgb(147,51,234)] transition-transform duration-500 ease-[cubic-bezier(0.34,1.20,0.64,1)] ${open ? "-translate-y-20" : "translate-y-full"}`}>
+    <div className={`${COMPONENTS.chat.container} ${open ? "-translate-y-20" : "translate-y-full"}`}>
       <button
         onClick={() => setOpen(!open)}
-        className={`absolute -top-12 right-0 h-12 px-6 ounded-t-xl border-t-4 border-l-4 border-r-4 border-purple-600 border-b-0 font-bold text-lg transition-all duration-300 flex items-center gap-2 border-2 border-purple-600  bg-slate-100 text-purple-600 p-2 rounded-xl font-bold text-xl transition-all shadow-[0_6px_0_rgb(147,51,234)] ${COLORS.hover} active:translate-y-[6px] active:shadow-none`}
+        className={COMPONENTS.chat.button}
       >
         {open ? "▼ Fermer" : "▲ Chat"}
       </button>
 
       <div className='h-max p-9'>
-        <div className=' h-70 overflow-y-scroll shadow-[inset_0_2px_10px_rgba(0,0,0,0.3)] rounded-xl p-2 text-purple-900' >
+        <div className={COMPONENTS.chat.history} >
           {historiqueChat.map ((chat, index) => (
             <p key={index}>{chat}</p>
           ))}
@@ -1432,9 +1495,9 @@ const Chat = ({ onClick, historiqueChat, theme }) => {
           <input
             type="text" placeholder='Écris ici...' value={texteChat} 
             onChange={(e) => changerTexteChat(e.target.value)} 
-            className={`p-3 border-2 mt-1 text-purple-800 border-[rgba(0,0,0,0.1)] transition-all duration-100 outline-none focus:shadow-[inset_0_2px_8px_rgba(0,0,0,0.3)] rounded-xl w-full ${texteChat === "" ? "" : "shadow-[inset_0_2px_8px_rgba(0,0,0,0.3)]" }`}
+            className={`${COMPONENTS.chat.input} ${texteChat === "" ? "" : "shadow-[inset_0_2px_8px_rgba(0,0,0,0.3)]" }`}
           />
-          <button onClick={() => {onClick(texteChat); changerTexteChat(""); }} className='w-max border border-[rgba(0,0,0,0.3)] rounded-xl font-bold text-[rgba(0,0,0,0.5)] shadow-[0_3px_0_rgba(0,0,0,0.3)] hover:cursor-pointer active:translate-y-[3px] active:shadow-none mt-1 ml-1 mb-1 p-1 pl-5 pr-5'>
+          <button onClick={() => {onClick(texteChat); changerTexteChat(""); }} className={COMPONENTS.chat.sendBtn}>
             ➤
           </button>
         </div>
@@ -1897,11 +1960,11 @@ export default function App() {
   const afficherContenuQuestion = (isReviewing) => {
   switch (typeJeu) {  
     case "ouverte":
-      return ( // <-- 1. Parenthèse obligatoire sur la même ligne que le return
-    <div className='flex flex-col items-center'>
+      return ( 
+    <div className="flex flex-col items-center">
       
       {/* --- L'en-tête de la question --- */}
-      <div className='flex flex-row w-full gap-2 mb-8'>    
+      <div className={`${LAYOUTS.questionHeader} mb-8`}>    
         <h1 className={theme.container.glassHeader}>
           {questionData?.question}
         </h1>
@@ -1910,18 +1973,17 @@ export default function App() {
         </h1>
       </div>
       
-      {isReviewing ? <p className='text-center text-4xl mb-5 font-bold text-slate-100 drop-shadow-md w-full'> {pseudoReview} </p> : ""}
+      {isReviewing ? <p className={theme.text.reviewPseudo}> {pseudoReview} </p> : ""}
       
       {/* --- Les boutons de réponse --- */}
-        {/* 2. Plus besoin de vérifier typeJeu, on fait directement la boucle (map) */}
         <QuestionOuverte 
             remplirText={setRepOuverte} 
             valueText={repOuverte}
             review={isReviewing}
             theme={theme}
-        /> {/* <-- 3. N'oublie pas de fermer la boucle map ici */}
+        />
 
-       {isReviewing ? <div className='w-200 mt-10'>
+       {isReviewing ? <div className="w-200 mt-10">
                     <label className={`${theme.text.label} ml-15`}> Réponse : </label>
                     <div className={theme.input.game}>{questionData.reponse}</div>
                     </div> : "" }
@@ -1930,11 +1992,11 @@ export default function App() {
     );
 
     case "qcm":
-      return ( // <-- 1. Parenthèse obligatoire sur la même ligne que le return
-    <div className='flex flex-col h-full w-full pb-8'>
+      return ( 
+    <div className="flex flex-col h-full w-full pb-8">
       
       {/* --- L'en-tête de la question --- */}
-      <div className='flex flex-row w-full gap-2 mb-8'>    
+      <div className={`${LAYOUTS.questionHeader} mb-8`}>    
         <h1 className={theme.container.glassHeader}>
           {questionData?.question}
         </h1>
@@ -1943,14 +2005,10 @@ export default function App() {
         </h1>
       </div>
 
-      {isReviewing ? <p className='text-center text-4xl mb-5 font-bold text-slate-100 drop-shadow-md w-full'> {pseudoReview} </p> : ""}
+      {isReviewing ? <p className={theme.text.reviewPseudo}> {pseudoReview} </p> : ""}
       
       {/* --- Les boutons de réponse --- */}
-      <div className='flex flex-wrap justify-center mb-5 gap-4'>
-        {/* 2. Plus besoin de vérifier typeJeu, on fait directement la boucle (map) */}
-        
-      
-
+      <div className={LAYOUTS.optionsGrid}>
         {questionData.options.map((option, index) => (
           isReviewing ? 
           <div key={index}>
@@ -1970,18 +2028,18 @@ export default function App() {
             onChoixFait={(rep) => { setRepOuverte(rep); }}
             theme={theme}
           />
-        ))} {/* <-- 3. N'oublie pas de fermer la boucle map ici */}
+        ))} 
       </div>
 
     </div>
     );
 
-    case "drapeau": // <-- Ton 3ème type de jeu (exemple)
+    case "drapeau": 
       return (
-        <div className='flex flex-col items-center'>
+        <div className="flex flex-col items-center">
       
       {/* --- L'en-tête de la question --- */}
-      <div className='flex flex-row w-full gap-2 mb-8'>    
+      <div className={`${LAYOUTS.questionHeader} mb-8`}>    
         <h1 className={theme.container.glassHeader}>
           {questionData.question}
         </h1>
@@ -1997,12 +2055,9 @@ export default function App() {
             theme={theme}
         />
 
-      {isReviewing ? <p className='text-center text-4xl mb-5 font-bold text-slate-100 drop-shadow-md w-full'> {pseudoReview} </p> : ""}
- 
-      
-      
+      {isReviewing ? <p className={theme.text.reviewPseudo}> {pseudoReview} </p> : ""}
 
-      {isReviewing ? <div className='w-200 mt-10'>
+      {isReviewing ? <div className="w-200 mt-10">
                     <label className={`${theme.text.label} ml-15`}> Réponse : </label>
                     <div className={theme.input.game}>{questionData.reponse}</div>
                     </div> : "" }  
@@ -2013,8 +2068,8 @@ export default function App() {
 
     case 'codeTrou':
       return (
-        <div className='flex flex-col items-center w-full'>
-          <div className='flex flex-row w-full gap-2 mb-8'>    
+        <div className="flex flex-col items-center w-full">
+          <div className={`${LAYOUTS.questionHeader} mb-8`}>    
             <h1 className={theme.container.glassHeader}>
               {questionData.question}
             </h1>
@@ -2032,9 +2087,9 @@ export default function App() {
             theme={theme}
           />
 
-          {isReviewing ? <p className='text-center text-4xl mt-5 mb-5 font-bold text-slate-100 drop-shadow-md w-full'> {pseudoReview} </p> : ""}
+          {isReviewing ? <p className={`${theme.text.reviewPseudo} mt-5`}> {pseudoReview} </p> : ""}
 
-          <div className='w-full max-w-md mt-2'>
+          <div className="w-full max-w-md mt-2">
         <input 
           disabled={isReviewing} 
           type="text" 
@@ -2046,7 +2101,7 @@ export default function App() {
       </div>
           
           {isReviewing ? 
-            <div className='w-full max-w-md mt-4 flex flex-col items-center'>
+            <div className="w-full max-w-md mt-4 flex flex-col items-center">
               <label className={`${theme.text.label}`}> Vraie Réponse : </label>
               <div className={`${theme.input.game} bg-emerald-100 border-emerald-500 text-emerald-800 font-mono flex items-center justify-center`}>
                 {questionData.reponse}
@@ -2059,10 +2114,10 @@ export default function App() {
 
     case 'devineMeme':
       return (
-        <div className='flex flex-col items-center'>
+        <div className="flex flex-col items-center">
       
       {/* --- L'en-tête de la question --- */}
-      <div className='flex flex-row w-full gap-2 mb-8'>    
+      <div className={`${LAYOUTS.questionHeader} mb-8`}>    
         <h1 className={theme.container.glassHeader}>
           {questionData.question}
         </h1>
@@ -2078,12 +2133,9 @@ export default function App() {
             theme={theme}
         />
 
-      {isReviewing ? <p className='text-center text-4xl mb-5 font-bold text-slate-100 drop-shadow-md w-full'> {pseudoReview} </p> : ""}
+      {isReviewing ? <p className={theme.text.reviewPseudo}> {pseudoReview} </p> : ""}
  
-      
-      
-
-      {isReviewing ? <div className='w-200 mt-10'>
+      {isReviewing ? <div className="w-200 mt-10">
                     <label className={`${theme.text.label} ml-15`}> Réponse : </label>
                     <div className={theme.input.game}>{questionData.reponse}</div>
                     </div> : "" }  
@@ -2093,15 +2145,15 @@ export default function App() {
 
     case 'chronologie':
       return (
-        <div className='flex flex-col items-center w-full'>
-          <div className='flex flex-row w-full gap-2 mb-2 '>    
+        <div className="flex flex-col items-center w-full">
+          <div className={`${LAYOUTS.questionHeader} mb-2`}>    
             <h1 className={theme.container.glassHeader}>
               {questionData.question}
             </h1>
             <h1>Pts : {difficulty}</h1> 
           </div>
 
-          {isReviewing && <p className='text-center text-4xl mt-8 font-bold text-white uppercase drop-shadow-md'>{pseudoReview}</p>}
+          {isReviewing && <p className={`${theme.text.reviewPseudo} mt-8 uppercase`}>{pseudoReview}</p>}
 
           <QuestionChronologie 
             items={questionData.items} 
@@ -2111,16 +2163,14 @@ export default function App() {
             vraieReponse={questionData.reponse}
             theme={theme}
           />
-
-          
           
         </div>
       );
 
     case 'petitBac':
       return (
-        <div className='flex flex-col items-center w-full'>
-          <div className='flex flex-row w-full gap-2 mb-6'>    
+        <div className="flex flex-col items-center w-full">
+          <div className={`${LAYOUTS.questionHeader} mb-6`}>    
             <h1 className={theme.container.glassHeader}>
               {questionData.question}
             </h1>
@@ -2152,9 +2202,9 @@ export default function App() {
 
     case 'bombParty':
       return (
-        <div className='flex flex-col items-center w-full'>
+        <div className="flex flex-col items-center w-full">
           {/* En-tête classique de la question */}
-          <div className='flex flex-row w-full justify-center gap-2 mb-2'>    
+          <div className={`${LAYOUTS.questionHeader} justify-center mb-2`}>    
             <h1 className={theme.container.glassHeader}>
               {questionData.question}
             </h1>
@@ -2173,10 +2223,10 @@ export default function App() {
 
     case 'wikipedia':
       return (
-        <div className='flex flex-col items-center w-full h-full'>
+        <div className="flex flex-col items-center w-full h-full">
           {/* NOUVEAU : Le titre disparaît complétement si isWikiFullscreen est vrai */}
           {!isWikiFullscreen && (
-            <div className='flex flex-row w-full justify-center gap-2 mb-4 shrink-0'>    
+            <div className={`${LAYOUTS.questionHeader} justify-center mb-4 shrink-0`}>    
               <h1 className={theme.container.glassHeader}>
                 {questionData.question}
               </h1>
@@ -2201,8 +2251,8 @@ export default function App() {
 
     case 'wordle':
       return (
-        <div className='flex flex-col items-center w-full'>
-          <div className='flex flex-row w-full justify-center gap-2 mb-4 shrink-0'>    
+        <div className="flex flex-col items-center w-full">
+          <div className={`${LAYOUTS.questionHeader} justify-center mb-4 shrink-0`}>    
             <h1 className={theme.container.glassHeader}>
               {questionData.question}
             </h1>
@@ -2241,7 +2291,7 @@ export default function App() {
   // ==================================================================================
 
   return (
-    <div style={{backgroundImage: `${theme.bg.image}`,backgroundColor: `${theme.bg.color}`}} className={`bg-cover bg-center h-screen w-screen overflow-hidden flex items-center justify-center relative`}>
+    <div style={{backgroundImage: `${theme.bg.image}`,backgroundColor: `${theme.bg.color}`}} className={LAYOUTS.main}>
       
       <Chat historiqueChat={historiqueChat} onClick={(texte) => envoyerChat(texte)} theme={theme}/>
       
@@ -2249,9 +2299,9 @@ export default function App() {
         
         {/* NOUVEAU : La carte prend !w-full !h-full et annule ses bordures arrondies en plein écran */}
        <div 
-  className={`transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)] ring-8 ring-inset ring-[rgba(226,232,240,0.3)] flex flex-col relative overflow-hidden
+  className={`${LAYOUTS.card}
     ${isWikiFullscreen 
-      ? "fixed inset-0 !max-w-none !max-h-none bg-slate-900 rounded-none border-none !p-0 z-[101]" 
+      ? LAYOUTS.fullscreen 
       : `${theme.container.card} shadow-2xl`
     }`}
   style={{
@@ -2264,9 +2314,9 @@ export default function App() {
           {(gameStat === "lobby") && !loading ? ( /// Lobby
             !inRoom ?
             <>
-              <div className='flex flex-col gap-8 w-96 rounded-xl items-center p-7'>
+              <div className={LAYOUTS.lobby}>
                 <PhotoProfil />
-                <div className='w-full z-45'>
+                <div className="w-full z-45">
                   <label className={theme.text.title}> Pseudo </label>
                   <input 
                     value={pseudo} 
@@ -2288,15 +2338,15 @@ export default function App() {
             </>
             :
             <div className='flex flex-row w-full'>
-              <div className='w-full flex flex-col p-5'>
+              <div className={LAYOUTS.room}>
                 <div>
                   <h2>
                     Code de la partie : {roomCode}
                   </h2>
                 </div>
 
-                <div className="bg-slate-100 p-4 rounded-xl min-h-[100px] mb-4 shadow-inner">
-                  <h2 className="font-bold border-b mb-2 text-purple-800">Joueurs connectés ({lobby.length}) :</h2>
+                <div className={LAYOUTS.playersList}>
+                  <h2 className={LAYOUTS.playersListTitle}>Joueurs connectés ({lobby.length}) :</h2>
                   {lobby.map((j,index) => (
                     <div key={j.id} className='flex flex-row'>
                       <p className={`${j.pret ? "text-green-600" : "text-blue-600"} font-medium`}>● {j.pseudo} {j.id === socket?.id ? "(Moi)" : j.pret ? "(Prêt)" : ""}</p>
@@ -2327,22 +2377,22 @@ export default function App() {
             
           ) : (
             (gameStat === "playing" || loading) ? /// EN JEU
-            <div className='h-full w-full flex flex-col'>
+            <div className={LAYOUTS.gameView}>
               
               {/* NOUVEAU : On cache le chrono si isWikiFullscreen est vrai */}
               {(!loading && !isWikiFullscreen) && (
-                <div className="shrink-0 flex flex-col items-center pt-6 z-10">
-                  <div className={`text-4xl font-bold ${timeLeft < 5 ? 'text-red-500 animate-pulse ease-linear' : 'text-blue-600'}`}>
+                <div className={LAYOUTS.timerContainer}>
+                  <div className={`${theme.text.timer} ${timeLeft < 5 ? 'text-red-500 animate-pulse ease-linear' : 'text-blue-600'}`}>
                       {timeLeft}s
                   </div>
                 </div>
               )}
 
               {/* NOUVEAU : On supprime les paddings (p-6) de la zone centrale si on est en plein écran */}
-              <div className={`flex-1 w-full flex flex-col items-center overflow-hidden ${isWikiFullscreen ? "p-0" : "p-6"}`}>
+              <div className={`${LAYOUTS.contentArea} ${isWikiFullscreen ? "p-0" : "p-6"}`}>
                 {loading ? (
                   <div className="m-auto flex items-center justify-center">
-                    <h1 className='text-slate-100 font-black text-5xl text-center'>{gameStat === "review" ? "Résultats..." :  "Génération de la question..."}</h1>
+                    <h1 className={theme.text.loading}>{gameStat === "review" ? "Résultats..." :  "Génération de la question..."}</h1>
                   </div>
                 ) : (
                   afficherContenuQuestion(false)
@@ -2351,8 +2401,8 @@ export default function App() {
               
               {/* NOUVEAU : On cache la barre de progression si isWikiFullscreen est vrai */}
               {(!loading && !isWikiFullscreen) && (
-                <div className='shrink-0 w-full p-6 pt-2 z-10'>
-                  <div style={{backgroundColor:"rgba(147,51,234, 0.3)"}} className='w-full h-4 rounded-full overflow-hidden shadow-inner'>
+                <div className={LAYOUTS.progressBar}>
+                  <div style={{backgroundColor:"rgba(147,51,234, 0.3)"}} className={LAYOUTS.progressBarBg}>
                       <div className="bg-purple-600 h-full rounded-full transition-all duration-1000" style={{ width: `${(indexQuestion / nombreQuestions) * 100}%` }}></div> 
                   </div>
                 </div>
@@ -2362,15 +2412,15 @@ export default function App() {
           
           : /// REVIEW
           gameStat === "review" ? 
-          <div className='h-full w-full flex flex-col'>
+          <div className={LAYOUTS.reviewView}>
             
             {/* 1. ZONE CONTENU (Scrollable) */}
-            <div className='flex-1 overflow-y-auto w-full p-6 pb-2 flex flex-col items-center custom-scrollbar'>
+            <div className={LAYOUTS.reviewContent}>
                {afficherContenuQuestion(true)}
             </div>
 
             {/* 2. ZONE BOUTONS (Fixe en bas) */}
-            <div className="shrink-0 w-full p-4 px-6 bg-slate-800/50 border-t border-slate-700/50 flex justify-end gap-4 z-10">
+            <div className={LAYOUTS.reviewFooter}>
               {typeJeu !== "petitBac" && typeJeu !== "bombParty" && (
                 <BoutonValide changeEtat={(etat) => changeEtat(etat)} theme={theme} etat={estBon} isChef={isChef}/>
               )}
@@ -2381,11 +2431,11 @@ export default function App() {
 
           :
           gameStat === "resultat" ?
-          <div className='w-full max-w-4xl p-5'>
-            <h2 className="text-3xl font-black text-white text-center mb-8">RÉSULTATS</h2>
-            <div className="flex flex-col gap-2">
+          <div className={LAYOUTS.results}>
+            <h2 className={theme.text.resultTitle}>RÉSULTATS</h2>
+            <div className={LAYOUTS.resultsList}>
               {resultatsAffiches.map((result,index) => (
-                <div key={index} className="bg-white/90 p-4 rounded-xl flex justify-between items-center font-bold text-purple-800 animate-bounce"> 
+                <div key={index} className={LAYOUTS.resultsItem}> 
                   <span>{index + 1}. {result.pseudo}</span>
                   <span className="text-2xl">{result.score} pts</span>
                 </div>
