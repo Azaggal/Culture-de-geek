@@ -99,9 +99,9 @@ const LAYOUTS = {
 
   // Lobby
   lobby: `${CONFIG_VISUELLE.MOBILE.lobby} ${CONFIG_VISUELLE.COMPUTER.lobby} rounded-xl items-center`,
-  room: `${CONFIG_VISUELLE.MOBILE.room} ${CONFIG_VISUELLE.COMPUTER.room}`,
-  playersList: "bg-slate-100 p-4 rounded-xl min-h-[100px] mb-4 shadow-inner",
-  playersListTitle: "font-bold border-b mb-2 text-purple-800",
+  room: `${CONFIG_VISUELLE.MOBILE.room} ${CONFIG_VISUELLE.COMPUTER.room} flex flex-col items-center`,
+  playersList: "grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-h-[300px] overflow-y-auto custom-scrollbar p-2 mb-6",
+  playersListTitle: "font-black text-xl mb-4 text-purple-900 uppercase tracking-widest text-center w-full block",
 
   // Game & UI
   gameView: "h-full w-full flex flex-col",
@@ -127,7 +127,7 @@ const LAYOUTS = {
 
 const COMPONENTS = {
   chat: {
-    container: "fixed bottom-0 right-10 z-50 flex flex-col bg-purple-400 w-80 h-96 rounded-2xl shadow-[0_120px_0_rgb(147,51,234)] transition-transform duration-500 ease-[cubic-bezier(0.34,1.20,0.64,1)]",
+    container: "hidden md:block fixed bottom-0 right-10 z-50 flex flex-col bg-purple-400 w-80 h-96 rounded-2xl shadow-[0_120px_0_rgb(147,51,234)] transition-transform duration-500 ease-[cubic-bezier(0.34,1.20,0.64,1)]",
     button: `absolute -top-12 right-0 h-12 px-6 ounded-t-xl border-t-4 border-l-4 border-r-4 border-purple-600 border-b-0 font-bold text-lg transition-all duration-300 flex items-center gap-2 border-2 border-purple-600  bg-slate-100 text-purple-600 p-2 rounded-xl font-bold text-xl transition-all shadow-[0_6px_0_rgb(147,51,234)] ${COLORS.hover} active:translate-y-[6px] active:shadow-none`,
     history: "h-70 overflow-y-scroll shadow-[inset_0_2px_10px_rgba(0,0,0,0.3)] rounded-xl p-2 text-purple-900",
     input: "p-3 border-2 mt-1 text-purple-800 border-[rgba(0,0,0,0.1)] transition-all duration-100 outline-none focus:shadow-[inset_0_2px_8px_rgba(0,0,0,0.3)] rounded-xl w-full",
@@ -279,7 +279,7 @@ const THEMES_CONFIG = {
       },
 
     text: {
-      label: "text-purple-900 font-black text-sm uppercase ml-1",
+      label: "text-purple-900 font-black text-sm uppercase ml-1 w-full",
       title: "text-slate-100 font-bold text-sm uppercase ml-1",
       timer: "text-4xl font-bold",
       loading: "text-slate-100 font-black text-5xl text-center",
@@ -2357,7 +2357,7 @@ export default function App() {
                   />
                 </div>  
 
-                <button onClick={creerLobby} className={`w-full relative z-45 ${theme.button.primary}`}>
+                <button onClick={creerLobby} className={`w-full relative z-45 ${theme.button.primary} mt-5 mb-5`}>
                   {isinRoom() ? "Changer de pseudo" : "Créer le salon"}
                 </button>
 
@@ -2368,41 +2368,81 @@ export default function App() {
               </div>
             </>
             :
-            <div className='flex flex-row w-full'>
+            <div className='flex flex-col w-full h-full p-4 items-center'>
               <div className={LAYOUTS.room}>
-                <div>
-                  <h2 className="text-xl md:text-2xl font-black">
-                    Code de la partie : {roomCode}
-                  </h2>
+                
+                {/* 1. CODE DE LA PARTIE (Stylisé et sans préfixe textuel lourd) */}
+                <div className="flex flex-col items-center mb-8">
+                   <p className="text-purple-900 font-black uppercase text-[10px] tracking-[0.3em] mb-2 opacity-70">Salon Privé</p>
+                   <div className="bg-white/40 backdrop-blur-sm px-10 py-4 rounded-3xl border-4 border-purple-600 shadow-[0_10px_0_rgb(147,51,234)] transform -rotate-1">
+                      <h2 className="text-5xl md:text-6xl font-black text-purple-700 tracking-[0.15em] drop-shadow-sm">
+                        {roomCode}
+                      </h2>
+                   </div>
                 </div>
 
-                <div className={LAYOUTS.playersList}>
-                  <h2 className={LAYOUTS.playersListTitle}>Joueurs connectés ({lobby.length}) :</h2>
-                  {lobby.map((j,index) => (
-                    <div key={j.id} className='flex flex-row'>
-                      <p className={`${j.pret ? "text-green-600" : "text-blue-600"} font-medium`}>● {j.pseudo} {j.id === socket?.id ? "(Moi)" : j.pret ? "(Prêt)" : ""}</p>
-                      {index===0 ? <img className='pl-1 pt-1 w-5 h-5' src='/images/couronne.png' alt="chef"></img> : ""}
-                    </div>
-                  ))}
+                {/* 2. LISTE DES JOUEURS (Grille thématique) */}
+                <div className="w-full flex flex-col items-center">
+                  <h2 className={LAYOUTS.playersListTitle}>Joueurs connectés ({lobby.length})</h2>
+                  <div className={LAYOUTS.playersList}>
+                    {lobby.map((j,index) => (
+                      <div key={j.id} className={`flex items-center justify-between p-4 rounded-2xl border-2 transition-all duration-300 transform hover:scale-[1.02]
+                        ${j.pret ? "bg-emerald-500/10 border-emerald-500 shadow-[0_4px_0_rgb(16,185,129)]" : "bg-white/80 border-purple-200 shadow-[0_4px_0_rgb(233,213,255)]"}
+                        ${j.id === socket?.id ? "ring-4 ring-purple-400/30" : ""}
+                      `}>
+                        <div className="flex items-center gap-3">
+                           {index === 0 ? 
+                             <div className="relative">
+                               <img className='w-8 h-8 animate-bounce' src='/images/couronne.png' alt="chef" />
+                             </div>
+                             : 
+                             <div className="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center font-black text-purple-400 text-xs">
+                               {index + 1}
+                             </div>
+                           }
+                           <span className={`font-black text-lg truncate max-w-[140px] ${j.pret ? "text-emerald-700" : "text-purple-900"}`}>
+                             {j.pseudo} {j.id === socket?.id ? "(Moi)" : ""}
+                           </span>
+                        </div>
+                        
+                        <div className={`px-3 py-1 rounded-full font-black text-[10px] uppercase tracking-tighter
+                          ${j.pret ? "bg-emerald-500 text-white shadow-inner" : "bg-slate-200 text-slate-500"}
+                        `}>
+                           {j.pret ? "Prêt !" : "Attente"}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 
+                {/* 3. OPTIONS DE JEU (Nombre de questions) */}
+                <div className='flex flex-col items-center mb-10 w-full'>
+                  <div className="w-full h-[2px] bg-purple-900/10 mb-8 rounded-full"></div>
+                  <label className={`${theme.text.label} text-center mb-5 block text-lg`}>Combien de questions ?</label>
+                  <div className='flex flex-wrap justify-center gap-3'>
+                    {choixNombreQuestions.map((nb,index) => {
+                      const isSelect = nombreQuestions === nb;
+                      return (
+                        <div key={index} className="transform hover:scale-105 transition-transform">
+                          <ButtonChoix valeur={nb} changerChoix={changerNbQuestions} isSelected={isSelect} isChef={isChef} theme={theme}/>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+                
+                {/* 4. BOUTON D'ACTION (Gros et centré) */}
+                <div className="w-full flex justify-center mt-2">
+                  <div className="w-full max-w-xs transform hover:scale-105 transition-transform">
+                    {isChef 
+                      ? <ButtonPret theme={theme} tousPrets={tousPrets()} lancerPartieSocket={() => lancerPartieSocket()} texte="🚀 LANCER LA PARTIE"/>
+                      : isPret 
+                        ? <ButtonPret theme={theme} tousPrets={isinRoom()} lancerPartieSocket={() => annulerPretSocket()} texte="🛑 PAS PRÊT"/>
+                        : <ButtonPret theme={theme} tousPrets={isinRoom()} lancerPartieSocket={() => seMettrePretSocket()} texte="✅ JE SUIS PRÊT"/>
+                    }
+                  </div>
+                </div>
 
-                <label className={theme.text.label}>Nombre de questions</label>
-                <div className='flex flex-row mb-5'>
-                  {choixNombreQuestions.map((nb,index) => {
-                    const isSelect = nombreQuestions === nb;
-                    return (
-                      <ButtonChoix valeur={nb} key={index} changerChoix={changerNbQuestions} isSelected={isSelect} isChef={isChef} theme={theme}/>
-                    )
-                  })}
-                </div>
-                
-                {isChef 
-                  ? <ButtonPret theme={theme} tousPrets={tousPrets()} lancerPartieSocket={() => lancerPartieSocket()} texte="LANCER LA PARTIE"/>
-                  : isPret 
-                    ? <ButtonPret theme={theme} tousPrets={isinRoom()} lancerPartieSocket={() => annulerPretSocket()} texte="PAS PRÊT"/>
-                    : <ButtonPret theme={theme} tousPrets={isinRoom()} lancerPartieSocket={() => seMettrePretSocket()} texte="PRÊT"/>
-                }
               </div>
             </div>
             
