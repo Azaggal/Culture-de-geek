@@ -61,7 +61,7 @@ const CONFIG_VISUELLE = {
     lobby: "flex w-full flex-col p-4",
     room: "w-full flex-col",
     timerText: "text-3xl",
-    glassHeader: "p-4 text-xl",
+    glassHeader: "p-4 text-sm",
   },
   COMPUTER: {
     card: "md:rounded-3xl md:ring-8 md:p-8 md:shadow-2xl",
@@ -105,8 +105,8 @@ const LAYOUTS = {
 
   // Game & UI
   gameView: "h-full w-full flex flex-col",
-  timerContainer: "shrink-0 flex flex-col items-center pt-4 md:pt-6 z-10",
-  contentArea: "flex-1 w-full flex flex-col items-center overflow-y-auto md:overflow-hidden custom-scrollbar",
+  timerContainer: "shrink-0 flex flex-col items-center pt-1 md:pt-6 z-0",
+  contentArea: "flex-1 w-full flex flex-col items-center overflow-y-auto custom-scrollbar",
   progressBar: "shrink-0 w-full p-4 md:p-6 pt-2 z-10",
   progressBarBg: "w-full h-4 rounded-full overflow-hidden shadow-inner",
   
@@ -134,7 +134,7 @@ const COMPONENTS = {
     sendBtn: "w-max border border-[rgba(0,0,0,0.3)] rounded-xl font-bold text-[rgba(0,0,0,0.5)] shadow-[0_3px_0_rgba(0,0,0,0.3)] hover:cursor-pointer active:translate-y-[3px] active:shadow-none mt-1 ml-1 mb-1 p-1 pl-5 pr-5",
   },
   photoProfil: {
-    container: "relative h-44 w-40 flex items-end justify-center group cursor-pointer mx-auto z-0",
+    container: "relative h-44 w-40 flex items-end justify-center group cursor-pointer mx-auto mb-10 mt-5 z-0",
     bgCircle: "absolute bottom-0 w-40 h-40 bg-white rounded-full border-4 border-purple-600 transition-all duration-300",
     avatarWrapper: "relative z-10 w-36 h-full mb-1 items-end justify-center overflow-visible transition-all duration-300 -translate-y-3",
     cache: "absolute top-full z-0 w-50 h-50 bg-purple-400 pointer-events-none",
@@ -187,7 +187,7 @@ const THEMES_CONFIG = {
       // La carte principale (Lobby, Jeu, etc.)
       card: `${COLORS.purple.bg} ${BASES_COMIC.card} flex flex-row gap-4 justify-center `,
       // Le header blanc "verre" pour les questions
-      glassHeader: "flex-1 p-8 text-3xl font-black text-purple-700 bg-white/90 backdrop-blur-md rounded-3xl border-b-[10px] border-purple-900/20 text-center uppercase",
+      glassHeader: "flex-1 p-5 text-2xl font-black text-purple-700 bg-white/90 backdrop-blur-md rounded-3xl border-b-[10px] border-purple-900/20 text-center uppercase",
     },
 
     input: {
@@ -795,12 +795,6 @@ const QuestionWikipedia = memo(({ depart, arrivee, socket, review, valueText, es
         >
           {isFullscreen ? "↙️" : "⛶"}
         </button>
-        <button 
-          onClick={accueil}
-          className="bg-slate-700 hover:bg-slate-600 text-white p-2 rounded-lg font-bold text-xl md:text-2xl transition-colors mx-2 shadow-inner"
-        >
-          Accueil
-        </button>
         <div className="text-right flex-1 truncate">
           <p className="text-slate-400 text-[10px] md:text-xs uppercase tracking-wider font-bold">Cible</p>
           <p className="text-emerald-400 text-sm md:text-xl font-black truncate">{arrivee}</p>
@@ -936,7 +930,7 @@ const QuestionPetitBac = ({ categories, lettre, theme, remplirText, review, valu
       {/* LA LETTRE GÉANTE */}
       <div className="relative">
         <div className="absolute inset-0 bg-purple-500 rounded-2xl transform rotate-3 shadow-lg"></div>
-        <div className="relative text-7xl font-black text-purple-600 bg-white w-28 h-28 flex items-center justify-center rounded-2xl shadow-xl border-4 border-slate-200 transform -rotate-3 z-10">
+        <div className="relative text-5xl font-black text-purple-600 bg-white w-20 h-20 flex items-center justify-center rounded-2xl shadow-xl border-4 border-slate-200 transform -rotate-3 z-10">
           {lettre}
         </div>
       </div>
@@ -2042,7 +2036,6 @@ export default function App() {
       <div className={LAYOUTS.optionsGrid}>
         {questionData.options.map((option, index) => (
           isReviewing ? 
-          <div key={index}>
             <ButtonRepReview 
               key={index}
               reponse={option}
@@ -2050,7 +2043,6 @@ export default function App() {
               clicked={repOuverte.toLowerCase() === option.toLowerCase()}
               theme={theme}
             />
-          </div>
           :
           <ButtonRep 
             key={index}
@@ -2337,8 +2329,8 @@ export default function App() {
     }`}
   style={{
     // Si on n'est pas en plein écran, on applique les dimensions du dico manuellement
-    width: isWikiFullscreen ? '100vw' : (isMobile ? '100vw' : `${dimensionContour.split(' ')[0].replace('w-', '') * 4}px`),
-    height: isWikiFullscreen ? '100vh' : (isMobile ? '100vh' : `${dimensionContour.split(' ')[1].replace('h-', '') * 4}px`),
+    width: isWikiFullscreen ? '100vw' : (isMobile ? '100vw' : `min(95vw, ${dimensionContour.split(' ')[0].replace('w-', '') * 4}px)`),
+    height: isWikiFullscreen ? '100vh' : (isMobile ? '100vh' : `min(95vh, ${dimensionContour.split(' ')[1].replace('h-', '') * 4}px)`),
   }}
 >
           
@@ -2357,7 +2349,7 @@ export default function App() {
                   />
                 </div>  
 
-                <button onClick={creerLobby} className={`w-full relative z-45 ${theme.button.primary} mt-5 mb-5`}>
+                <button onClick={creerLobby} className={`w-full relative z-45 ${theme.button.primary} mt-7 mb-7`}>
                   {isinRoom() ? "Changer de pseudo" : "Créer le salon"}
                 </button>
 
