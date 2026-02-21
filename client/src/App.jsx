@@ -393,6 +393,16 @@ const ButtonRepReview = ({reponse, isCorrect, clicked, theme}) => {
   );
 }
 
+const ScoreBadge = ({ points, theme, className = "" }) => {
+  return (
+    <div className={`flex items-center gap-2 bg-yellow-400 border-2 border-yellow-600 px-4 py-1 rounded-xl shadow-[0_5px_0_rgb(202,138,4)] transform -rotate-2 ${className}`}>
+      <span className="text-yellow-900 font-black text-xl uppercase italic tracking-tighter">
+        {points} PTS
+      </span>
+    </div>
+  );
+};
+
 
 
 
@@ -771,9 +781,16 @@ const QuestionWikipedia = memo(({ depart, arrivee, socket, review, valueText, es
             </span>
           ))}
         </div>
-        <p className={`text-4xl mt-8 font-black ${estBon > 0 ? 'text-emerald-400' : 'text-rose-500'}`}>
-          {estBon > 0 ? `+${estBon} points ! (Objectif atteint)` : 'Perdu...'}
-        </p>
+        <div className="mt-8">
+          {estBon > 0 ? (
+            <div className="flex flex-col items-center">
+              <ScoreBadge points={estBon} theme={theme} className="scale-150 mb-8" />
+              <p className="text-emerald-400 font-black uppercase tracking-widest mt-4">Objectif Atteint !</p>
+            </div>
+          ) : (
+            <p className="text-rose-500 text-4xl font-black">Perdu...</p>
+          )}
+        </div>
       </div>
     );
   }
@@ -1303,9 +1320,13 @@ const QuestionBombParty = ({ socket, review, pseudoReview, estBon, theme }) => {
               ))}
            </div>
         </div>
-        <p className={`text-5xl font-black mt-4 ${estBon > 0 ? 'text-emerald-400' : 'text-rose-500'}`}>
-          {estBon > 0 ? `+${estBon} points !` : 'ÉLIMINÉ'}
-        </p>
+        <div className="mt-8">
+          {estBon > 0 ? (
+            <ScoreBadge points={estBon} theme={theme} className="scale-150 mb-8" />
+          ) : (
+            <p className="text-rose-500 text-5xl font-black uppercase">ÉLIMINÉ</p>
+          )}
+        </div>
       </div>
     );
   }
@@ -1993,9 +2014,7 @@ export default function App() {
         <h1 className={theme.container.glassHeader}>
           {questionData?.question}
         </h1>
-        <h1>
-          Pts : {difficulty}
-        </h1>
+        <ScoreBadge points={difficulty} theme={theme} className="mb-2" />
       </div>
       
       {isReviewing ? <p className={theme.text.reviewPseudo}> {pseudoReview} </p> : ""}
@@ -2025,9 +2044,7 @@ export default function App() {
         <h1 className={theme.container.glassHeader}>
           {questionData?.question}
         </h1>
-        <h1>
-          Pts : {difficulty}
-        </h1>
+        <ScoreBadge points={difficulty} theme={theme} className="mb-2" />
       </div>
 
       {isReviewing ? <p className={theme.text.reviewPseudo}> {pseudoReview} </p> : ""}
@@ -2066,9 +2083,7 @@ export default function App() {
         <h1 className={theme.container.glassHeader}>
           {questionData.question}
         </h1>
-        <h1>
-          Pts : {difficulty}
-        </h1> 
+        <ScoreBadge points={difficulty} theme={theme} className="mb-2" />
       </div>
 
       <QuestionDrapeau image={questionData.image} 
@@ -2096,9 +2111,7 @@ export default function App() {
             <h1 className={theme.container.glassHeader}>
               {questionData.question}
             </h1>
-            <h1>
-              Pts : {difficulty}
-            </h1> 
+            <ScoreBadge points={difficulty} theme={theme} className="mb-2" />
           </div>
 
           <QuestionCodeTrou 
@@ -2144,9 +2157,7 @@ export default function App() {
         <h1 className={theme.container.glassHeader}>
           {questionData.question}
         </h1>
-        <h1>
-          Pts : {difficulty}
-        </h1> 
+        <ScoreBadge points={difficulty} theme={theme} className="mb-2" />
       </div>
 
       <MemeFlou image={questionData.image} 
@@ -2173,7 +2184,7 @@ export default function App() {
             <h1 className={theme.container.glassHeader}>
               {questionData.question}
             </h1>
-            <h1>Pts : {difficulty}</h1> 
+            <ScoreBadge points={difficulty} theme={theme} className="mb-2" />
           </div>
 
           {isReviewing && <p className={`${theme.text.reviewPseudo} mt-8 uppercase`}>{pseudoReview}</p>}
@@ -2198,7 +2209,7 @@ export default function App() {
               {questionData.question}
             </h1>
             {/* Affiche le nombre de points gagnés en temps réel pendant la review ! */}
-            <h1>Pts : {isReviewing && Array.isArray(estBon) ? estBon.filter(Boolean).length : difficulty}</h1> 
+            <ScoreBadge points={isReviewing && Array.isArray(estBon) ? estBon.filter(Boolean).length : difficulty} theme={theme} className="mb-2" />
           </div>
 
           <QuestionPetitBac 
@@ -2231,6 +2242,7 @@ export default function App() {
             <h1 className={theme.container.glassHeader}>
               {questionData.question}
             </h1>
+            <ScoreBadge points={difficulty} theme={theme} className="mb-2" />
           </div>
 
           {/* Le super composant Bomb Party */}
@@ -2253,6 +2265,7 @@ export default function App() {
               <h1 className={theme.container.glassHeader}>
                 {questionData.question}
               </h1>
+              <ScoreBadge points={difficulty} theme={theme} className="mb-2" />
             </div>
           )}
 
@@ -2279,6 +2292,7 @@ export default function App() {
             <h1 className={theme.container.glassHeader}>
               {questionData.question}
             </h1>
+            <ScoreBadge points={difficulty} theme={theme} className="mb-2" />
           </div>
 
           <QuestionWordle 
@@ -2499,7 +2513,7 @@ export default function App() {
               {resultatsAffiches.map((result,index) => (
                 <div key={index} className={LAYOUTS.resultsItem}> 
                   <span>{index + 1}. {result.pseudo}</span>
-                  <span className="text-2xl">{result.score} pts</span>
+                  <ScoreBadge points={result.score} theme={theme} className="scale-75 shadow-[0_3px_0_rgb(202,138,4)]" />
                 </div>
               ))}
             </div>
