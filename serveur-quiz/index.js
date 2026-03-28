@@ -520,7 +520,7 @@ io.on('connection', (socket) => {
               io.to(socket.roomCode).emit('game_started', {data:quizData,type:type, difficulty:difficulty, duration:tempsType[type]});
               io.to(socket.roomCode).emit('loading_status', { loading: false });
               demarrerTimer(socket.roomCode);
-          }, 5000);
+          }, 3000);
       } catch (err) {
           console.error(err);
           io.to(socket.roomCode).emit('loading_status', { loading: false });
