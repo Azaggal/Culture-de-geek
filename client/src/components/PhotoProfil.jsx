@@ -2,6 +2,15 @@
 import React, { useState } from 'react';
 import { COMPONENTS } from '../theme';
 
+const AVAILABLE_AVATARS = [
+  { id: 0, img: "0", name: "Le Bleu" },
+  { id: 1, img: "1", name: "Le Cyclope" },
+  { id: 2, img: "2", name: "La Plante" },
+  { id: 3, img: "3", name: "Le Mutant" },
+  { id: 4, img: "4", name: "Le Boss" },
+  { id: 5, img: "5", name: "L'Ancien" },
+];
+
 export const PhotoProfil = () => {
   const [photoProfil, setPhotoProfil] = useState("profil.png");
   const listePhoto = ['profil.png', 'moustache.png'];

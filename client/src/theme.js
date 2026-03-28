@@ -133,10 +133,10 @@ export const COMPONENTS = {
   },
   photoProfil: {
     container: "relative h-44 w-40 flex items-end justify-center group cursor-pointer mx-auto mb-10 mt-5 z-0",
-    bgCircle: "absolute bottom-0 w-40 h-40 bg-white rounded-full border-4 border-purple-600 transition-all duration-300",
+    bgCircle: "absolute bottom-0 z-0 w-40 h-40 bg-white rounded-full border-4 border-purple-600 transition-all duration-300",
     avatarWrapper: "relative z-10 w-36 h-full mb-1 items-end justify-center overflow-visible transition-all duration-300 -translate-y-3",
-    cache: "absolute top-full z-0 w-50 h-50 bg-purple-400 pointer-events-none",
-    bottomRim: "absolute bottom-0 z-20 w-40 h-20 rounded-b-full border-b-4 border-l-4 border-r-4 border-purple-600 pointer-events-none transition-all duration-300",
+    cache: "absolute top-[100%] left-1/2 -translate-x-1/2 z-20 w-[200px] h-[250px] bg-purple-400 pointer-events-none",
+    bottomRim: "absolute bottom-0 z-30 w-40 h-20 rounded-b-full border-b-4 border-l-4 border-r-4 border-purple-600 pointer-events-none transition-all duration-300",
   }
 };
 
